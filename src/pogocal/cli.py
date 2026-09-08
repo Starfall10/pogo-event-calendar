@@ -9,7 +9,7 @@ import argparse
 import logging
 import sys
 
-from pogocal import config
+from pogocal import config, discord_src
 from pogocal.ics_build import render
 from pogocal.leekduck import fetch_events
 
@@ -55,6 +55,27 @@ def build() -> int:
     return 0
 
 
+def poll() -> int:
+    """Read new posts from the followed channel and move the cursor."""
+    try:
+        posts = discord_src.poll()
+    except RuntimeError as error:
+        log.error("%s", error)
+        log.error("cursor not moved; the next run will try the same posts again")
+        return 1
+
+    if not posts:
+        print("no new posts")
+        return 0
+
+    with_image = sum(1 for p in posts if p.image_url)
+    print(f"{len(posts)} new posts ({with_image} with an image)")
+    for post in posts:
+        print(f"  {post.posted_at:%Y-%m-%d %H:%M}  {post.text[:60] or '<no text>'}")
+        print(f"      {post.link}")
+    return 0
+
+
 def not_yet(command: str, milestone: str) -> int:
     print(
         f"pogocal {command} arrives at {milestone}. Only 'build' works today.",
@@ -70,7 +91,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     subcommands = parser.add_subparsers(dest="command", required=True)
     subcommands.add_parser("build", help=f"rebuild {config.OUTPUT_PATH.name}")
-    subcommands.add_parser("poll", help="fetch new Discord posts (M2)")
+    subcommands.add_parser("poll", help="read new posts from the Discord channel")
     subcommands.add_parser("run", help="poll then build (M5)")
 
     args = parser.parse_args(argv)
@@ -81,7 +102,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "build":
         return build()
     if args.command == "poll":
-        return not_yet("poll", "M2")
+        return poll()
     return not_yet("run", "M5")
 
 

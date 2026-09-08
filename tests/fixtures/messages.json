@@ -1,0 +1,1289 @@
+[
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "HORIZONS_26.png",
+        "height": 2137,
+        "id": "1546789381950672976",
+        "original_content_type": "image/png",
+        "placeholder": "FEcGHwJKVyifl4d3eKeYN5iJhfOHLb8K",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1546789381950672976/HORIZONS_26.png?SIGNATURE-REMOVED",
+        "size": 6985846,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1546789381950672976/HORIZONS_26.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "3af5e5351b2519a7e08d975f95860df0",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Pokemon Horizons Celebration, September 16-22",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1546790566434705434",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1546789382063652885",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-09-08T07:53:29.017000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "e_MEGASQUAD.png",
+        "height": 2671,
+        "id": "1546788844035375217",
+        "original_content_type": "image/png",
+        "placeholder": "HXwGFgKXePaGaKmHd4qIeXd4+H6OCiY=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1546788844035375217/e_MEGASQUAD.png?SIGNATURE-REMOVED",
+        "size": 8468739,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1546788844035375217/e_MEGASQUAD.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "3af5e5351b2519a7e08d975f95860df0",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Mega Squads, September 8-14",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1546790423660462130",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1546788844383240272",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-09-08T07:52:54.977000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/jpeg",
+        "filename": "image0-1.jpg",
+        "height": 2048,
+        "id": "1546789590160117820",
+        "original_content_type": "image/jpeg",
+        "placeholder": "CkgGFwRaIjmfanZ3mEmHeXqYQmf4OpsP",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1546789590160117820/image0-1.jpg?SIGNATURE-REMOVED",
+        "size": 418016,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1546789590160117820/image0-1.jpg?SIGNATURE-REMOVED",
+        "width": 2048
+      }
+    ],
+    "author": {
+      "avatar": "3af5e5351b2519a7e08d975f95860df0",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Harvest Festival: Taken Over, October 2-5",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1546790331176058903",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1546789590411640832",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-09-08T07:52:32.927000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/jpeg",
+        "filename": "img_1_1788852561295.jpg",
+        "height": 1220,
+        "id": "1546789488330547261",
+        "original_content_type": "image/jpeg",
+        "placeholder": "ZdoFDwKVeahteYePhVdmp2aXXCYGhH8J",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1546789488330547261/img_1_1788852561295.jpg?SIGNATURE-REMOVED",
+        "size": 154911,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1546789488330547261/img_1_1788852561295.jpg?SIGNATURE-REMOVED",
+        "width": 1220
+      }
+    ],
+    "author": {
+      "avatar": "3af5e5351b2519a7e08d975f95860df0",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Harvest Festival, September 29-October 5",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1546790297982214215",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1546789488653770834",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-09-08T07:52:25.013000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "SM_Stara_RD.png",
+        "height": 2096,
+        "id": "1546789200563798097",
+        "original_content_type": "image/png",
+        "placeholder": "EucFHwZIV1ePZ4d7dphod2iIl/OoSY8K",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1546789200563798097/SM_Stara_RD.png?SIGNATURE-REMOVED",
+        "size": 6340314,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1546789200563798097/SM_Stara_RD.png?SIGNATURE-REMOVED",
+        "width": 2096
+      }
+    ],
+    "author": {
+      "avatar": "3af5e5351b2519a7e08d975f95860df0",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Mega Staraptor Raid Day, September 19",
+    "edited_timestamp": "2026-09-08T08:27:43.449000+00:00",
+    "embeds": [],
+    "flags": 2,
+    "id": "1546790188942893120",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1546789200886628423",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-09-08T07:51:59.016000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "Phantump_Catch_Mastery.png",
+        "height": 2096,
+        "id": "1546789095504617552",
+        "original_content_type": "image/png",
+        "placeholder": "rgcGBwD077VKnHLbJnNotXaZXvjX9XQN",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1546789095504617552/Phantump_Catch_Mastery.png?SIGNATURE-REMOVED",
+        "size": 4596468,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1546789095504617552/Phantump_Catch_Mastery.png?SIGNATURE-REMOVED",
+        "width": 2096
+      }
+    ],
+    "author": {
+      "avatar": "3af5e5351b2519a7e08d975f95860df0",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Phantump Catch Mastery, September 26",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1546790188468932711",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1546789095815122975",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-09-08T07:51:58.903000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "Gible_Classic_CD_g47ix.png",
+        "height": 2137,
+        "id": "1546788938549559306",
+        "original_content_type": "image/png",
+        "placeholder": "nnaCDQQPkQpMqohNGyRfVwuHCFd4h4CHZw==",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1546788938549559306/Gible_Classic_CD_g47ix.png?SIGNATURE-REMOVED",
+        "size": 7172086,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1546788938549559306/Gible_Classic_CD_g47ix.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "3af5e5351b2519a7e08d975f95860df0",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Gible Com Day Classic, September 12",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1546790188309811231",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1546788938830839870",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-09-08T07:51:58.865000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/jpeg",
+        "filename": "2AE392D2-F7A1-4D0A-99ED-6152F5112344.jpg",
+        "height": 2048,
+        "id": "1543836129805996083",
+        "placeholder": "mnQCFwB4WUdfl3aKdyhXJ2eEuPVoQGoI",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1543836129805996083/2AE392D2-F7A1-4D0A-99ED-6152F5112344.jpg?SIGNATURE-REMOVED",
+        "size": 286364,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1543836129805996083/2AE392D2-F7A1-4D0A-99ED-6152F5112344.jpg?SIGNATURE-REMOVED",
+        "width": 2048
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "https://pokemongo.com/news/more-mega-updates-2026",
+    "edited_timestamp": null,
+    "embeds": [
+      {
+        "color": 16777215,
+        "content_scan_version": 4,
+        "provider": {
+          "name": "Pokémon GO"
+        },
+        "thumbnail": {
+          "content_type": "image/gif",
+          "flags": 32,
+          "height": 288,
+          "placeholder": "K8cJLISHtlefiHdydn1YgFkDWA==",
+          "placeholder_version": 1,
+          "proxy_url": "https://images-ext-1.discordapp.net/external/txP5yQnlqKCLf4NEUpD71Prb3u37k0W9WXD7YtlfKSc/https/lh3.googleusercontent.com/OqkaukguYyiMfq3j-DtNXCTiZ31HI0gm1vvPzTpE_MpFt266bbt7gKMQkoZd248UabRcieqH7OX5uFMh-tNoFOBXKtglW56sCNezwl2qgxw",
+          "url": "https://lh3.googleusercontent.com/OqkaukguYyiMfq3j-DtNXCTiZ31HI0gm1vvPzTpE_MpFt266bbt7gKMQkoZd248UabRcieqH7OX5uFMh-tNoFOBXKtglW56sCNezwl2qgxw",
+          "width": 512
+        },
+        "title": "More mega moments! Additional Charged Attacks and Mega Mewtwo Adven...",
+        "type": "article",
+        "url": "https://pokemongo.com/news/more-mega-updates-2026"
+      }
+    ],
+    "flags": 2,
+    "id": "1543838203063050303",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1543836130049523734",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-31T04:21:50.737000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/jpeg",
+        "filename": "HQxtwIPWEAAoqH_.jpg",
+        "height": 1200,
+        "id": "1543067927454941278",
+        "placeholder": "m1UGFgJpWKVmifZniYh4m3mIdl9ZhPg=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1543067927454941278/HQxtwIPWEAAoqH_.jpg?SIGNATURE-REMOVED",
+        "size": 172609,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1543067927454941278/HQxtwIPWEAAoqH_.jpg?SIGNATURE-REMOVED",
+        "width": 960
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "Here's the instructions for Twitch rewards again, but in graphic form cause reading is difficult sometimes lol",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1543068410961723534",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1543067927719190549",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-29T01:22:57.998000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/jpeg",
+        "filename": "HQh4p0HWcAAnvXe-1.jpg",
+        "height": 1200,
+        "id": "1542837926046732398",
+        "placeholder": "GjcGJQSbeI92mGWoeGhmeISANX93",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1542837926046732398/HQh4p0HWcAAnvXe-1.jpg?SIGNATURE-REMOVED",
+        "size": 157740,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1542837926046732398/HQh4p0HWcAAnvXe-1.jpg?SIGNATURE-REMOVED",
+        "width": 902
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "Twitch Drops for this weekend",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1542838568081432609",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1542837926625419285",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-28T10:09:39.185000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "Screenshot_20260828_192111_Chrome.png",
+        "height": 1178,
+        "id": "1542796904243400724",
+        "placeholder": "PQgCBgB7+CWXl4h2eH6Ve3Y4sJcFXQo=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1542796904243400724/Screenshot_20260828_192111_Chrome.png?SIGNATURE-REMOVED",
+        "size": 262328,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1542796904243400724/Screenshot_20260828_192111_Chrome.png?SIGNATURE-REMOVED",
+        "width": 1080
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "Ooof here are the research tasks that give World Champ pika encounters this weekend:\n-# Cosmog-chu has some BRUTAL tasks while WCS pika is easy peasy rigged",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1542798773435105352",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1542796904570818620",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-28T07:31:31.402000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "SEP_CONTENT_G47IX.png",
+        "height": 1024,
+        "id": "1542042025174765608",
+        "placeholder": "1HkCFgIpIypveUWppq6XrpVLvI//7OU=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1542042025174765608/SEP_CONTENT_G47IX.png?SIGNATURE-REMOVED",
+        "size": 1482741,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1542042025174765608/SEP_CONTENT_G47IX.png?SIGNATURE-REMOVED",
+        "width": 820
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "September",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1542043340357242963",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1542042025648463892",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-26T05:29:42.121000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "image.png",
+        "height": 2671,
+        "id": "1541830612472561785",
+        "original_content_type": "image/png",
+        "placeholder": "EncGDgKnWaqWd/h3iIiIdlh4j4CeT4k=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1541830612472561785/image.png?SIGNATURE-REMOVED",
+        "size": 9648604,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1541830612472561785/image.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "[Twilight Trails](<https://pokemongo.com/seasons/twilight-trails>)",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1541832174238433433",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1541830612766425255",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-25T15:30:36.195000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "Untitled-1.png",
+        "height": 2137,
+        "id": "1537318700921659442",
+        "placeholder": "HicODwZHJ3hziYhgmZl5doh59NQZvYgP",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1537318700921659442/Untitled-1.png?SIGNATURE-REMOVED",
+        "size": 5818240,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1537318700921659442/Untitled-1.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "[10th Anniversary Celebration](<https://leekduck.com/events/10th-anniversary-celebration/>)\nTimed Research available to ALL trainers until __**September 6th**__.",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1537319938199523410",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1537318701404127382",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-13T04:40:35.290000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "image.png",
+        "height": 2671,
+        "id": "1536860491799076864",
+        "original_content_type": "image/png",
+        "placeholder": "G2UGHgClhVmHiPh3Z3aIbIhXlZD/xCk=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1536860491799076864/image.png?SIGNATURE-REMOVED",
+        "size": 6473549,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1536860491799076864/image.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "8067b7bc891364ff4a278c6a481c1909",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Mega Finale - September 5th & September 6th",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1536862180895363102",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1536860492398731264",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-11T22:21:37.444000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "WCS_2026_g47ix.png",
+        "height": 2671,
+        "id": "1534627486485315664",
+        "original_content_type": "image/png",
+        "placeholder": "m2UGDgJEd3Ynifhjd1dqqUiGNvT6udc=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1534627486485315664/WCS_2026_g47ix.png?SIGNATURE-REMOVED",
+        "size": 8971427,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1534627486485315664/WCS_2026_g47ix.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Pokemon XP and Worlds 2026, August 25-30",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1534628433844502529",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1534627486980378635",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-05T18:25:30.646000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "WW.png",
+        "height": 2137,
+        "id": "1534627334613893272",
+        "original_content_type": "image/png",
+        "placeholder": "H1QBHwTHNkmLeGaPaMfFVmuEB2eooGYD",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1534627334613893272/WW.png?SIGNATURE-REMOVED",
+        "size": 7653690,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1534627334613893272/WW.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Water Festival, August 18-24",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1534628394396946442",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1534627335058227331",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-05T18:25:21.241000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "emb_Hatch_event.png",
+        "height": 2137,
+        "id": "1534627231324966952",
+        "original_content_type": "image/png",
+        "placeholder": "k3gGFwIqaVZvc4iZaFiXR6mjt/PmDnoP",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1534627231324966952/emb_Hatch_event.png?SIGNATURE-REMOVED",
+        "size": 5400570,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1534627231324966952/emb_Hatch_event.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Fire and Ice Hatch Day, August 8",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1534628390886178958",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1534627231702319216",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-05T18:25:20.404000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "Arctit_embers_.png",
+        "height": 2135,
+        "id": "1533956777664712714",
+        "placeholder": "FbYFDwI0Sndqhahpd7iXCKiXJQKJeJAE",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1533956777664712714/Arctit_embers_.png?SIGNATURE-REMOVED",
+        "size": 7003621,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1533956777664712714/Arctit_embers_.png?SIGNATURE-REMOVED",
+        "width": 2135
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Arctic Embers, August 4-10",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1533959190177906901",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1533956778105110538",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-08-03T22:06:10.522000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/jpeg",
+        "filename": "HOGmB0JWgAAdzmE.jpg",
+        "height": 1200,
+        "id": "1530799199677976777",
+        "placeholder": "ZJUGDwLYuYp4dodfaDaIqGh2SfucqWEP",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1530799199677976777/HOGmB0JWgAAdzmE.jpg?SIGNATURE-REMOVED",
+        "size": 226272,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1530799199677976777/HOGmB0JWgAAdzmE.jpg?SIGNATURE-REMOVED",
+        "width": 1200
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "[Go Fest Make Up Event](<https://pokemongo.com/news/gofest2026-global-update>)\nSunday July 26th, 10am - 7pm",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1530800381666398347",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1530799199992680538",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-07-26T04:54:11.885000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "GO_Weekly_DD_20.png",
+        "height": 2670,
+        "id": "1528835810965585981",
+        "placeholder": "CveFDAIPWHC2OHm5pgj1TBANACCIKIiCAg==",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1528835810965585981/GO_Weekly_DD_20.png?SIGNATURE-REMOVED",
+        "size": 8939461,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1528835810965585981/GO_Weekly_DD_20.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "WEEKLY SCHEDULE",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1528836547451813984",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1528835811062186126",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-07-20T18:50:37.322000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "UU10.png",
+        "height": 2671,
+        "id": "1528579863579988070",
+        "original_content_type": "image/png",
+        "placeholder": "0yYCFgJyBbgpetmXhkx4emYYoZpQ+vk=",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1528579863579988070/UU10.png?SIGNATURE-REMOVED",
+        "size": 9005117,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1528579863579988070/UU10.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Ultra Unlock: 10th Anniversary, July 21-27",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1528582110410047634",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1528579863907401860",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-07-20T01:59:34.804000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "M_Starmie_RD.png",
+        "height": 2096,
+        "id": "1526765752634572960",
+        "original_content_type": "image/png",
+        "placeholder": "FjUGNwQIVRdwVIhhZ5h3WIiaePindnAH",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1526765752634572960/M_Starmie_RD.png?SIGNATURE-REMOVED",
+        "size": 7037968,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1526765752634572960/M_Starmie_RD.png?SIGNATURE-REMOVED",
+        "width": 2096
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Mega Starmie Raid Day, August 22",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1526767160695980084",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1526765753112596601",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-07-15T01:47:37.072000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "GMAX_Rillaboom.png",
+        "height": 2137,
+        "id": "1526765663966859405",
+        "original_content_type": "image/png",
+        "placeholder": "1sYGFwZJVUVgfHaEbPSXV3d0gPJ4WGAD",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1526765663966859405/GMAX_Rillaboom.png?SIGNATURE-REMOVED",
+        "size": 7542885,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1526765663966859405/GMAX_Rillaboom.png?SIGNATURE-REMOVED",
+        "width": 2137
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Gigantamax Rillaboom, August 1",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1526767160637001730",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1526765664302534737",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-07-15T01:47:37.058000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  },
+  {
+    "attachments": [
+      {
+        "content_scan_version": 4,
+        "content_type": "image/png",
+        "filename": "CD_AUG_26_G47IX.png",
+        "height": 2083,
+        "id": "1526125839421280336",
+        "original_content_type": "image/png",
+        "placeholder": "ThgGDwJmehhLmKiNh2iHWGeWsAPhSxAN",
+        "placeholder_version": 1,
+        "proxy_url": "https://media.discordapp.net/attachments/943822425026613308/1526125839421280336/CD_AUG_26_G47IX.png?SIGNATURE-REMOVED",
+        "size": 5052216,
+        "url": "https://cdn.discordapp.com/attachments/943822425026613308/1526125839421280336/CD_AUG_26_G47IX.png?SIGNATURE-REMOVED",
+        "width": 2083
+      }
+    ],
+    "author": {
+      "avatar": "b7cd934ba698410710d699628a5b5e5f",
+      "bot": true,
+      "clan": null,
+      "discriminator": "0000",
+      "flags": 0,
+      "global_name": null,
+      "id": "1409661329832149013",
+      "primary_guild": null,
+      "public_flags": 0,
+      "username": "Pokémon GO #info-and-infographics"
+    },
+    "channel_id": "111111111111111111",
+    "components": [],
+    "content": "# Nickit Community Day, August 16",
+    "edited_timestamp": null,
+    "embeds": [],
+    "flags": 2,
+    "id": "1526126920171917334",
+    "mention_everyone": false,
+    "mention_roles": [],
+    "mentions": [],
+    "message_reference": {
+      "channel_id": "111111111111111111",
+      "guild_id": "222222222222222222",
+      "message_id": "1526125839626928149",
+      "type": 0
+    },
+    "pinned": false,
+    "timestamp": "2026-07-13T07:23:31.836000+00:00",
+    "tts": false,
+    "type": 0,
+    "webhook_id": "333333333333333333"
+  }
+]
