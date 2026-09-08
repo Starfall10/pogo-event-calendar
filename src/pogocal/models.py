@@ -4,12 +4,25 @@ reads one, so this module imports nothing from the rest of the package."""
 from dataclasses import dataclass, field
 from datetime import datetime
 
-# Where an event's information came from, once reconciliation has run.
-SOURCES = ("leekduck", "vision", "merged")
+# Where an event's information came from.
+#
+#   "leekduck"  a feed event, with no Discord post matched to it
+#   "merged"    a feed event that also carries a link to the post announcing it
+#
+# There is no "discord" value, and there cannot be one: a post never creates an
+# event. Every event in this calendar comes from the feed, and a matched post
+# only adds a link to it. A value nothing can produce is vocabulary that misleads
+# whoever reads this next.
+#
+# "vision" was removed on 8 Sep 2026 with the withdrawal of paid API use.
+SOURCES = ("leekduck", "merged")
 
-# Whether the dates can be trusted. "low" means no Leek Duck record matched,
-# so the dates are the vision model's reading of an image and nothing has
-# confirmed them.
+# Whether the event's dates can be trusted.
+#
+# Nothing produces "low" any more. Every date comes from Leek Duck, so there is
+# no such thing here as an unverified date. Kept, always "high", because a
+# reconciliation that had to choose between several plausible posts may yet want
+# to record that it was not certain — see the note in reconcile.py.
 CONFIDENCE_LEVELS = ("high", "low")
 
 

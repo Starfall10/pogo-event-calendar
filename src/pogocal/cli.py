@@ -9,21 +9,30 @@ import argparse
 import logging
 import sys
 
-from pogocal import config, discord_src
+from pogocal import config, discord_src, reconcile
 from pogocal.ics_build import render
 from pogocal.leekduck import fetch_events
+from pogocal.models import Event
 
 log = logging.getLogger("pogocal")
 
 
-def build() -> int:
-    """Fetch the feed, render the calendar, write it to the published location."""
+def build(with_links: bool = False) -> int:
+    """Fetch the feed, render the calendar, write it to the published location.
+
+    With with_links, also read the Discord channel and attach a link to every
+    event a post announces. The links are recalculated from scratch each time
+    rather than stored, so they cannot drift from what the channel says.
+    """
     try:
         events = fetch_events()
     except RuntimeError as error:
         log.error("%s", error)
         log.error("calendar not rebuilt; the previous file is left in place")
         return 1
+
+    if with_links:
+        _attach_links(events)
 
     calendar = render(events)
 
@@ -44,9 +53,11 @@ def build() -> int:
     state = "unchanged" if calendar == previous else "updated"
     relative = config.OUTPUT_PATH.relative_to(config.REPO_ROOT)
     floating = sum(1 for e in events if e.is_local_time)
+    linked = sum(1 for e in events if e.discord_url)
     print(
         f"{relative}: {len(events)} events "
-        f"({floating} floating, {len(events) - floating} fixed), "
+        f"({floating} floating, {len(events) - floating} fixed, "
+        f"{linked} with an infographic), "
         f"{len(calendar)} bytes, {state}"
     )
     for event in sorted(events, key=lambda e: e.start.replace(tzinfo=None)):
@@ -76,6 +87,33 @@ def poll() -> int:
     return 0
 
 
+def _attach_links(events: list[Event]) -> None:
+    """Read the channel and attach infographic links. Never fatal.
+
+    A calendar with correct times and no links is worth publishing. One with
+    neither is not, so anything that goes wrong here is reported and stepped
+    over.
+    """
+    try:
+        guild_id = config.require("GUILD_ID")
+        channel_id = config.require("CHANNEL_ID")
+        messages = discord_src.fetch_messages(after=None)
+    except RuntimeError as error:
+        log.warning("%s", error)
+        log.warning("publishing without infographic links")
+        return
+
+    posts = []
+    for message in discord_src.oldest_first(messages):
+        try:
+            posts.append(discord_src.parse_message(message, guild_id, channel_id))
+        except (ValueError, TypeError, KeyError) as error:
+            log.warning("skipped message %s: %s",
+                        (message or {}).get("id", "<no id>"), error)
+
+    reconcile.attach(events, posts)
+
+
 def not_yet(command: str, milestone: str) -> int:
     print(
         f"pogocal {command} arrives at {milestone}. Only 'build' works today.",
@@ -90,9 +128,11 @@ def main(argv: list[str] | None = None) -> int:
         description="Publish Pokémon GO events as a subscribable calendar.",
     )
     subcommands = parser.add_subparsers(dest="command", required=True)
-    subcommands.add_parser("build", help=f"rebuild {config.OUTPUT_PATH.name}")
+    subcommands.add_parser(
+        "build", help=f"rebuild {config.OUTPUT_PATH.name} from the feed alone")
     subcommands.add_parser("poll", help="read new posts from the Discord channel")
-    subcommands.add_parser("run", help="poll then build (M5)")
+    subcommands.add_parser(
+        "run", help="rebuild with infographic links (what the Action runs)")
 
     args = parser.parse_args(argv)
     # A person is watching this now; at M5 nobody is. Either way the warnings
@@ -103,7 +143,7 @@ def main(argv: list[str] | None = None) -> int:
         return build()
     if args.command == "poll":
         return poll()
-    return not_yet("run", "M5")
+    return build(with_links=True)
 
 
 if __name__ == "__main__":

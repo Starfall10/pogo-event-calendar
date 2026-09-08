@@ -84,6 +84,41 @@ POLL_LIMIT = 100
 CURSOR_SEED_MESSAGE_ID = os.getenv("CURSOR_SEED_MESSAGE_ID", "").strip() or None
 
 
+# --- matching a Discord post to a Leek Duck event ----------------------------
+#
+# Measured against tests/fixtures/ on 8 Sep 2026: 25 real posts, 55 real feed
+# events. The numbers below come from that run, not from judgement.
+
+# How close two names must be, by difflib.SequenceMatcher on the slugs.
+#
+# In the measurement the closest correct match scored 0.62 — "Harvest Festival"
+# against the feed's "Harvest Festival 2026: Applin Picking" — and the highest
+# scoring wrong candidate that survived the date filter scored 0.42. Raising
+# this to 0.65 would silently drop that event's link.
+NAME_SIMILARITY_THRESHOLD = 0.6
+
+# How far apart the date in the post and the event's start may be.
+#
+# The date comes from the post's text, not from when it was posted: events are
+# announced 0 to 38 days ahead, so the posting time says almost nothing about
+# when the event runs. Widening this to 2 days changed no result, so it stays
+# at the tightest value that works.
+#
+# This filter, not the name score, is what prevents wrong matches. Two examples
+# from the measurement, both of which clear the similarity threshold on name
+# alone and are both wrong:
+#
+#   "Nickit Community Day"  -> "October Community Day"  0.78, 55 days apart
+#   "Mega Starmie Raid Day" -> "Super Mega Raid Day"    0.65, 70 days apart
+MATCH_DATE_WINDOW_DAYS = 1
+
+# Dropped from both names before comparing. They appear in almost every event
+# name on one side or the other and carry no distinguishing information, so
+# leaving them in inflates every score equally and flattens the gap between a
+# right answer and a wrong one.
+SLUG_STOPWORDS = ("pokemon", "pokémon", "go")
+
+
 def require(name: str) -> str:
     """Fetch a required setting, or fail with the name of what is missing.
 
