@@ -64,8 +64,9 @@ HTTP_RETRIES = 3
 # momentary failure.
 HTTP_BACKOFF = 1.0
 
-# Where the record of what has already been processed lives. Committed, so it
-# survives between runs of a job that keeps no machine of its own.
+# Where `pogocal poll` records the last message it reported. Local and
+# gitignored: the published calendar does not depend on it, because links are
+# recomputed from the channel on every run rather than stored.
 STATE_DIR = REPO_ROOT / "state"
 CURSOR_PATH = STATE_DIR / "cursor.json"
 

@@ -1,0 +1,81 @@
+# Rebuilds the calendar every hour and commits it when it has changed.
+#
+# The whole job is one command. `pogocal run` fetches the Leek Duck feed, reads
+# the Discord channel, matches posts to events, and writes docs/pogo.ics, which
+# GitHub Pages serves. Nothing here costs anything: Actions and Pages are free
+# on a public repository, and neither data source charges.
+#
+# Two things make this safe to run unattended:
+#
+#   * The output is byte-identical when nothing has changed, so the commit step
+#     below almost always finds nothing to do. Without that this would commit
+#     24 times a day and bury real changes in noise.
+#   * A missing token or an unreachable Discord costs the infographic links for
+#     that run, not the calendar. Only a feed failure stops the rebuild, and
+#     then the previously published file is left in place.
+
+name: Update calendar
+
+on:
+  schedule:
+    # Hourly, on the hour, UTC. GitHub's scheduler is best-effort and often
+    # runs several minutes late; at this cadence that does not matter.
+    - cron: "0 * * * *"
+  # So it can be triggered by hand from the Actions tab rather than waiting an
+  # hour to find out whether a change works.
+  workflow_dispatch:
+
+# The job commits to the repository, which needs more than the default
+# read-only token.
+permissions:
+  contents: write
+
+# Never let two runs commit at once. A scheduled run overlapping a manual one
+# would race on the push.
+concurrency:
+  group: update-calendar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10
+        with:
+          # uv installs the Python version pyproject.toml asks for, so there is
+          # no separate setup-python step.
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
+
+      - name: Rebuild the calendar
+        env:
+          # The only secret. The two IDs below are not secret - both appear in
+          # every link the calendar publishes.
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          GUILD_ID: "772532010555670530"
+          CHANNEL_ID: "1173052217050267679"
+        run: uv run pogocal run
+
+      - name: Commit, but only if the calendar changed
+        run: |
+          if git diff --quiet -- docs/pogo.ics; then
+            echo "calendar unchanged - nothing to commit"
+            exit 0
+          fi
+
+          echo "calendar changed:"
+          git diff --stat -- docs/pogo.ics
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/pogo.ics
+          git commit -m "Update calendar
+
+          Rebuilt from the Leek Duck feed and the Discord channel by the
+          scheduled job. Committing is what keeps the schedule alive: GitHub
+          disables cron on repositories with 60 days of no activity."
+          git push

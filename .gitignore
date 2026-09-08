@@ -10,3 +10,9 @@ __pycache__/
 # Local working memory: plans, progress logs, explanations.
 # The skills in .claude/skills/ are committed; what they produce is not.
 .claude/plans/
+
+# The cursor is local. Nothing about the published calendar depends on it:
+# links are recomputed from the channel on every run, so the scheduled job
+# never reads or writes state. Only `pogocal poll` uses it, to report what is
+# new on the machine it is run from — which is a per-machine question.
+state/
