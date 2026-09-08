@@ -60,7 +60,35 @@ jobs:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
           GUILD_ID: "772532010555670530"
           CHANNEL_ID: "1173052217050267679"
-        run: uv run pogocal run
+        # Kept so the summary step below can show what this run saw. tee sends
+        # it to both the live log and the file; PIPESTATUS is the exit code of
+        # pogocal rather than of tee, which always succeeds.
+        run: |
+          set -o pipefail
+          uv run pogocal run 2>&1 | tee /tmp/run.log
+
+      # Written whether the rebuild worked or not, so a failed run says why on
+      # its own summary page instead of only in the raw log.
+      - name: Say what this run saw
+        if: always()
+        run: |
+          {
+            if [ -f /tmp/run.log ]; then
+              grep -E "^docs/pogo.ics:" /tmp/run.log || echo "the rebuild did not get as far as writing a calendar"
+              echo
+              grep -E "posts matched an event|feed returned" /tmp/run.log || true
+              echo
+              echo "<details><summary>Full output</summary>"
+              echo
+              echo '```'
+              cat /tmp/run.log
+              echo '```'
+              echo
+              echo "</details>"
+            else
+              echo "The rebuild step produced no output. Check the log above."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit, but only if the calendar changed
         run: |
