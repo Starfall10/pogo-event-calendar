@@ -5,27 +5,670 @@ X-WR-CALNAME:Pokémon GO
 REFRESH-INTERVAL;VALUE=DURATION:PT1440M
 X-PUBLISHED-TTL:PT1440M
 BEGIN:VEVENT
-SUMMARY:Sample Raid Day
+SUMMARY:Forever Forward
+DTSTART:20260602T100000
+DTEND:20260908T100000
+DTSTAMP:20260101T000000Z
+UID:season-23-forever-forward@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Season\n\n📄 Details: https://leekduck.com/events/season-23-
+ forever-forward/
+URL:https://leekduck.com/events/season-23-forever-forward/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:LEGO Stores and Pokémon GO
+DTSTART:20260803T100000
+DTEND:20260930T235900
+DTSTAMP:20260101T000000Z
+UID:lego-pokemon-go-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/lego-pokemo
+ n-go-2026/
+URL:https://leekduck.com/events/lego-pokemon-go-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:GO Pass: August
+DTSTART:20260804T100000
+DTEND:20260908T100000
+DTSTAMP:20260101T000000Z
+UID:go-pass-august-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-a
+ ugust-2026/
+URL:https://leekduck.com/events/go-pass-august-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shadow Giratina (Altered Forme) in Shadow Raids
+DTSTART:20260805T060000
+DTEND:20260908T220000
+DTSTAMP:20260101T000000Z
+UID:shadow-giratina-altered-in-shadow-raids-august-2026@pogo-event-calenda
+ r
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
+ ow-giratina-altered-in-shadow-raids-august-2026/
+URL:https://leekduck.com/events/shadow-giratina-altered-in-shadow-raids-au
+ gust-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Gyarados in Mega Raids
+DTSTART:20260826T060000
+DTEND:20260908T220000
+DTSTAMP:20260101T000000Z
+UID:mega-gyarados-in-mega-raids-august-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -gyarados-in-mega-raids-august-2026/
+URL:https://leekduck.com/events/mega-gyarados-in-mega-raids-august-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Regirock\, Regice\, and Registeel in 5-star Raid Battles
+DTSTART:20260826T060000
+DTEND:20260908T220000
+DTSTAMP:20260101T000000Z
+UID:regirock-regice-registeel-in-5-star-raid-battles-august-2026@pogo-even
+ t-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/regi
+ rock-regice-registeel-in-5-star-raid-battles-august-2026/
+URL:https://leekduck.com/events/regirock-regice-registeel-in-5-star-raid-b
+ attles-august-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Beedrill in Mega Raids
+DTSTART:20260908T060000
+DTEND:20260915T220000
+DTSTAMP:20260101T000000Z
+UID:mega-beedrill-in-mega-raids-september-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -beedrill-in-mega-raids-september-2026/
+URL:https://leekduck.com/events/mega-beedrill-in-mega-raids-september-2026
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:GO Pass: September
+DTSTART:20260908T100000
+DTEND:20261006T100000
+DTSTAMP:20260101T000000Z
+UID:go-pass-september-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-s
+ eptember-2026/
+URL:https://leekduck.com/events/go-pass-september-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Squads
+DTSTART:20260908T100000
+DTEND:20260914T200000
+DTSTAMP:20260101T000000Z
+UID:mega-squads@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/mega-squads
+ /
+URL:https://leekduck.com/events/mega-squads/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Twilight Trails
+DTSTART:20260908T100000
+DTEND:20261201T100000
+DTSTAMP:20260101T000000Z
+UID:season-24-twilight-trails@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Season\n\n📄 Details: https://leekduck.com/events/season-24-
+ twilight-trails/
+URL:https://leekduck.com/events/season-24-twilight-trails/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
+ er League: Mega Edition | Twilight Trails
+DTSTART:20260908T200000Z
+DTEND:20260915T200000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-editio
+ n_master-league-mega-edition-split-1@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_ma
+ ster-league-mega-edition-split-1/
+URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
+ ion_ultra-league-mega-edition_master-league-mega-edition-split-1/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shadow Thundurus (Incarnate Forme) in Shadow Raids
+DTSTART:20260909T060000
+DTEND:20261006T220000
+DTSTAMP:20260101T000000Z
+UID:shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026@pogo-e
+ vent-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
+ ow-thundurus-incarnate-forme-in-shadow-raids-september-2026/
+URL:https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow
+ -raids-september-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Zacian (Hero of Many Battles) in 5-star Raid Battles
+DTSTART:20260909T060000
+DTEND:20260915T220000
+DTSTAMP:20260101T000000Z
+UID:zacian-hero-of-many-battles-in-5-star-raid-battles-september-2026@pogo
+ -event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/zaci
+ an-hero-of-many-battles-in-5-star-raid-battles-september-2026/
+URL:https://leekduck.com/events/zacian-hero-of-many-battles-in-5-star-raid
+ -battles-september-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Zacian (Hero of Many Battles) Raid Hour
+DTSTART:20260909T180000
+DTEND:20260909T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20260909@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20260909/
+URL:https://leekduck.com/events/raidhour20260909/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Weedle\, Kakuna\, and Beedrill Spotlight Hour
+DTSTART:20260910T180000
+DTEND:20260910T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-09-10@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-09-10/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-09-10/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Houndoom in Mega Raids
+DTSTART:20260911T060000
+DTEND:20260915T220000
+DTSTAMP:20260101T000000Z
+UID:mega-houndoom-in-mega-raids-september-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -houndoom-in-mega-raids-september-2026/
+URL:https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Gible Community Day Classic
+DTSTART:20260912T140000
+DTEND:20260912T170000
+DTSTAMP:20260101T000000Z
+UID:september-communitydayclassic2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/sep
+ tember-communitydayclassic2026/
+URL:https://leekduck.com/events/september-communitydayclassic2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Houndour and Houndoom Spotlight Hour
+DTSTART:20260913T180000
+DTEND:20260913T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-09-13@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-09-13/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-09-13/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dynamax Rhyhorn during Max Monday
+DTSTART:20260914T060000
+DTEND:20260914T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-09-14@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-09-14/
+URL:https://leekduck.com/events/max-mondays-2026-09-14/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League\, Ultra League: Mega Edition\, and Willpower Cup: Gre
+ at League Edition | Twilight Trails
+DTSTART:20260915T200000Z
+DTEND:20260922T200000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_great-league_ultra-league-mega-edition_willpower-c
+ up-great-league-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_great-league_ultra-league-mega-edition_willpower-cup-g
+ reat-league-edition/
+URL:https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-lea
+ gue-mega-edition_willpower-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Venusaur in Mega Raids
+DTSTART:20260916T060000
+DTEND:20260922T220000
+DTSTAMP:20260101T000000Z
+UID:mega-venusaur-in-mega-raids-september-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -venusaur-in-mega-raids-september-2026/
+URL:https://leekduck.com/events/mega-venusaur-in-mega-raids-september-2026
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Zamazenta (Hero of Many Battles) in 5-star Raid Battles
+DTSTART:20260916T060000
+DTEND:20260922T220000
+DTSTAMP:20260101T000000Z
+UID:zamazenta-hero-of-many-battles-in-5-star-raid-battles-september-2026@p
+ ogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/zama
+ zenta-hero-of-many-battles-in-5-star-raid-battles-september-2026/
+URL:https://leekduck.com/events/zamazenta-hero-of-many-battles-in-5-star-r
+ aid-battles-september-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pokémon Horizons: The Series Celebration Event
+DTSTART:20260916T100000
+DTEND:20260922T200000
+DTSTAMP:20260101T000000Z
+UID:pokemon-horizons-the-series-celebration-event-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-hor
+ izons-the-series-celebration-event-2026/
+URL:https://leekduck.com/events/pokemon-horizons-the-series-celebration-ev
+ ent-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Zamazenta (Hero of Many Battles) Raid Hour
+DTSTART:20260916T180000
+DTEND:20260916T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20260916@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20260916/
+URL:https://leekduck.com/events/raidhour20260916/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mystery Pokémon Spotlight Hour
+DTSTART:20260917T180000
+DTEND:20260917T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-09-17@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-09-17/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-09-17/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Staraptor Super Mega Raid Day
 DTSTART:20260919T140000
 DTEND:20260919T170000
 DTSTAMP:20260101T000000Z
-UID:sample-raid-day-2026-09-19@pogo-event-calendar
+UID:staraptor-super-mega-raid-day-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:This is a placeholder event from M0\, not a real Raid Day.\nIt
-  runs 2-5pm local time\, which is what a floating event means:\nthe same c
- lock time wherever you are.\n\n📄 Details: https://leekduck.com/events/
-URL:https://leekduck.com/events/
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/starapto
+ r-super-mega-raid-day-2026/
+URL:https://leekduck.com/events/staraptor-super-mega-raid-day-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sample Multi-Day Event
+SUMMARY:Dynamax Articuno\, Zapdos\, and Moltres during Max Monday
+DTSTART:20260921T060000
+DTEND:20260921T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-09-21@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-09-21/
+URL:https://leekduck.com/events/max-mondays-2026-09-21/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ultra League\, Master League: Mega Edition\, and Retro Cup: Great 
+ League Edition | Twilight Trails
+DTSTART:20260922T200000Z
+DTEND:20260929T200000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_ultra-league_master-league-mega-edition_retro-cup-
+ great-league-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_ultra-league_master-league-mega-edition_retro-cup-grea
+ t-league-edition/
+URL:https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-le
+ ague-mega-edition_retro-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Malamar in Mega Raids
+DTSTART:20260923T060000
+DTEND:20260929T220000
+DTSTAMP:20260101T000000Z
+UID:mega-malamar-in-mega-raids-september-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -malamar-in-mega-raids-september-2026/
+URL:https://leekduck.com/events/mega-malamar-in-mega-raids-september-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Xurkitree\, Pheromosa\, and Buzzwole in 5-star Raid Battles
+DTSTART:20260923T060000
+DTEND:20260929T220000
+DTSTAMP:20260101T000000Z
+UID:xurkitree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026@pog
+ o-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/xurk
+ itree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026/
+URL:https://leekduck.com/events/xurkitree-pheromosa-buzzwole-in-5-star-rai
+ d-battles-september-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Xurkitree\, Pheromosa\, and Buzzwole Raid Hour
+DTSTART:20260923T180000
+DTEND:20260923T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20260923@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20260923/
+URL:https://leekduck.com/events/raidhour20260923/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rattata Spotlight Hour
+DTSTART:20260924T180000
+DTEND:20260924T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-09-24@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-09-24/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-09-24/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Phantump Catch Mastery
+DTSTART:20260926T100000
+DTEND:20260926T200000
+DTSTAMP:20260101T000000Z
+UID:catch-mastery-phantump-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/catch-maste
+ ry-phantump-2026/
+URL:https://leekduck.com/events/catch-mastery-phantump-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dynamax Sobble during Max Monday
+DTSTART:20260928T060000
+DTEND:20260928T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-09-28@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-09-28/
+URL:https://leekduck.com/events/max-mondays-2026-09-28/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Harvest Festival 2026: Applin Picking
 DTSTART:20260929T100000
 DTEND:20261005T200000
 DTSTAMP:20260101T000000Z
-UID:sample-multi-day-event-2026-09-29@pogo-event-calendar
+UID:harvest-festival-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:This is a placeholder event from M0\, not a real event.\nIt st
- arts at 10am on 29 September and ends at 8pm on 5 October.\n\n📄 Details
- : https://leekduck.com/events/
-URL:https://leekduck.com/events/
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/harvest-fes
+ tival-2026/
+URL:https://leekduck.com/events/harvest-festival-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Master League and Mega Color Cup: Great League Edition | Twilight 
+ Trails
+DTSTART:20260929T200000Z
+DTEND:20261006T200000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_master-league_mega-color-cup-great-league-edition@
+ pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_master-league_mega-color-cup-great-league-edition/
+URL:https://leekduck.com/events/gbl-twilight-trails_master-league_mega-col
+ or-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Victreebel in Mega Raids
+DTSTART:20260930T060000
+DTEND:20261006T220000
+DTSTAMP:20260101T000000Z
+UID:mega-victreebel-in-mega-raids-september-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -victreebel-in-mega-raids-september-2026/
+URL:https://leekduck.com/events/mega-victreebel-in-mega-raids-september-20
+ 26/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Xerneas in 5-star Raid Battles
+DTSTART:20260930T060000
+DTEND:20261006T220000
+DTSTAMP:20260101T000000Z
+UID:xerneas-in-5-star-raid-battles-september-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/xern
+ eas-in-5-star-raid-battles-september-2026/
+URL:https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2
+ 026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Xerneas Raid Hour
+DTSTART:20260930T180000
+DTEND:20260930T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20260930@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20260930/
+URL:https://leekduck.com/events/raidhour20260930/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Harvest Festival: Taken Over
+DTSTART:20261002T000000
+DTEND:20261005T200000
+DTSTAMP:20260101T000000Z
+UID:harvest-festival-taken-over-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/harvest-fes
+ tival-taken-over-2026/
+URL:https://leekduck.com/events/harvest-festival-taken-over-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Max Battle Day
+DTSTART:20261003T140000
+DTEND:20261003T170000
+DTSTAMP:20260101T000000Z
+UID:max-battle-day-october-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
+ attle-day-october-2026/
+URL:https://leekduck.com/events/max-battle-day-october-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
+ er League: Mega Edition | Twilight Trails
+DTSTART:20261006T200000Z
+DTEND:20261013T200000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-editio
+ n_master-league-mega-edition-split-2@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_ma
+ ster-league-mega-edition-split-2/
+URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
+ ion_ultra-league-mega-edition_master-league-mega-edition-split-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:October Community Day
+DTSTART:20261010T140000
+DTEND:20261010T170000
+DTSTAMP:20260101T000000Z
+UID:october-communityday2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/oct
+ ober-communityday2026/
+URL:https://leekduck.com/events/october-communityday2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League\, Ultra League: Mega Edition\, and Little Cup | Twili
+ ght Trails
+DTSTART:20261013T200000Z
+DTEND:20261020T200000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_great-league_ultra-league-mega-edition_little-cup@
+ pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_great-league_ultra-league-mega-edition_little-cup/
+URL:https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-lea
+ gue-mega-edition_little-cup/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hatch Day
+DTSTART:20261017T110000
+DTEND:20261017T170000
+DTSTAMP:20260101T000000Z
+UID:hatch-day-october-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/hatch-day-o
+ ctober-2026/
+URL:https://leekduck.com/events/hatch-day-october-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ultra League\, Master League: Mega Edition\, and Fantasy Cup: Grea
+ t League Edition | Twilight Trails
+DTSTART:20261020T200000Z
+DTEND:20261027T200000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_ultra-league_master-league-mega-edition_fantasy-cu
+ p-great-league-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_ultra-league_master-league-mega-edition_fantasy-cup-gr
+ eat-league-edition/
+URL:https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-le
+ ague-mega-edition_fantasy-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Max Battle Day
+DTSTART:20261024T140000
+DTEND:20261024T170000
+DTSTAMP:20260101T000000Z
+UID:max-battle-day-october-24-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
+ attle-day-october-24-2026/
+URL:https://leekduck.com/events/max-battle-day-october-24-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Master League and Mega Halloween Cup: Great League Edition | Twili
+ ght Trails
+DTSTART:20261027T210000Z
+DTEND:20261103T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edit
+ ion@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edition/
+URL:https://leekduck.com/events/gbl-twilight-trails_master-league_mega-hal
+ loween-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Super Mega Raid Day
+DTSTART:20261031T140000
+DTEND:20261031T170000
+DTSTAMP:20260101T000000Z
+UID:super-mega-raid-day-october-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
+ ga-raid-day-october-2026/
+URL:https://leekduck.com/events/super-mega-raid-day-october-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
+ er League: Mega Edition | Twilight Trails
+DTSTART:20261103T210000Z
+DTEND:20261110T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-editio
+ n_master-league-mega-edition-split-3@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_ma
+ ster-league-mega-edition-split-3/
+URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
+ ion_ultra-league-mega-edition_master-league-mega-edition-split-3/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League\, Ultra League: Mega Edition\, and 2026 GO LAIC Cup |
+  Twilight Trails
+DTSTART:20261110T210000Z
+DTEND:20261117T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-lai
+ c-cup@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-laic-cu
+ p/
+URL:https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-lea
+ gue-mega-edition_2026-go-laic-cup/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ultra League\, Master League: Mega Edition\, and 2026 GO LAIC Cup 
+ | Twilight Trails
+DTSTART:20261118T210000Z
+DTEND:20261125T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-la
+ ic-cup@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-laic-c
+ up/
+URL:https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-le
+ ague-mega-edition_2026-go-laic-cup/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:November Community Day
+DTSTART:20261121T140000
+DTEND:20261121T170000
+DTSTAMP:20260101T000000Z
+UID:november-communityday2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/nov
+ ember-communityday2026/
+URL:https://leekduck.com/events/november-communityday2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Master League and Mega Catch Cup: Great League Edition | Twilight 
+ Trails
+DTSTART:20261124T210000Z
+DTEND:20261201T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition@
+ pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition/
+URL:https://leekduck.com/events/gbl-twilight-trails_master-league_mega-cat
+ ch-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Super Mega Raid Day
+DTSTART:20261128T140000
+DTEND:20261128T170000
+DTSTAMP:20260101T000000Z
+UID:super-mega-raid-day-november-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
+ ga-raid-day-november-2026/
+URL:https://leekduck.com/events/super-mega-raid-day-november-2026/
 END:VEVENT
 END:VCALENDAR

@@ -30,3 +30,24 @@ REFRESH_INTERVAL = "PT1440M"
 # Appended to each event's own identifier to build the ICS UID. It makes the
 # identifier unique beyond this calendar, which is what UID is for.
 UID_DOMAIN = "pogo-event-calendar"
+
+# The Leek Duck event feed, published by ScrapedDuck. Around 55 events at a
+# time; past events drop off, so anything worth keeping has to be kept here.
+LEEKDUCK_FEED_URL = (
+    "https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/events.min.json"
+)
+
+# Seconds to wait on a network call before giving up. Without a timeout a
+# hung connection hangs the whole run, and the run is a scheduled job nobody
+# is watching.
+HTTP_TIMEOUT = 30.0
+
+# How many times to retry a failed fetch before letting the error out. The
+# feed is a static file on somebody else's server; a single failure is far
+# more likely to be a blip than a real outage.
+HTTP_RETRIES = 3
+
+# Seconds to wait after a failed attempt, doubling each time: 1s, then 2s,
+# then 4s. Short enough not to stall an hourly job, long enough to outlast a
+# momentary failure.
+HTTP_BACKOFF = 1.0

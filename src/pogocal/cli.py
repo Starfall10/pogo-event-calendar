@@ -6,16 +6,25 @@ explains itself rather than producing an argument error.
 """
 
 import argparse
+import logging
 import sys
 
 from pogocal import config
 from pogocal.ics_build import render
-from pogocal.sample_events import SAMPLE_EVENTS
+from pogocal.leekduck import fetch_events
+
+log = logging.getLogger("pogocal")
 
 
 def build() -> int:
-    """Render the calendar and write it to the published location."""
-    events = SAMPLE_EVENTS
+    """Fetch the feed, render the calendar, write it to the published location."""
+    try:
+        events = fetch_events()
+    except RuntimeError as error:
+        log.error("%s", error)
+        log.error("calendar not rebuilt; the previous file is left in place")
+        return 1
+
     calendar = render(events)
 
     previous = None
@@ -34,8 +43,13 @@ def build() -> int:
 
     state = "unchanged" if calendar == previous else "updated"
     relative = config.OUTPUT_PATH.relative_to(config.REPO_ROOT)
-    print(f"{relative}: {len(events)} events, {len(calendar)} bytes, {state}")
-    for event in sorted(events, key=lambda e: e.start):
+    floating = sum(1 for e in events if e.is_local_time)
+    print(
+        f"{relative}: {len(events)} events "
+        f"({floating} floating, {len(events) - floating} fixed), "
+        f"{len(calendar)} bytes, {state}"
+    )
+    for event in sorted(events, key=lambda e: e.start.replace(tzinfo=None)):
         marker = "floating" if event.is_local_time else "fixed"
         print(f"  {event.start:%Y-%m-%d %H:%M}  {marker:8}  {event.name}")
     return 0
@@ -60,6 +74,10 @@ def main(argv: list[str] | None = None) -> int:
     subcommands.add_parser("run", help="poll then build (M5)")
 
     args = parser.parse_args(argv)
+    # A person is watching this now; at M5 nobody is. Either way the warnings
+    # from a skipped feed record have to reach somewhere they can be read.
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+
     if args.command == "build":
         return build()
     if args.command == "poll":
