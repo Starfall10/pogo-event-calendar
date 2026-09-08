@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Calendar files are served to clients exactly as stored, and RFC 5545
+# requires CRLF line endings. Normalisation would strip them from the
+# published file while leaving the working copy correct, so this content
+# is stored byte for byte.
+*.ics -text

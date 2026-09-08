@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//pogo-event-calendar//pogocal//EN
+X-WR-CALNAME:Pokémon GO
+REFRESH-INTERVAL;VALUE=DURATION:PT1440M
+X-PUBLISHED-TTL:PT1440M
+BEGIN:VEVENT
+SUMMARY:Sample Raid Day
+DTSTART:20260919T140000
+DTEND:20260919T170000
+DTSTAMP:20260101T000000Z
+UID:sample-raid-day-2026-09-19@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:This is a placeholder event from M0\, not a real Raid Day.\nIt
+  runs 2-5pm local time\, which is what a floating event means:\nthe same c
+ lock time wherever you are.\n\n📄 Details: https://leekduck.com/events/
+URL:https://leekduck.com/events/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sample Multi-Day Event
+DTSTART:20260929T100000
+DTEND:20261005T200000
+DTSTAMP:20260101T000000Z
+UID:sample-multi-day-event-2026-09-29@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:This is a placeholder event from M0\, not a real event.\nIt st
+ arts at 10am on 29 September and ends at 8pm on 5 October.\n\n📄 Details
+ : https://leekduck.com/events/
+URL:https://leekduck.com/events/
+END:VEVENT
+END:VCALENDAR
