@@ -6,6 +6,34 @@
 
 ---
 
+## ⛔ Constraint added 8 September 2026 — this project costs nothing to run
+
+**Read this before §1. It withdraws part of the plan below.**
+
+The owner set a hard constraint after M1 landed: nothing in this project may
+spend money, at any point, ever. Not a budget to manage — a line not to cross.
+
+Everything else in this document stands. What it removes:
+
+- **M3, vision extraction, is withdrawn.** It assumed one paid Anthropic API
+  call per Discord post. There is no free substitute for reading an image, so
+  the capability goes rather than being replaced.
+- **§4.5 (Anthropic API key), the `anthropic` library in §7, and the running
+  cost in §9 no longer apply.**
+- **M4 changes shape** — see §6a. It still matches Discord posts to Leek Duck
+  events, but on text and date rather than on an image extraction.
+
+The original reasoning below is left intact rather than deleted. It explains
+why vision was chosen and what it was for, which is worth keeping now that it
+is not being used — and the matching rules in §5 survive almost unchanged.
+
+**What the project still delivers with no cost:** every event with correct
+dates and times from Leek Duck, richer descriptions from the feed's own
+`extraData`, and a permanent link to the Discord infographic post on every
+event that can be matched.
+
+---
+
 ## 0. What this document is
 
 A build plan for a system that turns Pokémon GO event announcements into
@@ -40,7 +68,7 @@ post, so the infographic is one tap away.
 | Feature | In v1 |
 |---|---|
 | Reads new posts from the followed channel | ✅ |
-| Extracts event details from the infographic | ✅ |
+| ~~Extracts event details from the infographic~~ | ⛔ withdrawn — needs a paid API |
 | Cross-checks dates against Leek Duck | ✅ |
 | Publishes a subscribable `.ics` calendar | ✅ |
 | Link to the original Discord post in each event | ✅ |
@@ -180,12 +208,14 @@ silently return nothing.
    Then right-click → Copy ID on: your server (guild), the news channel, and
    any one existing post in it (you'll use that as the starting point so you
    don't reprocess years of history).
-5. **Anthropic API key** from console.anthropic.com for the vision calls.
+5. ~~**Anthropic API key** from console.anthropic.com for the vision calls.~~
+   **Not needed.** Withdrawn by the constraint at the top of this document.
 6. **Create the repo, public.** Public is required for free GitHub Pages. The
    only thing in it is public event info, so this is fine — but be aware the
    calendar URL is guessable, and never commit a token.
 7. **Local env:** Python 3.12+, `uv` or a venv, and a `.env` holding
-   `DISCORD_BOT_TOKEN`, `ANTHROPIC_API_KEY`, `GUILD_ID`, `CHANNEL_ID`.
+   `DISCORD_BOT_TOKEN`, `GUILD_ID`, `CHANNEL_ID`. There is no
+   `ANTHROPIC_API_KEY` — see the constraint at the top of this document.
    `.env` goes in `.gitignore` on line one.
 
 ---
@@ -406,8 +436,12 @@ Discord link for each. Click one — it opens the right post.
 
 ---
 
-### M3 — Read the infographics
-*Est. 1 evening. You'll learn: vision prompting, structured output.*
+### ⛔ M3 — Read the infographics — WITHDRAWN 8 Sep 2026
+*Superseded by §6a. Kept for its reasoning; do not build it.*
+
+**This milestone requires a paid API and will not be built.** The prompt design
+below is still the best record of what the infographics contain and what a
+reader should refuse to guess at, which is why it stays in the document.
 
 1. `vision.py`: send the image to the Anthropic API asking for strict JSON.
    Use **tool-use / structured output** rather than "please reply with JSON" —
@@ -447,8 +481,89 @@ say — that's the correct answer, and M4 is what resolves it).
 
 ---
 
-### M4 — Merge the two sources
-*Est. 1 evening. You'll learn: fuzzy matching, and restraint.*
+## 6a. The free path, replacing M3 — added 8 September 2026
+
+M3 is withdrawn. This is what takes its place, and it costs nothing.
+
+### What is actually lost
+
+Only what appears **on the image and nowhere else**: the bonus lists, ticket
+prices and perks, shiny-odds notes, and the wording of the graphic. That is
+genuinely a loss and it should be stated rather than glossed over.
+
+What is **not** lost: every event, with correct dates and times, and — this is
+the part people assume needs the image — **the link to the infographic post
+itself**. Getting that link needs the post identified, not read.
+
+### The insight this rests on
+
+The build plan assumed the only way to know which event a Discord post is about
+was to read its picture. That is not the only way. Every crossposted message
+carries, for free:
+
+- a **timestamp**, which places it within a day or two of the event it announces
+- **text** — the message content, and for a crossposted news item usually an
+  embed title and description
+
+§5's matching rule already filters candidates by date and then compares names.
+It never needed the *image* — it needed a **name and a date**, and both arrive
+in the message itself.
+
+**What is unknown until M2:** how much text these particular crossposts carry.
+If the embeds have titles, matching is straightforward. If a post is nothing
+but an image with no text at all, that post cannot be matched and gets no link.
+**Do not design past this point until M2 has printed real message JSON.** That
+is a free thing to find out and it decides the rest.
+
+### The revised milestones
+
+**M3 (revised) — match posts to events, no image reading.**
+
+- Take the message text — embed title first, then embed description, then the
+  message content — as the name to match on.
+- Filter Leek Duck candidates to those starting within a few days of the post
+  timestamp, then compare names with `difflib.SequenceMatcher`, exactly as §5
+  describes.
+- On a match, attach `discord_url` to that event. Nothing else changes: dates,
+  times and description all still come from the feed.
+- On no match, log it and move on. An unmatched post is a missing link, not a
+  broken calendar.
+- `SOURCES` in `models.py` becomes `("leekduck", "discord", "merged")` —
+  `"vision"` is removed, since nothing can produce it.
+
+**M4 (revised) — richer descriptions from `extraData`.**
+
+The feed already carries a per-event `extraData` object, present on all 55
+events, with shapes including `generic`, `communityday`, `raidbattles` and
+`spotlight`. It holds spawns, featured Pokémon and bonus information. It is
+free, it is already downloaded, and it is machine-readable rather than read off
+a picture.
+
+This does not fully replace the infographic's bonus list, and it should not be
+described as if it does. It is the free half of it.
+
+**M5 is unchanged**, and gets simpler: with no per-post API call, the run has
+one less thing that can fail and no cost to bound.
+
+### The `⚠️` marker
+
+Under the original plan it meant "dates came from an image and nothing verified
+them". Nothing produces unverified dates now — every date comes from Leek Duck.
+The marker is therefore unnecessary, and `confidence` can stay on the model,
+always `"high"`, until something needs it.
+
+### If the constraint is ever lifted
+
+M3 as originally written is still in this document, above. Nothing built on the
+free path blocks it: matching would gain a second signal rather than being
+replaced, and `SOURCES` would regain `"vision"`. That is the only reason the
+withdrawn milestone is kept rather than deleted.
+
+---
+
+### M4 — Merge the two sources — SEE §6a
+*The matching rules here still hold. What is being matched has changed: a
+Discord post's text and timestamp, not a vision extraction. Read §6a first.*
 
 1. `reconcile.py` implementing the matching rule from §5.
 2. Merged events: dates and `is_local_time` from Leek Duck, description body
@@ -491,12 +606,12 @@ times, the infographic's bonus list, and a working link to the Discord post.
 2. Permissions block: `contents: write` — the job commits the rebuilt `.ics`
    and the state files back to the repo. That commit is also what keeps the
    schedule alive (GitHub disables cron on repos with 60 days of no activity).
-3. Secrets: `DISCORD_BOT_TOKEN`, `ANTHROPIC_API_KEY` under repo Settings →
-   Secrets and variables → Actions.
-4. Make the job **idempotent and forgiving**: if the vision call fails on one
-   image, log it, skip that message, don't advance the cursor past it, and
-   still rebuild the calendar from everything else. One bad post must never
-   wedge the pipeline.
+3. Secrets: `DISCORD_BOT_TOKEN` under repo Settings → Secrets and variables →
+   Actions. That is the only one.
+4. Make the job **idempotent and forgiving**: if one message cannot be
+   handled, log it, skip it, don't advance the cursor past it, and still
+   rebuild the calendar from everything else. One bad post must never wedge
+   the pipeline.
 5. Commit only when the output actually changed, or you'll get a pointless
    commit every hour.
 
@@ -557,7 +672,7 @@ hour you will never come close, but handle 429 anyway.
 |---|---|
 | ICS output | `icalendar` |
 | HTTP | `httpx` |
-| Vision | `anthropic` |
+| ~~Vision~~ | ~~`anthropic`~~ — withdrawn, see the constraint at the top |
 | Fuzzy match | `difflib` (stdlib — no dependency needed) |
 | Config | `python-dotenv` |
 
@@ -606,8 +721,9 @@ hour you will never come close, but handle 429 anyway.
 | M5 | ½ evening |
 | **v1 total** | **5 evenings** |
 
-Running cost: pennies. One vision call per new post, a few cents a month at
-most; GitHub Actions and Pages are free at this volume.
+Running cost: **nothing.** GitHub Actions and Pages are free on a public
+repository, the Discord REST API is free, and the ScrapedDuck feed is a static
+file. There is no metered service anywhere in the system, by constraint.
 
 ---
 
@@ -631,9 +747,9 @@ subscribable .ics calendar. See BUILD_PLAN.md for the full design.
   run; they must NEVER be written into calendar output.
 - Timezone handling lives in exactly one place. Naive datetime = floating
   local time. Aware datetime = fixed UTC. Never attach a named timezone.
-- Leek Duck is authoritative for dates and times. Vision output is
-  authoritative for bonuses and descriptions. Never let vision override a
-  matched Leek Duck date.
+- Nothing in this project may spend money. No paid API, no metered service.
+- Leek Duck is authoritative for dates and times, and is the only source of
+  event detail.
 - Every network call needs a timeout and a retry. Every per-message failure
   is caught, logged, and skipped — one bad post never stops the run.
 - No secrets in code or committed files. `.env` is gitignored.
