@@ -1,0 +1,12 @@
+.env
+
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+.DS_Store
+
+# Local working memory: plans, progress logs, explanations.
+# The skills in .claude/skills/ are committed; what they produce is not.
+.claude/plans/
