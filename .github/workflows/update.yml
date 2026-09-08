@@ -42,7 +42,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v10
+      # Pinned to an exact version: unlike actions/checkout, this action
+      # publishes no floating major tag, so @v10 does not resolve.
+      - uses: astral-sh/setup-uv@v10.0.1
         with:
           # uv installs the Python version pyproject.toml asks for, so there is
           # no separate setup-python step.
