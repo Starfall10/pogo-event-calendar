@@ -5,17 +5,6 @@ X-WR-CALNAME:Pokémon GO
 REFRESH-INTERVAL;VALUE=DURATION:PT1440M
 X-PUBLISHED-TTL:PT1440M
 BEGIN:VEVENT
-SUMMARY:Forever Forward
-DTSTART:20260602T100000
-DTEND:20260908T100000
-DTSTAMP:20260101T000000Z
-UID:season-23-forever-forward@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Season\n\n📄 Details: https://leekduck.com/events/season-23-
- forever-forward/
-URL:https://leekduck.com/events/season-23-forever-forward/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:LEGO Stores and Pokémon GO
 DTSTART:20260803T100000
 DTEND:20260930T235900
@@ -25,17 +14,6 @@ SEQUENCE:0
 DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/lego-pokemo
  n-go-2026/
 URL:https://leekduck.com/events/lego-pokemon-go-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:GO Pass: August
-DTSTART:20260804T100000
-DTEND:20260908T100000
-DTSTAMP:20260101T000000Z
-UID:go-pass-august-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-a
- ugust-2026/
-URL:https://leekduck.com/events/go-pass-august-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Shadow Giratina (Altered Forme) in Shadow Raids
