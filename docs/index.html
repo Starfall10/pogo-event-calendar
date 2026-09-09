@@ -1,0 +1,569 @@
+<title>Pokémon GO Events</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --ground:#f7f8f6; --surface:#ffffff; --ink:#15211c; --muted:#5c6b64;
+  --line:#dfe4e0; --line-soft:#eceeeb; --accent:#1f7a5c; --accent-soft:#e6f1ec;
+  --amber:#a8681a; --amber-soft:#f7ecdd;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#101613; --surface:#18201c; --ink:#e7ece9; --muted:#93a49b;
+    --line:#28322c; --line-soft:#1f2823; --accent:#54b891; --accent-soft:#172a22;
+    --amber:#d69a4a; --amber-soft:#2a2118;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#101613; --surface:#18201c; --ink:#e7ece9; --muted:#93a49b;
+  --line:#28322c; --line-soft:#1f2823; --accent:#54b891; --accent-soft:#172a22;
+  --amber:#d69a4a; --amber-soft:#2a2118;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0; background:var(--ground); color:var(--ink);
+  font:400 15px/1.5 "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap { max-width:60rem; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+header { display:flex; flex-wrap:wrap; gap:1.25rem 2rem; align-items:flex-end;
+  justify-content:space-between; padding-bottom:1.25rem; border-bottom:2px solid var(--ink); }
+h1 { font:700 1.9rem/1.1 Archivo, system-ui, sans-serif; margin:0; letter-spacing:-.02em; text-wrap:balance; }
+.sub { color:var(--muted); font-size:.875rem; margin:.4rem 0 0; }
+.sub b { color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+.subscribe { display:inline-flex; align-items:center; gap:.5rem; background:var(--accent);
+  color:#fff; text-decoration:none; font:600 .875rem/1 "IBM Plex Sans", sans-serif;
+  padding:.7rem 1rem; border-radius:6px; }
+.subscribe:hover { filter:brightness(1.08); }
+.subscribe span { font-family:"IBM Plex Mono", monospace; opacity:.75; font-weight:400; }
+.legend { list-style:none; display:flex; flex-wrap:wrap; gap:.4rem; margin:1.5rem 0 0; padding:0; }
+.legend li { display:flex; align-items:baseline; gap:.4rem; border:1px solid var(--line);
+  border-radius:999px; padding:.3rem .7rem; font-size:.78rem; color:var(--muted); background:var(--surface); }
+.legend .n { font:500 .8rem "IBM Plex Mono", monospace; color:var(--ink); font-variant-numeric:tabular-nums; }
+.month { margin-top:2.75rem; }
+.month > h2 { font:600 .78rem/1 "IBM Plex Sans", sans-serif; text-transform:uppercase;
+  letter-spacing:.13em; color:var(--muted); margin:0 0 .75rem; }
+.rows { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.row { display:grid; grid-template-columns:3.25rem 1fr auto auto; gap:1rem;
+  align-items:baseline; padding:.85rem .25rem .85rem .5rem; border-bottom:1px solid var(--line-soft); }
+.row.live { background:var(--amber-soft); box-shadow:inset 3px 0 0 var(--amber); border-radius:2px; }
+.date { font-family:"IBM Plex Mono", monospace; font-variant-numeric:tabular-nums; line-height:1.2; }
+.date .d { display:block; font-size:1.25rem; font-weight:500; }
+.date .m { display:block; font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+.body h3 { font:600 1rem/1.3 "IBM Plex Sans", sans-serif; margin:0; text-wrap:balance; }
+.meta { margin:.28rem 0 0; display:flex; flex-wrap:wrap; gap:.5rem; align-items:baseline; }
+.type { font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
+.type.big { color:var(--accent); font-weight:600; }
+.now { font:600 .68rem/1 "IBM Plex Sans", sans-serif; text-transform:uppercase;
+  letter-spacing:.07em; padding:.22rem .4rem; border-radius:3px; vertical-align:.12em;
+  margin-left:.4rem; background:var(--amber); color:#fff; }
+.when { text-align:right; font-family:"IBM Plex Mono", monospace; font-variant-numeric:tabular-nums; line-height:1.25; }
+.when .t { display:block; font-size:.86rem; }
+.when .z { display:block; font-size:.68rem; color:var(--muted); letter-spacing:.02em; }
+.links { display:flex; gap:.75rem; }
+.lk { font-size:.78rem; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); white-space:nowrap; }
+.lk:hover { color:var(--ink); border-color:var(--ink); }
+.lk.ig { color:var(--accent); border-color:var(--accent-soft); font-weight:500; }
+.ig-wrap { margin-top:.6rem; }
+.ig-wrap > summary { display:inline-block; cursor:pointer; font-size:.78rem; color:var(--accent);
+  border:1px solid var(--accent-soft); border-radius:4px; padding:.2rem .55rem; list-style:none; }
+.ig-wrap > summary::-webkit-details-marker { display:none; }
+.ig-wrap > summary::before { content:"B8 "; }
+.ig-wrap[open] > summary::before { content:"BE "; }
+.ig-wrap > summary:hover { background:var(--accent-soft); }
+.ig-wrap img { display:block; width:100%; max-width:32rem; height:auto; margin:.75rem 0 .35rem;
+  border:1px solid var(--line); border-radius:4px; background:var(--surface); }
+.credit { margin:0 0 .25rem; font-size:.72rem; color:var(--muted); }
+footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line);
+  color:var(--muted); font-size:.8rem; display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; }
+footer a { color:var(--muted); }
+a:focus-visible, .subscribe:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+@media (max-width:640px) {
+  .row { grid-template-columns:2.75rem 1fr; gap:.5rem .9rem; }
+  .when { grid-column:2; text-align:left; }
+  .links { grid-column:2; }
+}
+</style>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Pokémon GO Events</h1>
+      <p class="sub"><b>49</b> upcoming · <b>7</b> with an infographic · rebuilt hourly from Leek&nbsp;Duck</p>
+    </div>
+    <a class="subscribe" href="https://starfall10.github.io/pogo-event-calendar/pogo.ics">Subscribe <span>.ics</span></a>
+  </header>
+  <ul class="legend"><li><span class="n">12</span>Battle League</li><li><span class="n">10</span>Raids</li><li><span class="n">7</span>Event</li><li><span class="n">4</span>Spotlight Hour</li><li><span class="n">3</span>Community Day</li><li><span class="n">3</span>Max Monday</li><li><span class="n">3</span>Raid Day</li><li><span class="n">3</span>Raid Hour</li><li><span class="n">2</span>Max Battle</li><li><span class="n">1</span>GO Pass</li><li><span class="n">1</span>Season</li></ul>
+    <section class="month">
+      <h2>August 2026</h2>
+      <ul class="rows">
+      <li class="row live">
+        <div class="date"><span class="d">3</span><span class="m">–30 Sep</span></div>
+        <div class="body">
+          <h3>LEGO Stores and Pokémon GO <span class="now">today</span></h3>
+          <p class="meta"><span class="type big">Event</span></p>
+        </div>
+        <div class="when"><span class="t">10:00 → 30 Sep 23:59</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/lego-pokemon-go-2026/">Leek Duck</a></div>
+      </li>
+      </ul>
+    </section>
+    <section class="month">
+      <h2>September 2026</h2>
+      <ul class="rows">
+      <li class="row live">
+        <div class="date"><span class="d">8</span><span class="m">–15 Sep</span></div>
+        <div class="body">
+          <h3>Mega Beedrill in Mega Raids <span class="now">today</span></h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 15 Sep 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-beedrill-in-mega-raids-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row live">
+        <div class="date"><span class="d">8</span><span class="m">–6 Oct</span></div>
+        <div class="body">
+          <h3>GO Pass: September <span class="now">today</span></h3>
+          <p class="meta"><span class="type big">GO Pass</span></p>
+        </div>
+        <div class="when"><span class="t">10:00 → 6 Oct 10:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/go-pass-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row live">
+        <div class="date"><span class="d">8</span><span class="m">–14 Sep</span></div>
+        <div class="body">
+          <h3>Mega Squads <span class="now">today</span></h3>
+          <p class="meta"><span class="type big">Event</span></p>
+        <details class="ig-wrap"><summary>Infographic</summary><img src="img/mega-squads.png" alt="Infographic for Mega Squads" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+        </div>
+        <div class="when"><span class="t">10:00 → 14 Sep 20:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790423660462130">Post</a><a class="lk" href="https://leekduck.com/events/mega-squads/">Leek Duck</a></div>
+      </li>
+      <li class="row live">
+        <div class="date"><span class="d">8</span><span class="m">–1 Dec</span></div>
+        <div class="body">
+          <h3>Twilight Trails <span class="now">today</span></h3>
+          <p class="meta"><span class="type big">Season</span></p>
+        </div>
+        <div class="when"><span class="t">10:00 → 1 Dec 10:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/season-24-twilight-trails/">Leek Duck</a></div>
+      </li>
+      <li class="row live">
+        <div class="date"><span class="d">8</span><span class="m">–15 Sep</span></div>
+        <div class="body">
+          <h3>Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails <span class="now">today</span></h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-1/">Leek Duck</a></div>
+      </li>
+      <li class="row live">
+        <div class="date"><span class="d">9</span><span class="m">–6 Oct</span></div>
+        <div class="body">
+          <h3>Shadow Thundurus (Incarnate Forme) in Shadow Raids <span class="now">today</span></h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 6 Oct 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row live">
+        <div class="date"><span class="d">9</span><span class="m">–15 Sep</span></div>
+        <div class="body">
+          <h3>Zacian (Hero of Many Battles) in 5-star Raid Battles <span class="now">today</span></h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 15 Sep 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/zacian-hero-of-many-battles-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row live">
+        <div class="date"><span class="d">10</span><span class="m">Thu</span></div>
+        <div class="body">
+          <h3>Weedle, Kakuna, and Beedrill Spotlight Hour <span class="now">today</span></h3>
+          <p class="meta"><span class="type">Spotlight Hour</span></p>
+        </div>
+        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-10/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">11</span><span class="m">–15 Sep</span></div>
+        <div class="body">
+          <h3>Mega Houndoom in Mega Raids</h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 15 Sep 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">12</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Gible Community Day Classic</h3>
+          <p class="meta"><span class="type big">Community Day</span></p>
+        <details class="ig-wrap"><summary>Infographic</summary><img src="img/september-communitydayclassic2026.png" alt="Infographic for Gible Community Day Classic" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188309811231">Post</a><a class="lk" href="https://leekduck.com/events/september-communitydayclassic2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">13</span><span class="m">Sun</span></div>
+        <div class="body">
+          <h3>Houndour and Houndoom Spotlight Hour</h3>
+          <p class="meta"><span class="type">Spotlight Hour</span></p>
+        </div>
+        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-13/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">14</span><span class="m">Mon</span></div>
+        <div class="body">
+          <h3>Dynamax Rhyhorn during Max Monday</h3>
+          <p class="meta"><span class="type">Max Monday</span></p>
+        </div>
+        <div class="when"><span class="t">06:00–21:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/max-mondays-2026-09-14/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">15</span><span class="m">–22 Sep</span></div>
+        <div class="body">
+          <h3>Great League, Ultra League: Mega Edition, and Willpower Cup: Great League Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_willpower-cup-great-league-edition/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">16</span><span class="m">–22 Sep</span></div>
+        <div class="body">
+          <h3>Mega Venusaur in Mega Raids</h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 22 Sep 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-venusaur-in-mega-raids-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">16</span><span class="m">–22 Sep</span></div>
+        <div class="body">
+          <h3>Zamazenta (Hero of Many Battles) in 5-star Raid Battles</h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 22 Sep 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/zamazenta-hero-of-many-battles-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">16</span><span class="m">–22 Sep</span></div>
+        <div class="body">
+          <h3>Pokémon Horizons: The Series Celebration Event</h3>
+          <p class="meta"><span class="type big">Event</span></p>
+        <details class="ig-wrap"><summary>Infographic</summary><img src="img/pokemon-horizons-the-series-celebration-event-2026.png" alt="Infographic for Pokémon Horizons: The Series Celebration Event" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+        </div>
+        <div class="when"><span class="t">10:00 → 22 Sep 20:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790566434705434">Post</a><a class="lk" href="https://leekduck.com/events/pokemon-horizons-the-series-celebration-event-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">16</span><span class="m">Wed</span></div>
+        <div class="body">
+          <h3>Zamazenta (Hero of Many Battles) Raid Hour</h3>
+          <p class="meta"><span class="type">Raid Hour</span></p>
+        </div>
+        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/raidhour20260916/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">17</span><span class="m">Thu</span></div>
+        <div class="body">
+          <h3>Mystery Pokémon Spotlight Hour</h3>
+          <p class="meta"><span class="type">Spotlight Hour</span></p>
+        </div>
+        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-17/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">19</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Staraptor Super Mega Raid Day</h3>
+          <p class="meta"><span class="type big">Raid Day</span></p>
+        <details class="ig-wrap"><summary>Infographic</summary><img src="img/staraptor-super-mega-raid-day-2026.png" alt="Infographic for Staraptor Super Mega Raid Day" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188942893120">Post</a><a class="lk" href="https://leekduck.com/events/staraptor-super-mega-raid-day-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">21</span><span class="m">Mon</span></div>
+        <div class="body">
+          <h3>Dynamax Articuno, Zapdos, and Moltres during Max Monday</h3>
+          <p class="meta"><span class="type">Max Monday</span></p>
+        </div>
+        <div class="when"><span class="t">06:00–21:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/max-mondays-2026-09-21/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">22</span><span class="m">–29 Sep</span></div>
+        <div class="body">
+          <h3>Ultra League, Master League: Mega Edition, and Retro Cup: Great League Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_retro-cup-great-league-edition/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">23</span><span class="m">–29 Sep</span></div>
+        <div class="body">
+          <h3>Mega Malamar in Mega Raids</h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 29 Sep 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-malamar-in-mega-raids-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">23</span><span class="m">–29 Sep</span></div>
+        <div class="body">
+          <h3>Xurkitree, Pheromosa, and Buzzwole in 5-star Raid Battles</h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 29 Sep 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/xurkitree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">23</span><span class="m">Wed</span></div>
+        <div class="body">
+          <h3>Xurkitree, Pheromosa, and Buzzwole Raid Hour</h3>
+          <p class="meta"><span class="type">Raid Hour</span></p>
+        </div>
+        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/raidhour20260923/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">24</span><span class="m">Thu</span></div>
+        <div class="body">
+          <h3>Rattata Spotlight Hour</h3>
+          <p class="meta"><span class="type">Spotlight Hour</span></p>
+        </div>
+        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-24/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">26</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Phantump Catch Mastery</h3>
+          <p class="meta"><span class="type big">Event</span></p>
+        <details class="ig-wrap"><summary>Infographic</summary><img src="img/catch-mastery-phantump-2026.png" alt="Infographic for Phantump Catch Mastery" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+        </div>
+        <div class="when"><span class="t">10:00–20:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188468932711">Post</a><a class="lk" href="https://leekduck.com/events/catch-mastery-phantump-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">28</span><span class="m">Mon</span></div>
+        <div class="body">
+          <h3>Dynamax Sobble during Max Monday</h3>
+          <p class="meta"><span class="type">Max Monday</span></p>
+        </div>
+        <div class="when"><span class="t">06:00–21:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/max-mondays-2026-09-28/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">29</span><span class="m">–5 Oct</span></div>
+        <div class="body">
+          <h3>Harvest Festival 2026: Applin Picking</h3>
+          <p class="meta"><span class="type big">Event</span></p>
+        <details class="ig-wrap"><summary>Infographic</summary><img src="img/harvest-festival-2026.jpg" alt="Infographic for Harvest Festival 2026: Applin Picking" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+        </div>
+        <div class="when"><span class="t">10:00 → 5 Oct 20:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790297982214215">Post</a><a class="lk" href="https://leekduck.com/events/harvest-festival-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">29</span><span class="m">–6 Oct</span></div>
+        <div class="body">
+          <h3>Master League and Mega Color Cup: Great League Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_master-league_mega-color-cup-great-league-edition/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">30</span><span class="m">–6 Oct</span></div>
+        <div class="body">
+          <h3>Mega Victreebel in Mega Raids</h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 6 Oct 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">30</span><span class="m">–6 Oct</span></div>
+        <div class="body">
+          <h3>Xerneas in 5-star Raid Battles</h3>
+          <p class="meta"><span class="type">Raids</span></p>
+        </div>
+        <div class="when"><span class="t">06:00 → 6 Oct 22:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">30</span><span class="m">Wed</span></div>
+        <div class="body">
+          <h3>Xerneas Raid Hour</h3>
+          <p class="meta"><span class="type">Raid Hour</span></p>
+        </div>
+        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/raidhour20260930/">Leek Duck</a></div>
+      </li>
+      </ul>
+    </section>
+    <section class="month">
+      <h2>October 2026</h2>
+      <ul class="rows">
+      <li class="row">
+        <div class="date"><span class="d">2</span><span class="m">–5 Oct</span></div>
+        <div class="body">
+          <h3>Harvest Festival: Taken Over</h3>
+          <p class="meta"><span class="type big">Event</span></p>
+        <details class="ig-wrap"><summary>Infographic</summary><img src="img/harvest-festival-taken-over-2026.jpg" alt="Infographic for Harvest Festival: Taken Over" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+        </div>
+        <div class="when"><span class="t">00:00 → 5 Oct 20:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790331176058903">Post</a><a class="lk" href="https://leekduck.com/events/harvest-festival-taken-over-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">3</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Max Battle Day</h3>
+          <p class="meta"><span class="type">Max Battle</span></p>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/max-battle-day-october-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">6</span><span class="m">–13 Oct</span></div>
+        <div class="body">
+          <h3>Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-2/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">10</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>October Community Day</h3>
+          <p class="meta"><span class="type big">Community Day</span></p>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/october-communityday2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">13</span><span class="m">–20 Oct</span></div>
+        <div class="body">
+          <h3>Great League, Ultra League: Mega Edition, and Little Cup | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_little-cup/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">17</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Hatch Day</h3>
+          <p class="meta"><span class="type big">Event</span></p>
+        </div>
+        <div class="when"><span class="t">11:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/hatch-day-october-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">20</span><span class="m">–27 Oct</span></div>
+        <div class="body">
+          <h3>Ultra League, Master League: Mega Edition, and Fantasy Cup: Great League Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_fantasy-cup-great-league-edition/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">24</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Max Battle Day</h3>
+          <p class="meta"><span class="type">Max Battle</span></p>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/max-battle-day-october-24-2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">27</span><span class="m">–3 Nov</span></div>
+        <div class="body">
+          <h3>Master League and Mega Halloween Cup: Great League Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edition/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">31</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Super Mega Raid Day</h3>
+          <p class="meta"><span class="type big">Raid Day</span></p>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/super-mega-raid-day-october-2026/">Leek Duck</a></div>
+      </li>
+      </ul>
+    </section>
+    <section class="month">
+      <h2>November 2026</h2>
+      <ul class="rows">
+      <li class="row">
+        <div class="date"><span class="d">3</span><span class="m">–10 Nov</span></div>
+        <div class="body">
+          <h3>Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-3/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">10</span><span class="m">–17 Nov</span></div>
+        <div class="body">
+          <h3>Great League, Ultra League: Mega Edition, and 2026 GO LAIC Cup | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-laic-cup/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">18</span><span class="m">–25 Nov</span></div>
+        <div class="body">
+          <h3>Ultra League, Master League: Mega Edition, and 2026 GO LAIC Cup | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-laic-cup/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">21</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>November Community Day</h3>
+          <p class="meta"><span class="type big">Community Day</span></p>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/november-communityday2026/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">24</span><span class="m">–1 Dec</span></div>
+        <div class="body">
+          <h3>Master League and Mega Catch Cup: Great League Edition | Twilight Trails</h3>
+          <p class="meta"><span class="type">Battle League</span></p>
+        </div>
+        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition/">Leek Duck</a></div>
+      </li>
+      <li class="row">
+        <div class="date"><span class="d">28</span><span class="m">Sat</span></div>
+        <div class="body">
+          <h3>Super Mega Raid Day</h3>
+          <p class="meta"><span class="type big">Raid Day</span></p>
+        </div>
+        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
+        <div class="links"><a class="lk" href="https://leekduck.com/events/super-mega-raid-day-november-2026/">Leek Duck</a></div>
+      </li>
+      </ul>
+    </section>
+  <footer>
+    <span><b>Local time</b> means the same clock time everywhere — a 2pm Raid Day is 2pm wherever you are.</span>
+    <span><b>UTC, fixed</b> is one moment worldwide.</span>
+    <span>Event data from <a href="https://leekduck.com">Leek Duck</a>. Infographics by G47IX.</span>
+  </footer>
+</div>

@@ -9,7 +9,11 @@
 #
 #   * The output is byte-identical when nothing has changed, so the commit step
 #     below almost always finds nothing to do. Without that this would commit
-#     24 times a day and bury real changes in noise.
+#     24 times a day and bury real changes in noise. The web page depends on
+#     the date as well, so it changes at most once a day on its own.
+#   * Infographics are fetched once and deleted when their event has finished.
+#     GitHub Pages stops publishing a site over 1 GB; pruning is what keeps the
+#     published folder at tens of megabytes rather than growing without limit.
 #   * A missing token or an unreachable Discord costs the infographic links for
 #     that run, not the calendar. Only a feed failure stops the rebuild, and
 #     then the previously published file is left in place.
@@ -90,19 +94,24 @@ jobs:
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Commit, but only if the calendar changed
+      - name: Commit, but only if something changed
         run: |
-          if git diff --quiet -- docs/pogo.ics; then
-            echo "calendar unchanged - nothing to commit"
+          # git status, not git diff: a newly downloaded infographic is an
+          # untracked file, and git diff cannot see those. Checking only the
+          # calendar, as this step used to, would publish the page and the
+          # images never.
+          if [ -z "$(git status --porcelain -- docs/)" ]; then
+            echo "nothing changed - nothing to commit"
             exit 0
           fi
 
-          echo "calendar changed:"
-          git diff --stat -- docs/pogo.ics
+          echo "changed:"
+          git status --short -- docs/
+          du -sh docs/img 2>/dev/null || true
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/pogo.ics
+          git add -A docs/
           git commit -m "Update calendar
 
           Rebuilt from the Leek Duck feed and the Discord channel by the

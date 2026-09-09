@@ -9,7 +9,7 @@ import argparse
 import logging
 import sys
 
-from pogocal import config, discord_src, reconcile
+from pogocal import config, discord_src, images, reconcile, web_build
 from pogocal.ics_build import render
 from pogocal.leekduck import fetch_events
 from pogocal.models import Event
@@ -31,10 +31,17 @@ def build(with_links: bool = False) -> int:
         log.error("calendar not rebuilt; the previous file is left in place")
         return 1
 
+    local_images: dict[str, str] = {}
     if with_links:
-        _attach_links(events)
+        sources = _attach_links(events)
+        if sources:
+            try:
+                local_images = images.sync(sources)
+            except OSError as error:
+                log.warning("could not update the infographics: %s", error)
 
     calendar = render(events)
+    page = web_build.render(events, images=local_images)
 
     previous = None
     if config.OUTPUT_PATH.exists():
@@ -50,6 +57,9 @@ def build(with_links: bool = False) -> int:
     with config.OUTPUT_PATH.open("w", encoding="utf-8", newline="") as handle:
         handle.write(calendar)
 
+    page_path = config.OUTPUT_PATH.parent / "index.html"
+    page_state = _write(page_path, page)
+
     state = "unchanged" if calendar == previous else "updated"
     relative = config.OUTPUT_PATH.relative_to(config.REPO_ROOT)
     floating = sum(1 for e in events if e.is_local_time)
@@ -59,6 +69,10 @@ def build(with_links: bool = False) -> int:
         f"({floating} floating, {len(events) - floating} fixed, "
         f"{linked} with an infographic), "
         f"{len(calendar)} bytes, {state}"
+    )
+    print(
+        f"{page_path.relative_to(config.REPO_ROOT)}: {len(page)} bytes, "
+        f"{page_state}, {len(local_images)} images on disk"
     )
     for event in sorted(events, key=lambda e: e.start.replace(tzinfo=None)):
         marker = "floating" if event.is_local_time else "fixed"
@@ -87,12 +101,33 @@ def poll() -> int:
     return 0
 
 
-def _attach_links(events: list[Event]) -> None:
+def _write(path, text: str) -> str:
+    """Write a published file, reporting whether it changed.
+
+    newline="" both ways: reading in text mode would turn CRLF into LF and the
+    comparison would report a change on every run.
+    """
+    previous = None
+    if path.exists():
+        with path.open(encoding="utf-8", newline="") as handle:
+            previous = handle.read()
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        handle.write(text)
+    return "unchanged" if text == previous else "updated"
+
+
+def _attach_links(events: list[Event]) -> dict[str, str]:
     """Read the channel and attach infographic links. Never fatal.
 
     A calendar with correct times and no links is worth publishing. One with
     neither is not, so anything that goes wrong here is reported and stepped
     over.
+
+    Returns event id -> the image url of the post that announced it, for the
+    events that matched one. Those urls expire in about 24 hours: they are
+    fetched during this run and never written anywhere.
     """
     try:
         guild_id = config.require("GUILD_ID")
@@ -101,7 +136,7 @@ def _attach_links(events: list[Event]) -> None:
     except RuntimeError as error:
         log.warning("%s", error)
         log.warning("publishing without infographic links")
-        return
+        return {}
 
     posts = []
     for message in discord_src.oldest_first(messages):
@@ -112,6 +147,15 @@ def _attach_links(events: list[Event]) -> None:
                         (message or {}).get("id", "<no id>"), error)
 
     reconcile.attach(events, posts)
+
+    by_link = {post.link: post for post in posts}
+    return {
+        event.event_id: by_link[event.discord_url].image_url
+        for event in events
+        if event.discord_url
+        and event.discord_url in by_link
+        and by_link[event.discord_url].image_url
+    }
 
 
 def not_yet(command: str, milestone: str) -> int:

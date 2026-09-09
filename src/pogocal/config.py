@@ -85,6 +85,18 @@ POLL_LIMIT = 100
 CURSOR_SEED_MESSAGE_ID = os.getenv("CURSOR_SEED_MESSAGE_ID", "").strip() or None
 
 
+# --- the published web page --------------------------------------------------
+
+# Local copies of the infographics, served by GitHub Pages alongside the
+# calendar. Images for events that have finished are deleted on each run:
+# Pages stops publishing a site over 1 GB, and at roughly 7 MB an infographic
+# that cap is about a year away without pruning.
+IMAGE_DIR = OUTPUT_PATH.parent / "img"
+
+# What the page offers people to subscribe to.
+CALENDAR_URL = "https://starfall10.github.io/pogo-event-calendar/pogo.ics"
+
+
 # --- matching a Discord post to a Leek Duck event ----------------------------
 #
 # Measured against tests/fixtures/ on 8 Sep 2026: 25 real posts, 55 real feed
