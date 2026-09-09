@@ -16,43 +16,6 @@ DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/lego-pokemo
 URL:https://leekduck.com/events/lego-pokemon-go-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Shadow Giratina (Altered Forme) in Shadow Raids
-DTSTART:20260805T060000
-DTEND:20260908T220000
-DTSTAMP:20260101T000000Z
-UID:shadow-giratina-altered-in-shadow-raids-august-2026@pogo-event-calenda
- r
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
- ow-giratina-altered-in-shadow-raids-august-2026/
-URL:https://leekduck.com/events/shadow-giratina-altered-in-shadow-raids-au
- gust-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mega Gyarados in Mega Raids
-DTSTART:20260826T060000
-DTEND:20260908T220000
-DTSTAMP:20260101T000000Z
-UID:mega-gyarados-in-mega-raids-august-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
- -gyarados-in-mega-raids-august-2026/
-URL:https://leekduck.com/events/mega-gyarados-in-mega-raids-august-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Regirock\, Regice\, and Registeel in 5-star Raid Battles
-DTSTART:20260826T060000
-DTEND:20260908T220000
-DTSTAMP:20260101T000000Z
-UID:regirock-regice-registeel-in-5-star-raid-battles-august-2026@pogo-even
- t-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/regi
- rock-regice-registeel-in-5-star-raid-battles-august-2026/
-URL:https://leekduck.com/events/regirock-regice-registeel-in-5-star-raid-b
- attles-august-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mega Beedrill in Mega Raids
 DTSTART:20260908T060000
 DTEND:20260915T220000
