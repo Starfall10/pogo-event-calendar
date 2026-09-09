@@ -79,11 +79,14 @@ Full setup walkthrough in [`BUILD_PLAN.md`](BUILD_PLAN.md) §4.
 ## Commands
 
 ```bash
-uv run pogocal poll     # fetch new Discord posts, extract, save state
-uv run pogocal build    # rebuild docs/pogo.ics from state + Leek Duck
-uv run pogocal run      # poll then build (what the Action runs)
+uv run pogocal run      # rebuild the calendar with infographic links (what the Action runs)
+uv run pogocal build    # rebuild from the Leek Duck feed alone, no credentials needed
+uv run pogocal poll     # print new posts in the Discord channel
 uv run pytest
 ```
+
+Fuller guide, including how to read the output and check the scheduled job:
+[`RUNNING.md`](RUNNING.md).
 
 ## Layout
 
