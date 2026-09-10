@@ -259,7 +259,7 @@ pogo-cal/
 ### Data flow
 
 ```
-GitHub Action (hourly)
+GitHub Action (every 3 hours)
         │
         ▼
   discord_src.poll()  ── GET /channels/{id}/messages?after=<cursor>

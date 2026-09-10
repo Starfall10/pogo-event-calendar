@@ -17,7 +17,7 @@ from pogocal import config
 from pogocal.models import Event
 
 # DTSTAMP means "when this calendar object was written". A real timestamp
-# would differ on every run, so every hourly rebuild would produce a changed
+# would differ on every run, so every scheduled rebuild would produce a changed
 # file and a pointless commit. A fixed value keeps the output byte-identical
 # when nothing has actually changed. Clients detect revisions from SEQUENCE,
 # not from this.

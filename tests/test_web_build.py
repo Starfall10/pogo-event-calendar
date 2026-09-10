@@ -5,7 +5,7 @@ the objects, because the page is what a browser and GitHub Pages actually see.
 
 The page depends on the date it is built, which the calendar file does not.
 That is why render() takes `today` rather than reading the clock: a page that
-changes every hour would make the scheduled job commit every hour.
+changes with the clock would make the scheduled job commit on every run.
 """
 
 from datetime import date, datetime, timezone

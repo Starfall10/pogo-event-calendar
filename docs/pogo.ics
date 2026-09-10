@@ -104,17 +104,6 @@ URL:https://leekduck.com/events/zacian-hero-of-many-battles-in-5-star-raid
  -battles-september-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Zacian (Hero of Many Battles) Raid Hour
-DTSTART:20260909T180000
-DTEND:20260909T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20260909@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20260909/
-URL:https://leekduck.com/events/raidhour20260909/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Weedle\, Kakuna\, and Beedrill Spotlight Hour
 DTSTART:20260910T180000
 DTEND:20260910T190000

@@ -1,4 +1,4 @@
-# Rebuilds the calendar every hour and commits it when it has changed.
+# Rebuilds the calendar every three hours and commits it when it has changed.
 #
 # The whole job is one command. `pogocal run` fetches the Leek Duck feed, reads
 # the Discord channel, matches posts to events, and writes docs/pogo.ics, which
@@ -22,9 +22,13 @@ name: Update calendar
 
 on:
   schedule:
-    # Hourly, on the hour, UTC. GitHub's scheduler is best-effort and often
-    # runs several minutes late; at this cadence that does not matter.
-    - cron: "0 * * * *"
+    # Every three hours, UTC: eight times a day.
+    #
+    # Not on the hour. GitHub's scheduler is best-effort and drops runs under
+    # load rather than queueing them, and the top of the hour is the most
+    # contended minute on the platform - measured over one night at hourly,
+    # only 4 of 13 slots fired. An odd minute competes with far less.
+    - cron: "37 */3 * * *"
   # So it can be triggered by hand from the Actions tab rather than waiting an
   # hour to find out whether a change works.
   workflow_dispatch:

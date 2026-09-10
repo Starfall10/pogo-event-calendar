@@ -194,7 +194,7 @@ Apply as concrete constraints during every REFACTOR:
 Not concurrency. These four, and they are worth writing down before implementing
 anything that touches them:
 
-**1. Re-running must be safe.** The job runs hourly and will re-process, re-fetch
+**1. Re-running must be safe.** The job runs every three hours and will re-process, re-fetch
 and rebuild. State the answer before you code: what does this do the second time
 it sees the same message? The rule is that a rebuild replaces, never appends.
 

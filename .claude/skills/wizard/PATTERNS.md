@@ -4,7 +4,7 @@ Quick reference for the wizard skill, written for this project's shapes.
 
 ## Idempotency Patterns
 
-The job runs hourly and re-processes. Everything must be safe to repeat.
+The job runs every three hours and re-processes. Everything must be safe to repeat.
 
 ### Stable Identifiers
 

@@ -46,8 +46,8 @@ timing, the infographic wins on everything else.
 Anything that can't be matched still goes in the calendar, with a ⚠️ on the
 title so it's obvious it hasn't been verified.
 
-No server. A GitHub Action runs hourly, rebuilds the calendar file, and commits
-it. That's the whole deployment.
+No server. A GitHub Action runs every three hours, rebuilds the calendar file,
+and commits it. That's the whole deployment.
 
 ## Setup
 

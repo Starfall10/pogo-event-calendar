@@ -10,7 +10,7 @@ Two rules it holds:
   * The page shows only what has not finished, and what it shows depends on
     the date it was built. That date is passed in rather than read from the
     clock, so the output is stable within a day. A page that differed every
-    hour would make the scheduled job commit every hour.
+    time it was built would make the scheduled job commit on every run.
   * Images are referenced by their local path. A Discord CDN url expires in
     about 24 hours and must never reach anything that is kept.
 """
@@ -238,7 +238,7 @@ _PAGE = """<title>Pokémon GO Events</title>
   <header>
     <div>
       <h1>Pokémon GO Events</h1>
-      <p class="sub"><b>{count}</b> upcoming · <b>{with_images}</b> with an infographic · rebuilt hourly from Leek&nbsp;Duck</p>
+      <p class="sub"><b>{count}</b> upcoming · <b>{with_images}</b> with an infographic · rebuilt every 3 hours from Leek&nbsp;Duck</p>
     </div>
     <a class="subscribe" href="{calendar_url}">Subscribe <span>.ics</span></a>
   </header>

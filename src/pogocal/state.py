@@ -8,8 +8,8 @@ Two rules, both enforced here:
   * The file is written atomically, so a process that dies mid-write cannot
     leave a half-written cursor behind.
   * The file contains the message id and nothing else. No timestamp, no run
-    counter. An hourly job that found nothing new must produce a byte-identical
-    file, or M5 commits noise every hour.
+    counter. A scheduled run that found nothing new must produce a
+    byte-identical file, or the job commits noise every time it fires.
 
 The third rule — that the cursor never advances past a message that failed —
 belongs to the caller, in discord_src.py, because only the caller knows whether

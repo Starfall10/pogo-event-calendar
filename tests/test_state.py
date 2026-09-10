@@ -3,7 +3,7 @@
 Small file, three failure modes that all matter. Lose the cursor and the next
 run reprocesses the channel. Advance it past a message that failed and that
 post is unreachable forever, because nothing will ever look at it again. Write
-a timestamp into it and the hourly job commits a changed file every run.
+a timestamp into it and the scheduled job commits a changed file every run.
 """
 
 import json
@@ -55,8 +55,8 @@ def test_saving_creates_the_state_directory():
 
 
 def test_saving_the_same_id_twice_writes_identical_bytes():
-    """No timestamp, no counter. An hourly job that found nothing new must not
-    produce a changed file, or M5 commits noise every hour."""
+    """No timestamp, no counter. A scheduled run that found nothing new must not
+    produce a changed file, or the job commits noise every time it fires."""
     state.save_cursor("1546790566434705434")
     first = config.CURSOR_PATH.read_bytes()
     state.save_cursor("1546790566434705434")

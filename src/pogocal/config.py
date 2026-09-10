@@ -60,7 +60,7 @@ HTTP_TIMEOUT = 30.0
 HTTP_RETRIES = 3
 
 # Seconds to wait after a failed attempt, doubling each time: 1s, then 2s,
-# then 4s. Short enough not to stall an hourly job, long enough to outlast a
+# then 4s. Short enough not to stall a scheduled run, long enough to outlast a
 # momentary failure.
 HTTP_BACKOFF = 1.0
 
@@ -76,8 +76,8 @@ DISCORD_API_BASE = "https://discord.com/api/v10"
 # somebody on their side would work out what a misbehaving client is.
 USER_AGENT = "pogo-event-calendar (https://github.com/Starfall10/pogo-event-calendar)"
 
-# Messages per request. 100 is the API's maximum, and one request an hour is
-# far more than a channel posting a few times a week will ever need.
+# Messages per request. 100 is the API's maximum, and one request every three
+# hours is far more than a channel posting a few times a week will ever need.
 POLL_LIMIT = 100
 
 # Read once, on the very first run, when no cursor file exists yet. Optional:

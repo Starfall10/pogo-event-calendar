@@ -15,7 +15,7 @@ If `uv` is not installed: `brew install uv`. It fetches the Python version
 | `uv run pytest -q tests/test_leekduck.py` | One file | No |
 | `uv run pytest -q -k harvest` | One test, by name | No |
 | `uv run pogocal build` | Rebuild `docs/pogo.ics` from the Leek Duck feed alone | No |
-| `uv run pogocal run` | The full job — feed **and** Discord infographic links. This is what the hourly Action runs | Yes |
+| `uv run pogocal run` | The full job — feed **and** Discord infographic links. This is what the scheduled Action runs | Yes |
 | `uv run pogocal poll` | Print posts in the channel newer than the cursor | Yes |
 
 Nothing here costs money. The feed is a static file, the Discord REST API is
@@ -83,9 +83,13 @@ Or the [Actions tab](https://github.com/Starfall10/pogo-event-calendar/actions).
 Each run writes a summary saying what it saw; the last word of the first line
 is `unchanged` or `updated`.
 
-Runs are best-effort and GitHub skips many of them: measured over one night,
-4 of 13 hourly slots fired, 9 to 51 minutes late. That is normal for a free
-scheduled workflow and does not matter here, since events are announced weeks
+The job runs every three hours — eight slots a day, at 37 minutes past.
+
+Expect fewer than eight. GitHub's scheduler is best-effort and drops runs under
+load rather than queueing them: measured over one night while the job was
+hourly, 4 of 13 slots fired, between 9 and 51 minutes late. The odd minute is
+deliberate, since the top of the hour is the most contended time on the
+platform. None of this matters here, because events are announced weeks
 ahead.
 
 **Green runs with no commits is the normal state.** The job commits only when

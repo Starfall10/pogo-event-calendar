@@ -57,7 +57,7 @@ runnable. **Do not skip ahead and do not work two at once.**
 - **M3 before M4**, because reconcile has nothing to reconcile until both
   sources produce Events.
 - **M4 before M5**, because automating a pipeline that produces wrong output
-  just produces wrong output hourly.
+  just produces wrong output on a schedule.
 
 **A milestone is not done until its acceptance check has been run and shown.**
 The plan writes one for each. Several of them are the owner looking at their own

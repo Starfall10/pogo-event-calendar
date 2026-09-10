@@ -68,7 +68,7 @@ For this project the natural sequence is nearly always the pipeline, and the
 document should follow it:
 
 1. **What happens, end to end.** A numbered sequence — somebody posts an image
-   to a channel; an hourly job asks Discord for anything new; the image is read;
+   to a channel; a scheduled job asks Discord for anything new; the image is read;
    a public feed is fetched; the two are matched; a calendar file is written; a
    phone downloads it. A table with two columns: what happens, and which part of
    the code does it. **Every later section refers back to a numbered step

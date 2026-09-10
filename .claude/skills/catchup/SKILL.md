@@ -32,7 +32,7 @@ git status --short
 - **Uncommitted work is normal here.** Whole steps may have been left
   uncommitted on purpose for the owner to review. Read the plans before
   assuming a dirty tree is unfinished.
-- **The hourly GitHub Action commits to this repo.** A commit you did not make,
+- **The scheduled GitHub Action commits to this repo.** A commit you did not make,
   touching `docs/pogo.ics` and `state/`, is the job running — not someone else's
   work. Check the author before reading anything into it.
 
