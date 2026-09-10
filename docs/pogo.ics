@@ -433,15 +433,15 @@ URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
  46790331176058903
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Max Battle Day
+SUMMARY:Gigantamax Cinderace Max Battle Day
 DTSTART:20261003T140000
 DTEND:20261003T170000
 DTSTAMP:20260101T000000Z
-UID:max-battle-day-october-2026@pogo-event-calendar
+UID:gigantamax-cinderace-max-battle-day-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
- attle-day-october-2026/
-URL:https://leekduck.com/events/max-battle-day-october-2026/
+DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/gigan
+ tamax-cinderace-max-battle-day-2026/
+URL:https://leekduck.com/events/gigantamax-cinderace-max-battle-day-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
@@ -561,7 +561,7 @@ URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
  ion_ultra-league-mega-edition_master-league-mega-edition-split-3/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pokémon GO Wild Area: Sendai\, Tohoku
+SUMMARY:Pokémon GO Wild Area 2026: Sendai • Tohoku
 DTSTART:20261106T010000Z
 DTEND:20261108T090000Z
 DTSTAMP:20260101T000000Z
@@ -572,7 +572,7 @@ DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
 URL:https://leekduck.com/events/pokemon-go-wild-area-2026-sendai-japan/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pokémon GO Wild Area: Mexico City
+SUMMARY:Pokémon GO Wild Area 2026: Mexico City
 DTSTART:20261106T160000Z
 DTEND:20261109T000000Z
 DTSTAMP:20260101T000000Z
@@ -598,7 +598,7 @@ URL:https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-lea
  gue-mega-edition_2026-go-laic-cup/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pokémon GO Wild Area: Global
+SUMMARY:Pokémon GO Wild Area 2026: Global
 DTSTART:20261114T100000
 DTEND:20261115T180000
 DTSTAMP:20260101T000000Z
