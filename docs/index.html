@@ -1,596 +1,668 @@
-<title>Pokémon GO Events</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<title>Pokémon GO — what's on</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lato:wght@400;700;900&display=swap">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root {
-  --ground:#f7f8f6; --surface:#ffffff; --ink:#15211c; --muted:#5c6b64;
-  --line:#dfe4e0; --line-soft:#eceeeb; --accent:#1f7a5c; --accent-soft:#e6f1ec;
-  --amber:#a8681a; --amber-soft:#f7ecdd;
+:root{--paper:#f6f3ec;--card:#fff;--ink:#2b2438;--muted:#7b7389;--edge:#e7e1d6;--sun:#ffb020}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 16px/1.5 Lato,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:62rem;margin:0 auto;padding:2rem 1rem 5rem}
+.top h1{font:600 2.3rem/1 Fredoka,system-ui,sans-serif;margin:0}
+.top p{margin:.3rem 0 1.3rem;color:var(--muted)}
+.sub-link{color:var(--ink)}
+
+.ribbons{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem}
+.ribbon{position:relative;display:flex;align-items:center;gap:.7rem;background:var(--rc);
+  color:#fff;padding:.6rem 1rem;border-radius:5px;box-shadow:0 5px 14px -10px rgba(40,30,60,.9)}
+.ribbon b{font:600 1rem/1 Fredoka,system-ui,sans-serif}
+.ribbon small{opacity:.85;font-size:.82rem}
+.ribbon .days{margin-left:auto;font:900 .82rem/1 Lato,sans-serif;font-variant-numeric:tabular-nums;
+  background:rgba(255,255,255,.22);padding:.3rem .5rem;border-radius:4px;white-space:nowrap}
+
+.day{background:var(--card);border-radius:24px;margin-bottom:1.25rem;overflow:hidden;
+  box-shadow:0 12px 34px -22px rgba(40,30,60,.6);display:grid;grid-template-columns:5.4rem 1fr}
+.spine{padding:1.15rem .4rem;text-align:center;border-right:1px dashed var(--edge)}
+.spine .wd{font:500 .8rem/1 Fredoka,system-ui,sans-serif;color:var(--muted)}
+.spine .n{font:700 2.4rem/1 Fredoka,system-ui,sans-serif;font-variant-numeric:tabular-nums;margin:.08rem 0}
+.spine .mo{font-size:.76rem;color:var(--muted)}
+.day.now .spine{background:var(--sun)}
+.day.now .spine .wd,.day.now .spine .mo{color:#7a4b00}
+.deck{padding:.95rem;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fill,minmax(12.5rem,1fr))}
+
+.p{position:relative;display:flex;flex-direction:column;overflow:hidden;min-height:17.5rem;
+  padding:.6rem;border:5px solid var(--card);outline:1px solid var(--edge);border-radius:16px;
+  background:radial-gradient(circle at 16% 10%,var(--tint) 0 24%,transparent 24.5%),
+             radial-gradient(circle at 88% 82%,var(--tint) 0 18%,transparent 18.5%),var(--bg);
+  box-shadow:0 7px 18px -13px rgba(40,30,60,.75);color:var(--ink)}
+.kind{position:relative;z-index:2;font:700 .64rem/1 Lato,sans-serif;letter-spacing:.05em;opacity:.7}
+.badge{position:absolute;top:.55rem;right:.55rem;z-index:2;background:var(--ink);color:var(--bg);
+  font:900 .72rem/1 Lato,sans-serif;padding:.32rem .5rem;border-radius:6px;font-variant-numeric:tabular-nums}
+.hero{width:112%;margin:-.4rem 0 -.6rem -6%;height:10.5rem;object-fit:contain;
+  filter:drop-shadow(0 8px 7px rgba(0,0,0,.24))}
+.hero.ball{width:6.2rem;height:6.2rem;margin:.6rem auto 0;border:3px solid var(--ink);
+  border-radius:50%;opacity:.18;
+  background:radial-gradient(circle at 50% 42%,var(--ink) 0 14%,transparent 14.5%),
+    linear-gradient(180deg,var(--ink) 0 47%,var(--card) 47% 53%,transparent 53%)}
+.foot{margin-top:auto;position:relative;z-index:2}
+.p h3{font:600 1.02rem/1.15 Fredoka,system-ui,sans-serif;margin:0}
+.sub{margin:.15rem 0 0;font-size:.8rem;opacity:.75}
+.weak{display:flex;flex-wrap:wrap;gap:.28rem;margin-top:.45rem}
+.tp{width:22px;height:22px;border-radius:50%;background:var(--c);color:#fff;flex:none;
+  display:grid;place-items:center;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.tp svg{width:13px;height:13px;display:block}
+.bon{display:inline-flex;align-items:center;gap:.22rem;font-size:.7rem;background:var(--card);
+  border-radius:999px;padding:.16rem .45rem .16rem .18rem;margin:.35rem .2rem 0 0}
+.bon img{width:17px;height:17px}
+.spark{position:absolute;left:.5rem;top:1.9rem;z-index:2;width:17px;height:17px;background:var(--sun);
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.ig{margin-top:.4rem}
+.ig > summary{cursor:pointer;font-size:.72rem;opacity:.8;list-style:none}
+.ig > summary::-webkit-details-marker{display:none}
+.ig > summary::before{content:"B8 "}
+.ig[open] > summary::before{content:"BE "}
+.ig img{display:block;width:100%;margin:.4rem 0 .1rem;border-radius:8px}
+.credit{font-size:.66rem;opacity:.6}
+.links{margin:.4rem 0 0;display:flex;gap:.6rem;font-size:.72rem}
+.links a{color:var(--ink);opacity:.75}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+footer{margin-top:2.5rem;color:var(--muted);font-size:.82rem}
+footer a{color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){
+  .p{transition:transform .16s ease}
+  .p:hover{transform:translateY(-3px) rotate(-.6deg)}
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --ground:#101613; --surface:#18201c; --ink:#e7ece9; --muted:#93a49b;
-    --line:#28322c; --line-soft:#1f2823; --accent:#54b891; --accent-soft:#172a22;
-    --amber:#d69a4a; --amber-soft:#2a2118;
-  }
-}
-:root[data-theme="dark"] {
-  --ground:#101613; --surface:#18201c; --ink:#e7ece9; --muted:#93a49b;
-  --line:#28322c; --line-soft:#1f2823; --accent:#54b891; --accent-soft:#172a22;
-  --amber:#d69a4a; --amber-soft:#2a2118;
-}
-* { box-sizing:border-box; }
-body {
-  margin:0; background:var(--ground); color:var(--ink);
-  font:400 15px/1.5 "IBM Plex Sans", system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap { max-width:60rem; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
-header { display:flex; flex-wrap:wrap; gap:1.25rem 2rem; align-items:flex-end;
-  justify-content:space-between; padding-bottom:1.25rem; border-bottom:2px solid var(--ink); }
-h1 { font:700 1.9rem/1.1 Archivo, system-ui, sans-serif; margin:0; letter-spacing:-.02em; text-wrap:balance; }
-.sub { color:var(--muted); font-size:.875rem; margin:.4rem 0 0; }
-.sub b { color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
-.subscribe { display:inline-flex; align-items:center; gap:.5rem; background:var(--accent);
-  color:#fff; text-decoration:none; font:600 .875rem/1 "IBM Plex Sans", sans-serif;
-  padding:.7rem 1rem; border-radius:6px; }
-.subscribe:hover { filter:brightness(1.08); }
-.subscribe span { font-family:"IBM Plex Mono", monospace; opacity:.75; font-weight:400; }
-.legend { list-style:none; display:flex; flex-wrap:wrap; gap:.4rem; margin:1.5rem 0 0; padding:0; }
-.legend li { display:flex; align-items:baseline; gap:.4rem; border:1px solid var(--line);
-  border-radius:999px; padding:.3rem .7rem; font-size:.78rem; color:var(--muted); background:var(--surface); }
-.legend .n { font:500 .8rem "IBM Plex Mono", monospace; color:var(--ink); font-variant-numeric:tabular-nums; }
-.month { margin-top:2.75rem; }
-.month > h2 { font:600 .78rem/1 "IBM Plex Sans", sans-serif; text-transform:uppercase;
-  letter-spacing:.13em; color:var(--muted); margin:0 0 .75rem; }
-.rows { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
-.row { display:grid; grid-template-columns:3.25rem 1fr auto auto; gap:1rem;
-  align-items:baseline; padding:.85rem .25rem .85rem .5rem; border-bottom:1px solid var(--line-soft); }
-.row.live { background:var(--amber-soft); box-shadow:inset 3px 0 0 var(--amber); border-radius:2px; }
-.date { font-family:"IBM Plex Mono", monospace; font-variant-numeric:tabular-nums; line-height:1.2; }
-.date .d { display:block; font-size:1.25rem; font-weight:500; }
-.date .m { display:block; font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
-.body h3 { font:600 1rem/1.3 "IBM Plex Sans", sans-serif; margin:0; text-wrap:balance; }
-.meta { margin:.28rem 0 0; display:flex; flex-wrap:wrap; gap:.5rem; align-items:baseline; }
-.type { font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
-.type.big { color:var(--accent); font-weight:600; }
-.now { font:600 .68rem/1 "IBM Plex Sans", sans-serif; text-transform:uppercase;
-  letter-spacing:.07em; padding:.22rem .4rem; border-radius:3px; vertical-align:.12em;
-  margin-left:.4rem; background:var(--amber); color:#fff; }
-.when { text-align:right; font-family:"IBM Plex Mono", monospace; font-variant-numeric:tabular-nums; line-height:1.25; }
-.when .t { display:block; font-size:.86rem; }
-.when .z { display:block; font-size:.68rem; color:var(--muted); letter-spacing:.02em; }
-.links { display:flex; gap:.75rem; }
-.lk { font-size:.78rem; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); white-space:nowrap; }
-.lk:hover { color:var(--ink); border-color:var(--ink); }
-.lk.ig { color:var(--accent); border-color:var(--accent-soft); font-weight:500; }
-.ig-wrap { margin-top:.6rem; }
-.ig-wrap > summary { display:inline-block; cursor:pointer; font-size:.78rem; color:var(--accent);
-  border:1px solid var(--accent-soft); border-radius:4px; padding:.2rem .55rem; list-style:none; }
-.ig-wrap > summary::-webkit-details-marker { display:none; }
-.ig-wrap > summary::before { content:"B8 "; }
-.ig-wrap[open] > summary::before { content:"BE "; }
-.ig-wrap > summary:hover { background:var(--accent-soft); }
-.ig-wrap img { display:block; width:100%; max-width:32rem; height:auto; margin:.75rem 0 .35rem;
-  border:1px solid var(--line); border-radius:4px; background:var(--surface); }
-.credit { margin:0 0 .25rem; font-size:.72rem; color:var(--muted); }
-footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line);
-  color:var(--muted); font-size:.8rem; display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; }
-footer a { color:var(--muted); }
-a:focus-visible, .subscribe:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
-@media (max-width:640px) {
-  .row { grid-template-columns:2.75rem 1fr; gap:.5rem .9rem; }
-  .when { grid-column:2; text-align:left; }
-  .links { grid-column:2; }
+@media (max-width:560px){
+  .day{grid-template-columns:4.2rem 1fr}
+  .deck{grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));padding:.7rem}
+  .hero{height:8.5rem}
+  .spine .n{font-size:2rem}
 }
 </style>
 <div class="wrap">
-  <header>
-    <div>
-      <h1>Pokémon GO Events</h1>
-      <p class="sub"><b>52</b> upcoming · <b>7</b> with an infographic · rebuilt every 3 hours from Leek&nbsp;Duck</p>
+  <div class="top">
+    <h1>What's on</h1>
+    <p>Thursday 10 September — <a class="sub-link" href="https://starfall10.github.io/pogo-event-calendar/pogo.ics">subscribe to this as a calendar</a></p>
+  </div>
+  <div class="ribbons">
+    <div class="ribbon" style="--rc:#1d7f79"><b>LEGO Stores and Pokémon GO</b><small>event</small><span class="days">20 days left</span></div>
+    <div class="ribbon" style="--rc:#1f7f4d"><b>GO Pass: September</b><small>go pass</small><span class="days">26 days left</span></div>
+    <div class="ribbon" style="--rc:#4f41ac"><b>Twilight Trails</b><small>season</small><span class="days">82 days left</span></div>
+    <div class="ribbon" style="--rc:#3948a8"><b>Shadow Thundurus (Incarnate Forme) in Shadow Raids</b><small>raids</small><span class="days">26 days left</span></div>
+  </div>
+  <article class="day">
+    <div class="spine"><div class="wd">Tue</div><div class="n">8</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">5 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
+          <h3>Mega Beedrill in Mega Raids</h3>
+          <p class="sub">Mega Beedrill</p>
+          <div class="weak"><span class="tp" style="--c:#ee8130" title="fire"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M352.258 395.394C358.584 372.263 346.305 324.71 346.305 324.71C346.305 324.71 337.399 363.449 323.483 377.767C311.611 389.98 297.066 398.451 276.206 400.677C293.261 392.393 304.99 375.12 304.99 355.155C304.99 327.129 281.878 304.409 253.368 304.409C224.858 304.409 201.745 327.129 201.745 355.155C201.745 362.809 203.47 370.068 206.557 376.576C188.725 362.37 185.921 339.594 185.921 339.594C185.921 339.594 166.009 422.264 220.875 461.152C275.74 500.04 383.219 466.614 383.219 466.614C383.219 466.614 229.41 574.837 115.436 457.05C17.2568 355.584 89.8111 222.003 89.8111 222.003C89.8111 222.003 86.6777 234.395 86.6777 248.78C86.6777 263.165 94.477 274.11 94.477 274.11C94.477 274.11 117.742 225.071 135.848 205.128C152.984 186.254 174.465 170.946 193.019 157.724C207.301 147.546 219.849 138.604 227.343 130.223C268.62 84.0687 243.311 0 243.311 0C243.311 0 289.841 41.02 302.831 93.9978C307.783 114.192 304.597 137.169 301.749 157.716C297.125 191.072 293.388 218.025 326.793 216.276C380.775 213.449 333.866 130.223 333.866 130.223C333.866 130.223 456.318 194.583 447.17 307.145C438.021 419.707 313.324 445.297 313.324 445.297C313.324 445.297 345.931 418.525 352.258 395.394Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f7ae5" title="flying"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M178.712 477.733C253.715 477.733 317.927 436.048 344.436 376.956C344.76 376.235 238.007 404.699 241.411 394.637C242.931 390.144 308.371 366.238 356.048 338.354C383.451 322.327 396.07 288.4 396.07 288.4C396.07 288.4 349.903 310.815 326.564 316.501C279.532 327.961 238.131 326.727 238.131 325.533C238.131 322.951 306.876 309.889 402.424 251.664C447.367 224.277 459.574 177.103 459.574 177.103C459.574 177.103 410.163 206.535 380.293 216.252C309.457 239.295 244.815 246.239 244.815 243.121C244.815 236.445 301.702 220.802 362.016 191.577C393.376 176.382 420.535 156.53 452.008 134.453C503.506 98.332 511.999 34 511.999 34C511.999 34 461.207 66.7601 436.42 77.6394C334.141 122.531 243.829 146.079 178.712 151.177C80.416 158.873 0 227.456 0 316.501C0 405.547 80.0119 477.733 178.712 477.733Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#f95587" title="psychic"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M455.925 425.184C455.925 425.184 391.365 476.963 262.893 455.536C165.423 439.279 113.437 331.833 113.437 274.079C113.437 137.149 214.783 105.988 283.3 105.988C351.816 105.988 396.513 172.788 396.513 224.508C396.513 276.228 359.933 321.466 303.006 321.466C246.08 321.466 229.22 281.501 229.22 244.758C229.22 208.016 258.947 195.071 286.058 195.071C313.169 195.071 322.452 218.217 322.452 238.11C322.452 258.004 307.017 265.128 294.143 265.128C281.269 265.128 279.996 258.633 275.069 251.807C270.141 244.982 281.353 219.146 262.893 219.146C244.433 219.146 240.992 248.847 240.992 248.847C240.992 248.847 247.722 306.18 303.006 305.191C358.291 304.201 384.518 261.461 376.896 219.146C369.274 176.83 328.207 131.865 256.133 140.951C184.059 150.037 154.632 222.861 167.603 300.685C180.574 378.51 273.807 423.602 347.112 407.379C420.418 391.156 493.429 338.086 493.429 203.533C493.429 68.9789 376.896 -11.9002 237.941 1.42913C98.9859 14.7584 12.729 136.242 18.2502 282.207C23.7714 428.172 162.275 507.669 279.394 511.766C396.513 515.864 468.312 448.067 468.312 448.067C468.312 448.067 484.459 433.668 478.128 422.424C471.798 411.18 455.925 425.184 455.925 425.184Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#a89029" title="rock"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M395.138 244.757C395.109 244.717 395.097 244.667 395.105 244.618L427.769 54.1518C427.784 54.0641 427.861 54 427.949 54H438.287C438.367 54 438.437 54.0517 438.461 54.1277L512.051 287.131C512.074 287.203 512.049 287.283 511.989 287.33L457.73 329.693C457.649 329.756 457.532 329.74 457.471 329.657L395.138 244.757ZM-1 371.022C-1 371.101 -0.949204 371.171 -0.874109 371.196L110.975 407.767C111.029 407.785 111.089 407.776 111.136 407.744L361.145 235.144C361.187 235.115 361.215 235.07 361.222 235.02L388.032 55.1284C388.049 55.018 387.963 54.9188 387.852 54.9188H166.406C166.351 54.9188 166.3 54.943 166.265 54.9849L-0.957974 256.714C-0.98514 256.747 -1 256.788 -1 256.831V371.022ZM157.583 417.085L279.776 457.112C279.831 457.13 279.892 457.121 279.939 457.087L425.418 352.734C425.499 352.677 425.519 352.566 425.464 352.484L370.928 271.329C370.871 271.244 370.757 271.222 370.673 271.28L157.583 417.085Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/mega-beedrill-in-mega-raids-september-2026/">Leek Duck</a></p>
+        </div>
+      </article>
+      <article class="p" style="--bg:#d7f0ee;--tint:#b6e3e0;--ink:#1d7f79">
+        <span class="kind">Event</span>
+        <span class="badge">4 days</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
+          <h3>Mega Squads</h3>
+          
+          
+          <details class="ig"><summary>Infographic</summary><img src="img/mega-squads.png" alt="Infographic for Mega Squads" loading="lazy" decoding="async"><span class="credit">by G47IX</span></details>
+          <p class="links"><a href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790423660462130">The post</a><a href="https://leekduck.com/events/mega-squads/">Leek Duck</a></p>
+        </div>
+      </article>
     </div>
-    <a class="subscribe" href="https://starfall10.github.io/pogo-event-calendar/pogo.ics">Subscribe <span>.ics</span></a>
-  </header>
-  <ul class="legend"><li><span class="n">12</span>Battle League</li><li><span class="n">10</span>Raids</li><li><span class="n">7</span>Event</li><li><span class="n">4</span>Spotlight Hour</li><li><span class="n">3</span>Community Day</li><li><span class="n">3</span>Max Monday</li><li><span class="n">3</span>Raid Day</li><li><span class="n">3</span>Raid Hour</li><li><span class="n">3</span>wild-area</li><li><span class="n">2</span>Max Battle</li><li><span class="n">1</span>GO Pass</li><li><span class="n">1</span>Season</li></ul>
-    <section class="month">
-      <h2>August 2026</h2>
-      <ul class="rows">
-      <li class="row live">
-        <div class="date"><span class="d">3</span><span class="m">–30 Sep</span></div>
-        <div class="body">
-          <h3>LEGO Stores and Pokémon GO <span class="now">today</span></h3>
-          <p class="meta"><span class="type big">Event</span></p>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Wed</div><div class="n">9</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">5 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
+          <h3>Zacian (Hero of Many Battles) in 5-star Raid Battles</h3>
+          <p class="sub">Zacian (Hero of Many Battles)</p>
+          <div class="weak"><span class="tp" style="--c:#a33ea1" title="poison"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M427.821 393.449C479.524 352.108 512 292.376 512 225.95C512 101.161 397.385 0 256 0C114.615 0 0 101.161 0 225.95C0 289.978 30.1737 347.786 78.6553 388.901C75.7171 399.046 74.1052 410.081 74.1052 421.62C74.1052 471.535 104.267 512 141.474 512C165.65 512 186.852 494.915 198.737 469.254C210.622 494.915 231.824 512 256 512C278.038 512 297.604 497.804 309.895 475.857C322.186 497.804 341.752 512 363.789 512C400.996 512 431.158 471.535 431.158 421.62C431.158 411.784 429.986 402.314 427.821 393.449ZM404.211 230.431C404.211 293.785 336.346 345.144 252.632 345.144C168.917 345.144 101.053 293.785 101.053 230.431C101.053 167.077 168.917 115.718 252.632 115.718C336.346 115.718 404.211 167.077 404.211 230.431Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f90ab" title="steel"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.0511107 254.527C-0.0170046 254.411 -0.0170388 254.267 0.0510196 254.15L128.795 34.1843C128.862 34.0702 128.985 34 129.117 34H384.294C384.427 34 384.55 34.0708 384.617 34.1859L511.949 254.152C512.016 254.267 512.016 254.41 511.949 254.525L384.617 474.244C384.55 474.359 384.427 474.43 384.294 474.43H129.117C128.985 474.43 128.862 474.36 128.795 474.246L0.0511107 254.527ZM374.617 254.215C374.617 319.703 321.528 372.792 256.04 372.792C190.552 372.792 137.463 319.703 137.463 254.215C137.463 188.726 190.552 135.638 256.04 135.638C321.528 135.638 374.617 188.726 374.617 254.215Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/zacian-hero-of-many-battles-in-5-star-raid-battles-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">10:00 → 30 Sep 23:59</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/lego-pokemon-go-2026/">Leek Duck</a></div>
-      </li>
-      </ul>
-    </section>
-    <section class="month">
-      <h2>September 2026</h2>
-      <ul class="rows">
-      <li class="row live">
-        <div class="date"><span class="d">8</span><span class="m">–15 Sep</span></div>
-        <div class="body">
-          <h3>Mega Beedrill in Mega Raids <span class="now">today</span></h3>
-          <p class="meta"><span class="type">Raids</span></p>
+      </article>
+    </div>
+  </article>
+  <article class="day now">
+    <div class="spine"><div class="wd">Thu</div><div class="n">10</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#fff2cc;--tint:#fbe09a;--ink:#a86e00">
+        <span class="kind">Spotlight Hour</span>
+        <span class="badge">6pm</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
+          <h3>Weedle, Kakuna, and Beedrill Spotlight Hour</h3>
+          <p class="sub">Weedle</p>
+          
+          <span class="bon">2× Transfer Candy</span>
+          <p class="links"><a href="https://leekduck.com/events/pokemonspotlighthour2026-09-10/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 15 Sep 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-beedrill-in-mega-raids-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row live">
-        <div class="date"><span class="d">8</span><span class="m">–6 Oct</span></div>
-        <div class="body">
-          <h3>GO Pass: September <span class="now">today</span></h3>
-          <p class="meta"><span class="type big">GO Pass</span></p>
-        </div>
-        <div class="when"><span class="t">10:00 → 6 Oct 10:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/go-pass-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row live">
-        <div class="date"><span class="d">8</span><span class="m">–14 Sep</span></div>
-        <div class="body">
-          <h3>Mega Squads <span class="now">today</span></h3>
-          <p class="meta"><span class="type big">Event</span></p>
-        <details class="ig-wrap"><summary>Infographic</summary><img src="img/mega-squads.png" alt="Infographic for Mega Squads" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
-        </div>
-        <div class="when"><span class="t">10:00 → 14 Sep 20:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790423660462130">Post</a><a class="lk" href="https://leekduck.com/events/mega-squads/">Leek Duck</a></div>
-      </li>
-      <li class="row live">
-        <div class="date"><span class="d">8</span><span class="m">–1 Dec</span></div>
-        <div class="body">
-          <h3>Twilight Trails <span class="now">today</span></h3>
-          <p class="meta"><span class="type big">Season</span></p>
-        </div>
-        <div class="when"><span class="t">10:00 → 1 Dec 10:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/season-24-twilight-trails/">Leek Duck</a></div>
-      </li>
-      <li class="row live">
-        <div class="date"><span class="d">8</span><span class="m">–15 Sep</span></div>
-        <div class="body">
-          <h3>Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails <span class="now">today</span></h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-1/">Leek Duck</a></div>
-      </li>
-      <li class="row live">
-        <div class="date"><span class="d">9</span><span class="m">–6 Oct</span></div>
-        <div class="body">
-          <h3>Shadow Thundurus (Incarnate Forme) in Shadow Raids <span class="now">today</span></h3>
-          <p class="meta"><span class="type">Raids</span></p>
-        </div>
-        <div class="when"><span class="t">06:00 → 6 Oct 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row live">
-        <div class="date"><span class="d">9</span><span class="m">–15 Sep</span></div>
-        <div class="body">
-          <h3>Zacian (Hero of Many Battles) in 5-star Raid Battles <span class="now">today</span></h3>
-          <p class="meta"><span class="type">Raids</span></p>
-        </div>
-        <div class="when"><span class="t">06:00 → 15 Sep 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/zacian-hero-of-many-battles-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row live">
-        <div class="date"><span class="d">10</span><span class="m">Thu</span></div>
-        <div class="body">
-          <h3>Weedle, Kakuna, and Beedrill Spotlight Hour <span class="now">today</span></h3>
-          <p class="meta"><span class="type">Spotlight Hour</span></p>
-        </div>
-        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-10/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">11</span><span class="m">–15 Sep</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Fri</div><div class="n">11</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">5 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Mega Houndoom in Mega Raids</h3>
-          <p class="meta"><span class="type">Raids</span></p>
+          <p class="sub">Mega Houndoom</p>
+          <div class="weak"><span class="tp" style="--c:#c22e28" title="fighting"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M88.2336 42.5656C94.4299 18.1014 116.593 0 142.983 0C162.778 0 180.195 10.1847 190.279 25.6H206.792C217.051 15.0716 231.384 8.53333 247.245 8.53333C270.499 8.53333 290.471 22.5882 299.129 42.6667H312.954C321.617 37.2585 331.853 34.1333 342.818 34.1333C366.073 34.1333 386.044 48.1882 394.702 68.2667H432.297C432.618 68.2667 432.919 68.3532 433.178 68.5041C434.895 68.347 436.634 68.2667 438.391 68.2667C469.582 68.2667 494.866 93.5514 494.866 124.742V294.086L494.867 294.4L494.866 294.714V297.153C494.866 298.186 494.838 299.215 494.782 300.239C491.384 417.717 385.749 512 255.933 512C123.974 512 17 414.577 17 294.4C17 236.391 41.9249 183.683 82.5535 144.675C82.4522 201.228 83.4074 259.694 87.8107 258.691C99.6011 256.003 90.3891 80.8395 88.2336 42.5656Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#c08a26" title="ground"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M112.764 439.754C112.625 439.754 112.528 439.617 112.574 439.486L243.289 70.134C243.318 70.0537 243.394 70 243.479 70H383.021C383.106 70 383.183 70.0541 383.211 70.1349L511.987 439.487C512.032 439.618 511.935 439.754 511.797 439.754H116.692H112.764ZM0.201306 441.199C0.0609122 441.199 -0.0362852 441.059 0.0129607 440.928L97.3526 181.056C97.3821 180.977 97.4571 180.925 97.541 180.925H182.118C182.258 180.925 182.355 181.064 182.307 181.195L88.1823 441.067C88.1535 441.146 88.0779 441.199 87.9932 441.199H0.201306Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#a89029" title="rock"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M395.138 244.757C395.109 244.717 395.097 244.667 395.105 244.618L427.769 54.1518C427.784 54.0641 427.861 54 427.949 54H438.287C438.367 54 438.437 54.0517 438.461 54.1277L512.051 287.131C512.074 287.203 512.049 287.283 511.989 287.33L457.73 329.693C457.649 329.756 457.532 329.74 457.471 329.657L395.138 244.757ZM-1 371.022C-1 371.101 -0.949204 371.171 -0.874109 371.196L110.975 407.767C111.029 407.785 111.089 407.776 111.136 407.744L361.145 235.144C361.187 235.115 361.215 235.07 361.222 235.02L388.032 55.1284C388.049 55.018 387.963 54.9188 387.852 54.9188H166.406C166.351 54.9188 166.3 54.943 166.265 54.9849L-0.957974 256.714C-0.98514 256.747 -1 256.788 -1 256.831V371.022ZM157.583 417.085L279.776 457.112C279.831 457.13 279.892 457.121 279.939 457.087L425.418 352.734C425.499 352.677 425.519 352.566 425.464 352.484L370.928 271.329C370.871 271.244 370.757 271.222 370.673 271.28L157.583 417.085Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#6390f0" title="water"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M422.172 346.515C422.172 437.897 347.813 511.977 256.086 511.977C164.359 511.977 90 437.897 90 346.515C90 257.639 247.102 13.5479 255.718 0.22781C255.915 -0.0759384 256.258 -0.0759358 256.454 0.227813C265.07 13.5479 422.172 257.639 422.172 346.515ZM228.4 458.931C144.12 440.49 158.542 347.13 158.542 347.13C158.542 347.13 181.556 403.488 237.405 421.744C293.253 439.999 360.745 413.225 360.745 413.225C360.745 413.225 312.68 477.371 228.4 458.931Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 15 Sep 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">12</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">12</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe3ec;--tint:#ffc3d6;--ink:#c02a5e">
+        <span class="kind">Community Day</span>
+        <span class="badge">2pm</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/443.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Gible Community Day Classic</h3>
-          <p class="meta"><span class="type big">Community Day</span></p>
-        <details class="ig-wrap"><summary>Infographic</summary><img src="img/september-communitydayclassic2026.png" alt="Infographic for Gible Community Day Classic" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+          <p class="sub">Gible</p>
+          
+          <span class="bon"><img src="https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png" alt="" loading="lazy">Increased Spawns</span><span class="bon"><img src="https://cdn.leekduck.com/assets/img/events/bonuses/xp.png" alt="" loading="lazy">3x Catch XP</span><span class="bon"><img src="https://cdn.leekduck.com/assets/img/events/bonuses/incense.png" alt="" loading="lazy">3-hour Incense*</span><span class="bon"><img src="https://cdn.leekduck.com/assets/img/events/bonuses/lure.png" alt="" loading="lazy">1-hour Lures**</span><details class="ig"><summary>Infographic</summary><img src="img/september-communitydayclassic2026.png" alt="Infographic for Gible Community Day Classic" loading="lazy" decoding="async"><span class="credit">by G47IX</span></details>
+          <p class="links"><a href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188309811231">The post</a><a href="https://leekduck.com/events/september-communitydayclassic2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188309811231">Post</a><a class="lk" href="https://leekduck.com/events/september-communitydayclassic2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">13</span><span class="m">Sun</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sun</div><div class="n">13</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#fff2cc;--tint:#fbe09a;--ink:#a86e00">
+        <span class="kind">Spotlight Hour</span>
+        <span class="badge">6pm</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/228.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Houndour and Houndoom Spotlight Hour</h3>
-          <p class="meta"><span class="type">Spotlight Hour</span></p>
+          <p class="sub">Houndour</p>
+          
+          <span class="bon">2× Transfer Candy</span>
+          <p class="links"><a href="https://leekduck.com/events/pokemonspotlighthour2026-09-13/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-13/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">14</span><span class="m">Mon</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Mon</div><div class="n">14</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#f2ddff;--tint:#e3bcff;--ink:#7c30b4">
+        <span class="kind">Max Monday</span>
+        <span class="badge">6am</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/111.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Dynamax Rhyhorn during Max Monday</h3>
-          <p class="meta"><span class="type">Max Monday</span></p>
+          <p class="sub">Rhyhorn</p>
+          <div class="weak"><span class="tp" style="--c:#6cba43" title="grass"><svg viewBox="0 0 512 512" aria-hidden="true"><path clip-rule="evenodd" d="m97.4121 440.649c-1.7574-1.653-3.4954-3.338- 5.2132-5.056-90.68455-90.684-90.68453-237.713 0-328.397 90.6841-90.6849 379.6401-96.7516 379.6401-96.7516s39.442 334.4646-51.242 425.1486c-80.54 80.54-205.522 89.55-296.005 27.031l72.908-89.471 116.55-25.163-95.139-9.511 60.462-61.562 68.824-15.077-54.422-16.117 54.422-98.176-77.41 86.828-29.893-42.183 10.523 69.648-53.917 60.782-24.993-76.9v102.268z" fill="currentColor" fill-rule="evenodd"/></svg></span><span class="tp" style="--c:#6390f0" title="water"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M422.172 346.515C422.172 437.897 347.813 511.977 256.086 511.977C164.359 511.977 90 437.897 90 346.515C90 257.639 247.102 13.5479 255.718 0.22781C255.915 -0.0759384 256.258 -0.0759358 256.454 0.227813C265.07 13.5479 422.172 257.639 422.172 346.515ZM228.4 458.931C144.12 440.49 158.542 347.13 158.542 347.13C158.542 347.13 181.556 403.488 237.405 421.744C293.253 439.999 360.745 413.225 360.745 413.225C360.745 413.225 312.68 477.371 228.4 458.931Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#c22e28" title="fighting"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M88.2336 42.5656C94.4299 18.1014 116.593 0 142.983 0C162.778 0 180.195 10.1847 190.279 25.6H206.792C217.051 15.0716 231.384 8.53333 247.245 8.53333C270.499 8.53333 290.471 22.5882 299.129 42.6667H312.954C321.617 37.2585 331.853 34.1333 342.818 34.1333C366.073 34.1333 386.044 48.1882 394.702 68.2667H432.297C432.618 68.2667 432.919 68.3532 433.178 68.5041C434.895 68.347 436.634 68.2667 438.391 68.2667C469.582 68.2667 494.866 93.5514 494.866 124.742V294.086L494.867 294.4L494.866 294.714V297.153C494.866 298.186 494.838 299.215 494.782 300.239C491.384 417.717 385.749 512 255.933 512C123.974 512 17 414.577 17 294.4C17 236.391 41.9249 183.683 82.5535 144.675C82.4522 201.228 83.4074 259.694 87.8107 258.691C99.6011 256.003 90.3891 80.8395 88.2336 42.5656Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#c08a26" title="ground"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M112.764 439.754C112.625 439.754 112.528 439.617 112.574 439.486L243.289 70.134C243.318 70.0537 243.394 70 243.479 70H383.021C383.106 70 383.183 70.0541 383.211 70.1349L511.987 439.487C512.032 439.618 511.935 439.754 511.797 439.754H116.692H112.764ZM0.201306 441.199C0.0609122 441.199 -0.0362852 441.059 0.0129607 440.928L97.3526 181.056C97.3821 180.977 97.4571 180.925 97.541 180.925H182.118C182.258 180.925 182.355 181.064 182.307 181.195L88.1823 441.067C88.1535 441.146 88.0779 441.199 87.9932 441.199H0.201306Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#4fb6b3" title="ice"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M384.304 39.0418L385.879 177.392L265.209 235.319L263.721 104.69L384.304 39.0418Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M505.269 257.047L385.814 325.374L266.288 256.939L385.752 194.187L505.269 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip- rule="evenodd" d="M245.04 257.047L125.585 325.374L6.05861 256.939L125.523 194.187L245.04 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M124.243 38.4753L248.229 99.881L245.059 233.697L127.993 175.719L124.243 38.4753Z" fill="currentColor"/> <path fill- rule="evenodd" clip-rule="evenodd" d="M387.678 473.525L263.692 412.119L266.862 278.302L383.928 336.281L387.678 473.525Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M128.525 474.77L126.949 336.42L247.62 278.493L249.108 409.121L128.525 474.77Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f90ab" title="steel"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.0511107 254.527C-0.0170046 254.411 -0.0170388 254.267 0.0510196 254.15L128.795 34.1843C128.862 34.0702 128.985 34 129.117 34H384.294C384.427 34 384.55 34.0708 384.617 34.1859L511.949 254.152C512.016 254.267 512.016 254.41 511.949 254.525L384.617 474.244C384.55 474.359 384.427 474.43 384.294 474.43H129.117C128.985 474.43 128.862 474.36 128.795 474.246L0.0511107 254.527ZM374.617 254.215C374.617 319.703 321.528 372.792 256.04 372.792C190.552 372.792 137.463 319.703 137.463 254.215C137.463 188.726 190.552 135.638 256.04 135.638C321.528 135.638 374.617 188.726 374.617 254.215Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/max-mondays-2026-09-14/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00–21:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/max-mondays-2026-09-14/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">15</span><span class="m">–22 Sep</span></div>
-        <div class="body">
-          <h3>Great League, Ultra League: Mega Edition, and Willpower Cup: Great League Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_willpower-cup-great-league-edition/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">16</span><span class="m">–22 Sep</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Wed</div><div class="n">16</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">12 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Mega Venusaur in Mega Raids</h3>
-          <p class="meta"><span class="type">Raids</span></p>
+          <p class="sub">Mega Venusaur</p>
+          <div class="weak"><span class="tp" style="--c:#ee8130" title="fire"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M352.258 395.394C358.584 372.263 346.305 324.71 346.305 324.71C346.305 324.71 337.399 363.449 323.483 377.767C311.611 389.98 297.066 398.451 276.206 400.677C293.261 392.393 304.99 375.12 304.99 355.155C304.99 327.129 281.878 304.409 253.368 304.409C224.858 304.409 201.745 327.129 201.745 355.155C201.745 362.809 203.47 370.068 206.557 376.576C188.725 362.37 185.921 339.594 185.921 339.594C185.921 339.594 166.009 422.264 220.875 461.152C275.74 500.04 383.219 466.614 383.219 466.614C383.219 466.614 229.41 574.837 115.436 457.05C17.2568 355.584 89.8111 222.003 89.8111 222.003C89.8111 222.003 86.6777 234.395 86.6777 248.78C86.6777 263.165 94.477 274.11 94.477 274.11C94.477 274.11 117.742 225.071 135.848 205.128C152.984 186.254 174.465 170.946 193.019 157.724C207.301 147.546 219.849 138.604 227.343 130.223C268.62 84.0687 243.311 0 243.311 0C243.311 0 289.841 41.02 302.831 93.9978C307.783 114.192 304.597 137.169 301.749 157.716C297.125 191.072 293.388 218.025 326.793 216.276C380.775 213.449 333.866 130.223 333.866 130.223C333.866 130.223 456.318 194.583 447.17 307.145C438.021 419.707 313.324 445.297 313.324 445.297C313.324 445.297 345.931 418.525 352.258 395.394Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f7ae5" title="flying"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M178.712 477.733C253.715 477.733 317.927 436.048 344.436 376.956C344.76 376.235 238.007 404.699 241.411 394.637C242.931 390.144 308.371 366.238 356.048 338.354C383.451 322.327 396.07 288.4 396.07 288.4C396.07 288.4 349.903 310.815 326.564 316.501C279.532 327.961 238.131 326.727 238.131 325.533C238.131 322.951 306.876 309.889 402.424 251.664C447.367 224.277 459.574 177.103 459.574 177.103C459.574 177.103 410.163 206.535 380.293 216.252C309.457 239.295 244.815 246.239 244.815 243.121C244.815 236.445 301.702 220.802 362.016 191.577C393.376 176.382 420.535 156.53 452.008 134.453C503.506 98.332 511.999 34 511.999 34C511.999 34 461.207 66.7601 436.42 77.6394C334.141 122.531 243.829 146.079 178.712 151.177C80.416 158.873 0 227.456 0 316.501C0 405.547 80.0119 477.733 178.712 477.733Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#4fb6b3" title="ice"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M384.304 39.0418L385.879 177.392L265.209 235.319L263.721 104.69L384.304 39.0418Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M505.269 257.047L385.814 325.374L266.288 256.939L385.752 194.187L505.269 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip- rule="evenodd" d="M245.04 257.047L125.585 325.374L6.05861 256.939L125.523 194.187L245.04 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M124.243 38.4753L248.229 99.881L245.059 233.697L127.993 175.719L124.243 38.4753Z" fill="currentColor"/> <path fill- rule="evenodd" clip-rule="evenodd" d="M387.678 473.525L263.692 412.119L266.862 278.302L383.928 336.281L387.678 473.525Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M128.525 474.77L126.949 336.42L247.62 278.493L249.108 409.121L128.525 474.77Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#f95587" title="psychic"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M455.925 425.184C455.925 425.184 391.365 476.963 262.893 455.536C165.423 439.279 113.437 331.833 113.437 274.079C113.437 137.149 214.783 105.988 283.3 105.988C351.816 105.988 396.513 172.788 396.513 224.508C396.513 276.228 359.933 321.466 303.006 321.466C246.08 321.466 229.22 281.501 229.22 244.758C229.22 208.016 258.947 195.071 286.058 195.071C313.169 195.071 322.452 218.217 322.452 238.11C322.452 258.004 307.017 265.128 294.143 265.128C281.269 265.128 279.996 258.633 275.069 251.807C270.141 244.982 281.353 219.146 262.893 219.146C244.433 219.146 240.992 248.847 240.992 248.847C240.992 248.847 247.722 306.18 303.006 305.191C358.291 304.201 384.518 261.461 376.896 219.146C369.274 176.83 328.207 131.865 256.133 140.951C184.059 150.037 154.632 222.861 167.603 300.685C180.574 378.51 273.807 423.602 347.112 407.379C420.418 391.156 493.429 338.086 493.429 203.533C493.429 68.9789 376.896 -11.9002 237.941 1.42913C98.9859 14.7584 12.729 136.242 18.2502 282.207C23.7714 428.172 162.275 507.669 279.394 511.766C396.513 515.864 468.312 448.067 468.312 448.067C468.312 448.067 484.459 433.668 478.128 422.424C471.798 411.18 455.925 425.184 455.925 425.184Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/mega-venusaur-in-mega-raids-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 22 Sep 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-venusaur-in-mega-raids-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">16</span><span class="m">–22 Sep</span></div>
-        <div class="body">
+      </article>
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">12 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Zamazenta (Hero of Many Battles) in 5-star Raid Battles</h3>
-          <p class="meta"><span class="type">Raids</span></p>
+          <p class="sub">Zamazenta (Hero of Many Battles)</p>
+          <div class="weak"><span class="tp" style="--c:#d685ad" title="fairy"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M102.726 405.978L184.848 382.166L255.778 511.857C255.871 512.025 256.112 512.025 256.204 511.857L327.134 382.166L409.257 405.978C409.441 406.031 409.612 405.86 409.557 405.676L385.741 325.179L511.856 256.204C512.025 256.112 512.025 255.871 511.857 255.779L384.702 186.235L409.557 102.225C409.612 102.041 409.441 101.87 409.257 101.923L325.208 126.294L256.204 0.126188C256.112 -0.0420597 255.871 -0.0420644 255.779 0.126184L186.775 126.294L102.726 101.923C102.542 101.87 102.371 102.041 102.426 102.225L127.281 186.235L0.126188 255.779C-0.0420597 255.871 -0.0420644 256.112 0.126184 256.204L126.241 325.179L102.426 405.676C102.371 405.86 102.542 406.031 102.726 405.978ZM166.452 256.876L224.631 288.695L256.45 346.873C256.542 347.042 256.784 347.042 256.876 346.873L288.695 288.695L346.873 256.876C347.041 256.784 347.041 256.542 346.873 256.45L288.695 224.631L256.876 166.453C256.784 166.284 256.542 166.284 256.45 166.453L224.631 224.631L166.452 256.45C166.284 256.542 166.284 256.784 166.452 256.876Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f7ae5" title="flying"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M178.712 477.733C253.715 477.733 317.927 436.048 344.436 376.956C344.76 376.235 238.007 404.699 241.411 394.637C242.931 390.144 308.371 366.238 356.048 338.354C383.451 322.327 396.07 288.4 396.07 288.4C396.07 288.4 349.903 310.815 326.564 316.501C279.532 327.961 238.131 326.727 238.131 325.533C238.131 322.951 306.876 309.889 402.424 251.664C447.367 224.277 459.574 177.103 459.574 177.103C459.574 177.103 410.163 206.535 380.293 216.252C309.457 239.295 244.815 246.239 244.815 243.121C244.815 236.445 301.702 220.802 362.016 191.577C393.376 176.382 420.535 156.53 452.008 134.453C503.506 98.332 511.999 34 511.999 34C511.999 34 461.207 66.7601 436.42 77.6394C334.141 122.531 243.829 146.079 178.712 151.177C80.416 158.873 0 227.456 0 316.501C0 405.547 80.0119 477.733 178.712 477.733Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#f95587" title="psychic"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M455.925 425.184C455.925 425.184 391.365 476.963 262.893 455.536C165.423 439.279 113.437 331.833 113.437 274.079C113.437 137.149 214.783 105.988 283.3 105.988C351.816 105.988 396.513 172.788 396.513 224.508C396.513 276.228 359.933 321.466 303.006 321.466C246.08 321.466 229.22 281.501 229.22 244.758C229.22 208.016 258.947 195.071 286.058 195.071C313.169 195.071 322.452 218.217 322.452 238.11C322.452 258.004 307.017 265.128 294.143 265.128C281.269 265.128 279.996 258.633 275.069 251.807C270.141 244.982 281.353 219.146 262.893 219.146C244.433 219.146 240.992 248.847 240.992 248.847C240.992 248.847 247.722 306.18 303.006 305.191C358.291 304.201 384.518 261.461 376.896 219.146C369.274 176.83 328.207 131.865 256.133 140.951C184.059 150.037 154.632 222.861 167.603 300.685C180.574 378.51 273.807 423.602 347.112 407.379C420.418 391.156 493.429 338.086 493.429 203.533C493.429 68.9789 376.896 -11.9002 237.941 1.42913C98.9859 14.7584 12.729 136.242 18.2502 282.207C23.7714 428.172 162.275 507.669 279.394 511.766C396.513 515.864 468.312 448.067 468.312 448.067C468.312 448.067 484.459 433.668 478.128 422.424C471.798 411.18 455.925 425.184 455.925 425.184Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/zamazenta-hero-of-many-battles-in-5-star-raid-battles-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 22 Sep 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/zamazenta-hero-of-many-battles-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">16</span><span class="m">–22 Sep</span></div>
-        <div class="body">
+      </article>
+      <article class="p" style="--bg:#d7f0ee;--tint:#b6e3e0;--ink:#1d7f79">
+        <span class="kind">Event</span>
+        <span class="badge">12 days</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Pokémon Horizons: The Series Celebration Event</h3>
-          <p class="meta"><span class="type big">Event</span></p>
-        <details class="ig-wrap"><summary>Infographic</summary><img src="img/pokemon-horizons-the-series-celebration-event-2026.png" alt="Infographic for Pokémon Horizons: The Series Celebration Event" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+          
+          
+          <details class="ig"><summary>Infographic</summary><img src="img/pokemon-horizons-the-series-celebration-event-2026.png" alt="Infographic for Pokémon Horizons: The Series Celebration Event" loading="lazy" decoding="async"><span class="credit">by G47IX</span></details>
+          <p class="links"><a href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790566434705434">The post</a><a href="https://leekduck.com/events/pokemon-horizons-the-series-celebration-event-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">10:00 → 22 Sep 20:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790566434705434">Post</a><a class="lk" href="https://leekduck.com/events/pokemon-horizons-the-series-celebration-event-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">16</span><span class="m">Wed</span></div>
-        <div class="body">
+      </article>
+      <article class="p" style="--bg:#ffeccd;--tint:#ffd79a;--ink:#b4661a">
+        <span class="kind">Raid Hour</span>
+        <span class="badge">6pm</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Zamazenta (Hero of Many Battles) Raid Hour</h3>
-          <p class="meta"><span class="type">Raid Hour</span></p>
+          <p class="sub">Zamazenta</p>
+          <div class="weak"><span class="tp" style="--c:#d685ad" title="fairy"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M102.726 405.978L184.848 382.166L255.778 511.857C255.871 512.025 256.112 512.025 256.204 511.857L327.134 382.166L409.257 405.978C409.441 406.031 409.612 405.86 409.557 405.676L385.741 325.179L511.856 256.204C512.025 256.112 512.025 255.871 511.857 255.779L384.702 186.235L409.557 102.225C409.612 102.041 409.441 101.87 409.257 101.923L325.208 126.294L256.204 0.126188C256.112 -0.0420597 255.871 -0.0420644 255.779 0.126184L186.775 126.294L102.726 101.923C102.542 101.87 102.371 102.041 102.426 102.225L127.281 186.235L0.126188 255.779C-0.0420597 255.871 -0.0420644 256.112 0.126184 256.204L126.241 325.179L102.426 405.676C102.371 405.86 102.542 406.031 102.726 405.978ZM166.452 256.876L224.631 288.695L256.45 346.873C256.542 347.042 256.784 347.042 256.876 346.873L288.695 288.695L346.873 256.876C347.041 256.784 347.041 256.542 346.873 256.45L288.695 224.631L256.876 166.453C256.784 166.284 256.542 166.284 256.45 166.453L224.631 224.631L166.452 256.45C166.284 256.542 166.284 256.784 166.452 256.876Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f7ae5" title="flying"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M178.712 477.733C253.715 477.733 317.927 436.048 344.436 376.956C344.76 376.235 238.007 404.699 241.411 394.637C242.931 390.144 308.371 366.238 356.048 338.354C383.451 322.327 396.07 288.4 396.07 288.4C396.07 288.4 349.903 310.815 326.564 316.501C279.532 327.961 238.131 326.727 238.131 325.533C238.131 322.951 306.876 309.889 402.424 251.664C447.367 224.277 459.574 177.103 459.574 177.103C459.574 177.103 410.163 206.535 380.293 216.252C309.457 239.295 244.815 246.239 244.815 243.121C244.815 236.445 301.702 220.802 362.016 191.577C393.376 176.382 420.535 156.53 452.008 134.453C503.506 98.332 511.999 34 511.999 34C511.999 34 461.207 66.7601 436.42 77.6394C334.141 122.531 243.829 146.079 178.712 151.177C80.416 158.873 0 227.456 0 316.501C0 405.547 80.0119 477.733 178.712 477.733Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#f95587" title="psychic"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M455.925 425.184C455.925 425.184 391.365 476.963 262.893 455.536C165.423 439.279 113.437 331.833 113.437 274.079C113.437 137.149 214.783 105.988 283.3 105.988C351.816 105.988 396.513 172.788 396.513 224.508C396.513 276.228 359.933 321.466 303.006 321.466C246.08 321.466 229.22 281.501 229.22 244.758C229.22 208.016 258.947 195.071 286.058 195.071C313.169 195.071 322.452 218.217 322.452 238.11C322.452 258.004 307.017 265.128 294.143 265.128C281.269 265.128 279.996 258.633 275.069 251.807C270.141 244.982 281.353 219.146 262.893 219.146C244.433 219.146 240.992 248.847 240.992 248.847C240.992 248.847 247.722 306.18 303.006 305.191C358.291 304.201 384.518 261.461 376.896 219.146C369.274 176.83 328.207 131.865 256.133 140.951C184.059 150.037 154.632 222.861 167.603 300.685C180.574 378.51 273.807 423.602 347.112 407.379C420.418 391.156 493.429 338.086 493.429 203.533C493.429 68.9789 376.896 -11.9002 237.941 1.42913C98.9859 14.7584 12.729 136.242 18.2502 282.207C23.7714 428.172 162.275 507.669 279.394 511.766C396.513 515.864 468.312 448.067 468.312 448.067C468.312 448.067 484.459 433.668 478.128 422.424C471.798 411.18 455.925 425.184 455.925 425.184Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/raidhour20260916/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/raidhour20260916/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">17</span><span class="m">Thu</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Thu</div><div class="n">17</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#fff2cc;--tint:#fbe09a;--ink:#a86e00">
+        <span class="kind">Spotlight Hour</span>
+        <span class="badge">6pm</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Mystery Pokémon Spotlight Hour</h3>
-          <p class="meta"><span class="type">Spotlight Hour</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/pokemonspotlighthour2026-09-17/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-17/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">19</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">19</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe2d4;--tint:#ffc2a6;--ink:#c4471c">
+        <span class="kind">Raid Day</span>
+        <span class="badge">2pm</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/398.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Staraptor Super Mega Raid Day</h3>
-          <p class="meta"><span class="type big">Raid Day</span></p>
-        <details class="ig-wrap"><summary>Infographic</summary><img src="img/staraptor-super-mega-raid-day-2026.png" alt="Infographic for Staraptor Super Mega Raid Day" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+          <p class="sub">Staraptor</p>
+          <div class="weak"><span class="tp" style="--c:#dcae00" title="electric"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M152.56 0.583659C152.461 0.29796 152.674 0 152.976 0H332.805C332.998 0 333.169 0.125587 333.226 0.309782L415.824 267.171C415.911 267.454 415.7 267.741 415.403 267.741H295.684C295.538 267.741 295.433 267.88 295.473 268.021L364.135 509.726C364.269 510.195 363.654 510.501 363.361 510.111L96.5295 155.267C96.3115 154.977 96.5184 154.563 96.881 154.563H205.536C205.687 154.563 205.793 154.414 205.743 154.271L152.56 0.583659Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#4fb6b3" title="ice"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M384.304 39.0418L385.879 177.392L265.209 235.319L263.721 104.69L384.304 39.0418Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M505.269 257.047L385.814 325.374L266.288 256.939L385.752 194.187L505.269 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip- rule="evenodd" d="M245.04 257.047L125.585 325.374L6.05861 256.939L125.523 194.187L245.04 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M124.243 38.4753L248.229 99.881L245.059 233.697L127.993 175.719L124.243 38.4753Z" fill="currentColor"/> <path fill- rule="evenodd" clip-rule="evenodd" d="M387.678 473.525L263.692 412.119L266.862 278.302L383.928 336.281L387.678 473.525Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M128.525 474.77L126.949 336.42L247.62 278.493L249.108 409.121L128.525 474.77Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#a89029" title="rock"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M395.138 244.757C395.109 244.717 395.097 244.667 395.105 244.618L427.769 54.1518C427.784 54.0641 427.861 54 427.949 54H438.287C438.367 54 438.437 54.0517 438.461 54.1277L512.051 287.131C512.074 287.203 512.049 287.283 511.989 287.33L457.73 329.693C457.649 329.756 457.532 329.74 457.471 329.657L395.138 244.757ZM-1 371.022C-1 371.101 -0.949204 371.171 -0.874109 371.196L110.975 407.767C111.029 407.785 111.089 407.776 111.136 407.744L361.145 235.144C361.187 235.115 361.215 235.07 361.222 235.02L388.032 55.1284C388.049 55.018 387.963 54.9188 387.852 54.9188H166.406C166.351 54.9188 166.3 54.943 166.265 54.9849L-0.957974 256.714C-0.98514 256.747 -1 256.788 -1 256.831V371.022ZM157.583 417.085L279.776 457.112C279.831 457.13 279.892 457.121 279.939 457.087L425.418 352.734C425.499 352.677 425.519 352.566 425.464 352.484L370.928 271.329C370.871 271.244 370.757 271.222 370.673 271.28L157.583 417.085Z" fill="currentColor"/></svg></span></div>
+          <details class="ig"><summary>Infographic</summary><img src="img/staraptor-super-mega-raid-day-2026.png" alt="Infographic for Staraptor Super Mega Raid Day" loading="lazy" decoding="async"><span class="credit">by G47IX</span></details>
+          <p class="links"><a href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188942893120">The post</a><a href="https://leekduck.com/events/staraptor-super-mega-raid-day-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188942893120">Post</a><a class="lk" href="https://leekduck.com/events/staraptor-super-mega-raid-day-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">21</span><span class="m">Mon</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Mon</div><div class="n">21</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#f2ddff;--tint:#e3bcff;--ink:#7c30b4">
+        <span class="kind">Max Monday</span>
+        <span class="badge">6am</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Dynamax Articuno, Zapdos, and Moltres during Max Monday</h3>
-          <p class="meta"><span class="type">Max Monday</span></p>
+          <p class="sub">Articuno</p>
+          <div class="weak"><span class="tp" style="--c:#a89029" title="rock"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M395.138 244.757C395.109 244.717 395.097 244.667 395.105 244.618L427.769 54.1518C427.784 54.0641 427.861 54 427.949 54H438.287C438.367 54 438.437 54.0517 438.461 54.1277L512.051 287.131C512.074 287.203 512.049 287.283 511.989 287.33L457.73 329.693C457.649 329.756 457.532 329.74 457.471 329.657L395.138 244.757ZM-1 371.022C-1 371.101 -0.949204 371.171 -0.874109 371.196L110.975 407.767C111.029 407.785 111.089 407.776 111.136 407.744L361.145 235.144C361.187 235.115 361.215 235.07 361.222 235.02L388.032 55.1284C388.049 55.018 387.963 54.9188 387.852 54.9188H166.406C166.351 54.9188 166.3 54.943 166.265 54.9849L-0.957974 256.714C-0.98514 256.747 -1 256.788 -1 256.831V371.022ZM157.583 417.085L279.776 457.112C279.831 457.13 279.892 457.121 279.939 457.087L425.418 352.734C425.499 352.677 425.519 352.566 425.464 352.484L370.928 271.329C370.871 271.244 370.757 271.222 370.673 271.28L157.583 417.085Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#dcae00" title="electric"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M152.56 0.583659C152.461 0.29796 152.674 0 152.976 0H332.805C332.998 0 333.169 0.125587 333.226 0.309782L415.824 267.171C415.911 267.454 415.7 267.741 415.403 267.741H295.684C295.538 267.741 295.433 267.88 295.473 268.021L364.135 509.726C364.269 510.195 363.654 510.501 363.361 510.111L96.5295 155.267C96.3115 154.977 96.5184 154.563 96.881 154.563H205.536C205.687 154.563 205.793 154.414 205.743 154.271L152.56 0.583659Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#ee8130" title="fire"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M352.258 395.394C358.584 372.263 346.305 324.71 346.305 324.71C346.305 324.71 337.399 363.449 323.483 377.767C311.611 389.98 297.066 398.451 276.206 400.677C293.261 392.393 304.99 375.12 304.99 355.155C304.99 327.129 281.878 304.409 253.368 304.409C224.858 304.409 201.745 327.129 201.745 355.155C201.745 362.809 203.47 370.068 206.557 376.576C188.725 362.37 185.921 339.594 185.921 339.594C185.921 339.594 166.009 422.264 220.875 461.152C275.74 500.04 383.219 466.614 383.219 466.614C383.219 466.614 229.41 574.837 115.436 457.05C17.2568 355.584 89.8111 222.003 89.8111 222.003C89.8111 222.003 86.6777 234.395 86.6777 248.78C86.6777 263.165 94.477 274.11 94.477 274.11C94.477 274.11 117.742 225.071 135.848 205.128C152.984 186.254 174.465 170.946 193.019 157.724C207.301 147.546 219.849 138.604 227.343 130.223C268.62 84.0687 243.311 0 243.311 0C243.311 0 289.841 41.02 302.831 93.9978C307.783 114.192 304.597 137.169 301.749 157.716C297.125 191.072 293.388 218.025 326.793 216.276C380.775 213.449 333.866 130.223 333.866 130.223C333.866 130.223 456.318 194.583 447.17 307.145C438.021 419.707 313.324 445.297 313.324 445.297C313.324 445.297 345.931 418.525 352.258 395.394Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f90ab" title="steel"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.0511107 254.527C-0.0170046 254.411 -0.0170388 254.267 0.0510196 254.15L128.795 34.1843C128.862 34.0702 128.985 34 129.117 34H384.294C384.427 34 384.55 34.0708 384.617 34.1859L511.949 254.152C512.016 254.267 512.016 254.41 511.949 254.525L384.617 474.244C384.55 474.359 384.427 474.43 384.294 474.43H129.117C128.985 474.43 128.862 474.36 128.795 474.246L0.0511107 254.527ZM374.617 254.215C374.617 319.703 321.528 372.792 256.04 372.792C190.552 372.792 137.463 319.703 137.463 254.215C137.463 188.726 190.552 135.638 256.04 135.638C321.528 135.638 374.617 188.726 374.617 254.215Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/max-mondays-2026-09-21/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00–21:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/max-mondays-2026-09-21/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">22</span><span class="m">–29 Sep</span></div>
-        <div class="body">
-          <h3>Ultra League, Master League: Mega Edition, and Retro Cup: Great League Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_retro-cup-great-league-edition/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">23</span><span class="m">–29 Sep</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Wed</div><div class="n">23</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">19 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/687.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Mega Malamar in Mega Raids</h3>
-          <p class="meta"><span class="type">Raids</span></p>
+          <p class="sub">Mega Malamar</p>
+          <div class="weak"><span class="tp" style="--c:#8fa016" title="bug"><svg viewBox="0 0 512 512" aria-hidden="true"><path clip-rule="evenodd" d="m342.198.501279c.373-.5317158 1.105-.660937 1.637-.288625l36.354 25.455546c.532.3723.661 1.1051.289 1.6368l-50.599 72.2623c24.599 7.8587 41.358 16.3357 41.358 16.3357s-40.964 70.462-110.443 70.462-118.85-65.672-118.85-65.672 17.506-11.172 43.456-20.7539l-55.5- 66.1415c-.417-.4973-.352-1.2386.145-1.6558l33.997-28.52715c.498-.41723 1.239-.35238 1.656.14487l70.272 83.74688c6.017-.6806 12.147-1.061 18.333-1.061 8.891 0 17.771.6759 26.44 1.8229zm13.746 189.200721c18.541-13.242 46.597-47.804 46.597-47.804s71.664 56.79 71.664 177.206c0 120.415-123.896 192.888-123.896 192.888s-59.195-59.781-73.727-135.562c-14.531-75.781 21.496-159.927 21.496-159.927s39.324-13.559 57.866-26.801zm-199.683 0c-18.541-13.242-46.597-47.804-46.597-47.804s-71.664 56.79-71.664 177.206c0 120.415 123.896 192.888 123.896 192.888s59.195-59.781 73.727-135.562c14.531- 75.781-21.496-159.927-21.496-159.927s-39.324-13.559-57.866-26.801z" fill="currentColor" fill-rule="evenodd"/></svg></span><span class="tp" style="--c:#d685ad" title="fairy"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M102.726 405.978L184.848 382.166L255.778 511.857C255.871 512.025 256.112 512.025 256.204 511.857L327.134 382.166L409.257 405.978C409.441 406.031 409.612 405.86 409.557 405.676L385.741 325.179L511.856 256.204C512.025 256.112 512.025 255.871 511.857 255.779L384.702 186.235L409.557 102.225C409.612 102.041 409.441 101.87 409.257 101.923L325.208 126.294L256.204 0.126188C256.112 -0.0420597 255.871 -0.0420644 255.779 0.126184L186.775 126.294L102.726 101.923C102.542 101.87 102.371 102.041 102.426 102.225L127.281 186.235L0.126188 255.779C-0.0420597 255.871 -0.0420644 256.112 0.126184 256.204L126.241 325.179L102.426 405.676C102.371 405.86 102.542 406.031 102.726 405.978ZM166.452 256.876L224.631 288.695L256.45 346.873C256.542 347.042 256.784 347.042 256.876 346.873L288.695 288.695L346.873 256.876C347.041 256.784 347.041 256.542 346.873 256.45L288.695 224.631L256.876 166.453C256.784 166.284 256.542 166.284 256.45 166.453L224.631 224.631L166.452 256.45C166.284 256.542 166.284 256.784 166.452 256.876Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/mega-malamar-in-mega-raids-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 29 Sep 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-malamar-in-mega-raids-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">23</span><span class="m">–29 Sep</span></div>
-        <div class="body">
+      </article>
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">19 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/794.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Xurkitree, Pheromosa, and Buzzwole in 5-star Raid Battles</h3>
-          <p class="meta"><span class="type">Raids</span></p>
+          <p class="sub">Buzzwole</p>
+          <div class="weak"><span class="tp" style="--c:#8f7ae5" title="flying"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M178.712 477.733C253.715 477.733 317.927 436.048 344.436 376.956C344.76 376.235 238.007 404.699 241.411 394.637C242.931 390.144 308.371 366.238 356.048 338.354C383.451 322.327 396.07 288.4 396.07 288.4C396.07 288.4 349.903 310.815 326.564 316.501C279.532 327.961 238.131 326.727 238.131 325.533C238.131 322.951 306.876 309.889 402.424 251.664C447.367 224.277 459.574 177.103 459.574 177.103C459.574 177.103 410.163 206.535 380.293 216.252C309.457 239.295 244.815 246.239 244.815 243.121C244.815 236.445 301.702 220.802 362.016 191.577C393.376 176.382 420.535 156.53 452.008 134.453C503.506 98.332 511.999 34 511.999 34C511.999 34 461.207 66.7601 436.42 77.6394C334.141 122.531 243.829 146.079 178.712 151.177C80.416 158.873 0 227.456 0 316.501C0 405.547 80.0119 477.733 178.712 477.733Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#d685ad" title="fairy"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M102.726 405.978L184.848 382.166L255.778 511.857C255.871 512.025 256.112 512.025 256.204 511.857L327.134 382.166L409.257 405.978C409.441 406.031 409.612 405.86 409.557 405.676L385.741 325.179L511.856 256.204C512.025 256.112 512.025 255.871 511.857 255.779L384.702 186.235L409.557 102.225C409.612 102.041 409.441 101.87 409.257 101.923L325.208 126.294L256.204 0.126188C256.112 -0.0420597 255.871 -0.0420644 255.779 0.126184L186.775 126.294L102.726 101.923C102.542 101.87 102.371 102.041 102.426 102.225L127.281 186.235L0.126188 255.779C-0.0420597 255.871 -0.0420644 256.112 0.126184 256.204L126.241 325.179L102.426 405.676C102.371 405.86 102.542 406.031 102.726 405.978ZM166.452 256.876L224.631 288.695L256.45 346.873C256.542 347.042 256.784 347.042 256.876 346.873L288.695 288.695L346.873 256.876C347.041 256.784 347.041 256.542 346.873 256.45L288.695 224.631L256.876 166.453C256.784 166.284 256.542 166.284 256.45 166.453L224.631 224.631L166.452 256.45C166.284 256.542 166.284 256.784 166.452 256.876Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#ee8130" title="fire"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M352.258 395.394C358.584 372.263 346.305 324.71 346.305 324.71C346.305 324.71 337.399 363.449 323.483 377.767C311.611 389.98 297.066 398.451 276.206 400.677C293.261 392.393 304.99 375.12 304.99 355.155C304.99 327.129 281.878 304.409 253.368 304.409C224.858 304.409 201.745 327.129 201.745 355.155C201.745 362.809 203.47 370.068 206.557 376.576C188.725 362.37 185.921 339.594 185.921 339.594C185.921 339.594 166.009 422.264 220.875 461.152C275.74 500.04 383.219 466.614 383.219 466.614C383.219 466.614 229.41 574.837 115.436 457.05C17.2568 355.584 89.8111 222.003 89.8111 222.003C89.8111 222.003 86.6777 234.395 86.6777 248.78C86.6777 263.165 94.477 274.11 94.477 274.11C94.477 274.11 117.742 225.071 135.848 205.128C152.984 186.254 174.465 170.946 193.019 157.724C207.301 147.546 219.849 138.604 227.343 130.223C268.62 84.0687 243.311 0 243.311 0C243.311 0 289.841 41.02 302.831 93.9978C307.783 114.192 304.597 137.169 301.749 157.716C297.125 191.072 293.388 218.025 326.793 216.276C380.775 213.449 333.866 130.223 333.866 130.223C333.866 130.223 456.318 194.583 447.17 307.145C438.021 419.707 313.324 445.297 313.324 445.297C313.324 445.297 345.931 418.525 352.258 395.394Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#f95587" title="psychic"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M455.925 425.184C455.925 425.184 391.365 476.963 262.893 455.536C165.423 439.279 113.437 331.833 113.437 274.079C113.437 137.149 214.783 105.988 283.3 105.988C351.816 105.988 396.513 172.788 396.513 224.508C396.513 276.228 359.933 321.466 303.006 321.466C246.08 321.466 229.22 281.501 229.22 244.758C229.22 208.016 258.947 195.071 286.058 195.071C313.169 195.071 322.452 218.217 322.452 238.11C322.452 258.004 307.017 265.128 294.143 265.128C281.269 265.128 279.996 258.633 275.069 251.807C270.141 244.982 281.353 219.146 262.893 219.146C244.433 219.146 240.992 248.847 240.992 248.847C240.992 248.847 247.722 306.18 303.006 305.191C358.291 304.201 384.518 261.461 376.896 219.146C369.274 176.83 328.207 131.865 256.133 140.951C184.059 150.037 154.632 222.861 167.603 300.685C180.574 378.51 273.807 423.602 347.112 407.379C420.418 391.156 493.429 338.086 493.429 203.533C493.429 68.9789 376.896 -11.9002 237.941 1.42913C98.9859 14.7584 12.729 136.242 18.2502 282.207C23.7714 428.172 162.275 507.669 279.394 511.766C396.513 515.864 468.312 448.067 468.312 448.067C468.312 448.067 484.459 433.668 478.128 422.424C471.798 411.18 455.925 425.184 455.925 425.184Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/xurkitree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 29 Sep 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/xurkitree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">23</span><span class="m">Wed</span></div>
-        <div class="body">
+      </article>
+      <article class="p" style="--bg:#ffeccd;--tint:#ffd79a;--ink:#b4661a">
+        <span class="kind">Raid Hour</span>
+        <span class="badge">6pm</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/796.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Xurkitree, Pheromosa, and Buzzwole Raid Hour</h3>
-          <p class="meta"><span class="type">Raid Hour</span></p>
+          <p class="sub">Xurkitree</p>
+          <div class="weak"><span class="tp" style="--c:#c08a26" title="ground"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M112.764 439.754C112.625 439.754 112.528 439.617 112.574 439.486L243.289 70.134C243.318 70.0537 243.394 70 243.479 70H383.021C383.106 70 383.183 70.0541 383.211 70.1349L511.987 439.487C512.032 439.618 511.935 439.754 511.797 439.754H116.692H112.764ZM0.201306 441.199C0.0609122 441.199 -0.0362852 441.059 0.0129607 440.928L97.3526 181.056C97.3821 180.977 97.4571 180.925 97.541 180.925H182.118C182.258 180.925 182.355 181.064 182.307 181.195L88.1823 441.067C88.1535 441.146 88.0779 441.199 87.9932 441.199H0.201306Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/raidhour20260923/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/raidhour20260923/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">24</span><span class="m">Thu</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Thu</div><div class="n">24</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#fff2cc;--tint:#fbe09a;--ink:#a86e00">
+        <span class="kind">Spotlight Hour</span>
+        <span class="badge">6pm</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Rattata Spotlight Hour</h3>
-          <p class="meta"><span class="type">Spotlight Hour</span></p>
+          <p class="sub">Rattata</p>
+          
+          <span class="bon">2× Evolution XP</span>
+          <p class="links"><a href="https://leekduck.com/events/pokemonspotlighthour2026-09-24/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemonspotlighthour2026-09-24/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">26</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">26</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#d7f0ee;--tint:#b6e3e0;--ink:#1d7f79">
+        <span class="kind">Event</span>
+        <span class="badge">10am</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Phantump Catch Mastery</h3>
-          <p class="meta"><span class="type big">Event</span></p>
-        <details class="ig-wrap"><summary>Infographic</summary><img src="img/catch-mastery-phantump-2026.png" alt="Infographic for Phantump Catch Mastery" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+          
+          
+          <details class="ig"><summary>Infographic</summary><img src="img/catch-mastery-phantump-2026.png" alt="Infographic for Phantump Catch Mastery" loading="lazy" decoding="async"><span class="credit">by G47IX</span></details>
+          <p class="links"><a href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188468932711">The post</a><a href="https://leekduck.com/events/catch-mastery-phantump-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">10:00–20:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790188468932711">Post</a><a class="lk" href="https://leekduck.com/events/catch-mastery-phantump-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">28</span><span class="m">Mon</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Mon</div><div class="n">28</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#f2ddff;--tint:#e3bcff;--ink:#7c30b4">
+        <span class="kind">Max Monday</span>
+        <span class="badge">6am</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Dynamax Sobble during Max Monday</h3>
-          <p class="meta"><span class="type">Max Monday</span></p>
+          <p class="sub">Sobble</p>
+          <div class="weak"><span class="tp" style="--c:#dcae00" title="electric"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M152.56 0.583659C152.461 0.29796 152.674 0 152.976 0H332.805C332.998 0 333.169 0.125587 333.226 0.309782L415.824 267.171C415.911 267.454 415.7 267.741 415.403 267.741H295.684C295.538 267.741 295.433 267.88 295.473 268.021L364.135 509.726C364.269 510.195 363.654 510.501 363.361 510.111L96.5295 155.267C96.3115 154.977 96.5184 154.563 96.881 154.563H205.536C205.687 154.563 205.793 154.414 205.743 154.271L152.56 0.583659Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#6cba43" title="grass"><svg viewBox="0 0 512 512" aria-hidden="true"><path clip-rule="evenodd" d="m97.4121 440.649c-1.7574-1.653-3.4954-3.338- 5.2132-5.056-90.68455-90.684-90.68453-237.713 0-328.397 90.6841-90.6849 379.6401-96.7516 379.6401-96.7516s39.442 334.4646-51.242 425.1486c-80.54 80.54-205.522 89.55-296.005 27.031l72.908-89.471 116.55-25.163-95.139-9.511 60.462-61.562 68.824-15.077-54.422-16.117 54.422-98.176-77.41 86.828-29.893-42.183 10.523 69.648-53.917 60.782-24.993-76.9v102.268z" fill="currentColor" fill-rule="evenodd"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/max-mondays-2026-09-28/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00–21:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/max-mondays-2026-09-28/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">29</span><span class="m">–5 Oct</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Tue</div><div class="n">29</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#d7f0ee;--tint:#b6e3e0;--ink:#1d7f79">
+        <span class="kind">Event</span>
+        <span class="badge">25 days</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Harvest Festival 2026: Applin Picking</h3>
-          <p class="meta"><span class="type big">Event</span></p>
-        <details class="ig-wrap"><summary>Infographic</summary><img src="img/harvest-festival-2026.jpg" alt="Infographic for Harvest Festival 2026: Applin Picking" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+          
+          
+          <details class="ig"><summary>Infographic</summary><img src="img/harvest-festival-2026.jpg" alt="Infographic for Harvest Festival 2026: Applin Picking" loading="lazy" decoding="async"><span class="credit">by G47IX</span></details>
+          <p class="links"><a href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790297982214215">The post</a><a href="https://leekduck.com/events/harvest-festival-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">10:00 → 5 Oct 20:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790297982214215">Post</a><a class="lk" href="https://leekduck.com/events/harvest-festival-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">29</span><span class="m">–6 Oct</span></div>
-        <div class="body">
-          <h3>Master League and Mega Color Cup: Great League Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_master-league_mega-color-cup-great-league-edition/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">30</span><span class="m">–6 Oct</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Wed</div><div class="n">30</div><div class="mo">Sep</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">26 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Mega Victreebel in Mega Raids</h3>
-          <p class="meta"><span class="type">Raids</span></p>
+          <p class="sub">Mega Victreebel</p>
+          <div class="weak"><span class="tp" style="--c:#ee8130" title="fire"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M352.258 395.394C358.584 372.263 346.305 324.71 346.305 324.71C346.305 324.71 337.399 363.449 323.483 377.767C311.611 389.98 297.066 398.451 276.206 400.677C293.261 392.393 304.99 375.12 304.99 355.155C304.99 327.129 281.878 304.409 253.368 304.409C224.858 304.409 201.745 327.129 201.745 355.155C201.745 362.809 203.47 370.068 206.557 376.576C188.725 362.37 185.921 339.594 185.921 339.594C185.921 339.594 166.009 422.264 220.875 461.152C275.74 500.04 383.219 466.614 383.219 466.614C383.219 466.614 229.41 574.837 115.436 457.05C17.2568 355.584 89.8111 222.003 89.8111 222.003C89.8111 222.003 86.6777 234.395 86.6777 248.78C86.6777 263.165 94.477 274.11 94.477 274.11C94.477 274.11 117.742 225.071 135.848 205.128C152.984 186.254 174.465 170.946 193.019 157.724C207.301 147.546 219.849 138.604 227.343 130.223C268.62 84.0687 243.311 0 243.311 0C243.311 0 289.841 41.02 302.831 93.9978C307.783 114.192 304.597 137.169 301.749 157.716C297.125 191.072 293.388 218.025 326.793 216.276C380.775 213.449 333.866 130.223 333.866 130.223C333.866 130.223 456.318 194.583 447.17 307.145C438.021 419.707 313.324 445.297 313.324 445.297C313.324 445.297 345.931 418.525 352.258 395.394Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f7ae5" title="flying"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M178.712 477.733C253.715 477.733 317.927 436.048 344.436 376.956C344.76 376.235 238.007 404.699 241.411 394.637C242.931 390.144 308.371 366.238 356.048 338.354C383.451 322.327 396.07 288.4 396.07 288.4C396.07 288.4 349.903 310.815 326.564 316.501C279.532 327.961 238.131 326.727 238.131 325.533C238.131 322.951 306.876 309.889 402.424 251.664C447.367 224.277 459.574 177.103 459.574 177.103C459.574 177.103 410.163 206.535 380.293 216.252C309.457 239.295 244.815 246.239 244.815 243.121C244.815 236.445 301.702 220.802 362.016 191.577C393.376 176.382 420.535 156.53 452.008 134.453C503.506 98.332 511.999 34 511.999 34C511.999 34 461.207 66.7601 436.42 77.6394C334.141 122.531 243.829 146.079 178.712 151.177C80.416 158.873 0 227.456 0 316.501C0 405.547 80.0119 477.733 178.712 477.733Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#4fb6b3" title="ice"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M384.304 39.0418L385.879 177.392L265.209 235.319L263.721 104.69L384.304 39.0418Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M505.269 257.047L385.814 325.374L266.288 256.939L385.752 194.187L505.269 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip- rule="evenodd" d="M245.04 257.047L125.585 325.374L6.05861 256.939L125.523 194.187L245.04 257.047Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M124.243 38.4753L248.229 99.881L245.059 233.697L127.993 175.719L124.243 38.4753Z" fill="currentColor"/> <path fill- rule="evenodd" clip-rule="evenodd" d="M387.678 473.525L263.692 412.119L266.862 278.302L383.928 336.281L387.678 473.525Z" fill="currentColor"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M128.525 474.77L126.949 336.42L247.62 278.493L249.108 409.121L128.525 474.77Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#f95587" title="psychic"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M455.925 425.184C455.925 425.184 391.365 476.963 262.893 455.536C165.423 439.279 113.437 331.833 113.437 274.079C113.437 137.149 214.783 105.988 283.3 105.988C351.816 105.988 396.513 172.788 396.513 224.508C396.513 276.228 359.933 321.466 303.006 321.466C246.08 321.466 229.22 281.501 229.22 244.758C229.22 208.016 258.947 195.071 286.058 195.071C313.169 195.071 322.452 218.217 322.452 238.11C322.452 258.004 307.017 265.128 294.143 265.128C281.269 265.128 279.996 258.633 275.069 251.807C270.141 244.982 281.353 219.146 262.893 219.146C244.433 219.146 240.992 248.847 240.992 248.847C240.992 248.847 247.722 306.18 303.006 305.191C358.291 304.201 384.518 261.461 376.896 219.146C369.274 176.83 328.207 131.865 256.133 140.951C184.059 150.037 154.632 222.861 167.603 300.685C180.574 378.51 273.807 423.602 347.112 407.379C420.418 391.156 493.429 338.086 493.429 203.533C493.429 68.9789 376.896 -11.9002 237.941 1.42913C98.9859 14.7584 12.729 136.242 18.2502 282.207C23.7714 428.172 162.275 507.669 279.394 511.766C396.513 515.864 468.312 448.067 468.312 448.067C468.312 448.067 484.459 433.668 478.128 422.424C471.798 411.18 455.925 425.184 455.925 425.184Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 6 Oct 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">30</span><span class="m">–6 Oct</span></div>
-        <div class="body">
+      </article>
+      <article class="p" style="--bg:#e0e6ff;--tint:#c3cdff;--ink:#3948a8">
+        <span class="kind">Raids</span>
+        <span class="badge">26 days</span>
+        <span class="spark" title="can be shiny"></span>
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Xerneas in 5-star Raid Battles</h3>
-          <p class="meta"><span class="type">Raids</span></p>
+          <p class="sub">Xerneas</p>
+          <div class="weak"><span class="tp" style="--c:#a33ea1" title="poison"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M427.821 393.449C479.524 352.108 512 292.376 512 225.95C512 101.161 397.385 0 256 0C114.615 0 0 101.161 0 225.95C0 289.978 30.1737 347.786 78.6553 388.901C75.7171 399.046 74.1052 410.081 74.1052 421.62C74.1052 471.535 104.267 512 141.474 512C165.65 512 186.852 494.915 198.737 469.254C210.622 494.915 231.824 512 256 512C278.038 512 297.604 497.804 309.895 475.857C322.186 497.804 341.752 512 363.789 512C400.996 512 431.158 471.535 431.158 421.62C431.158 411.784 429.986 402.314 427.821 393.449ZM404.211 230.431C404.211 293.785 336.346 345.144 252.632 345.144C168.917 345.144 101.053 293.785 101.053 230.431C101.053 167.077 168.917 115.718 252.632 115.718C336.346 115.718 404.211 167.077 404.211 230.431Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f90ab" title="steel"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.0511107 254.527C-0.0170046 254.411 -0.0170388 254.267 0.0510196 254.15L128.795 34.1843C128.862 34.0702 128.985 34 129.117 34H384.294C384.427 34 384.55 34.0708 384.617 34.1859L511.949 254.152C512.016 254.267 512.016 254.41 511.949 254.525L384.617 474.244C384.55 474.359 384.427 474.43 384.294 474.43H129.117C128.985 474.43 128.862 474.36 128.795 474.246L0.0511107 254.527ZM374.617 254.215C374.617 319.703 321.528 372.792 256.04 372.792C190.552 372.792 137.463 319.703 137.463 254.215C137.463 188.726 190.552 135.638 256.04 135.638C321.528 135.638 374.617 188.726 374.617 254.215Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">06:00 → 6 Oct 22:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">30</span><span class="m">Wed</span></div>
-        <div class="body">
+      </article>
+      <article class="p" style="--bg:#ffeccd;--tint:#ffd79a;--ink:#b4661a">
+        <span class="kind">Raid Hour</span>
+        <span class="badge">6pm</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Xerneas Raid Hour</h3>
-          <p class="meta"><span class="type">Raid Hour</span></p>
+          <p class="sub">Xerneas</p>
+          <div class="weak"><span class="tp" style="--c:#a33ea1" title="poison"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M427.821 393.449C479.524 352.108 512 292.376 512 225.95C512 101.161 397.385 0 256 0C114.615 0 0 101.161 0 225.95C0 289.978 30.1737 347.786 78.6553 388.901C75.7171 399.046 74.1052 410.081 74.1052 421.62C74.1052 471.535 104.267 512 141.474 512C165.65 512 186.852 494.915 198.737 469.254C210.622 494.915 231.824 512 256 512C278.038 512 297.604 497.804 309.895 475.857C322.186 497.804 341.752 512 363.789 512C400.996 512 431.158 471.535 431.158 421.62C431.158 411.784 429.986 402.314 427.821 393.449ZM404.211 230.431C404.211 293.785 336.346 345.144 252.632 345.144C168.917 345.144 101.053 293.785 101.053 230.431C101.053 167.077 168.917 115.718 252.632 115.718C336.346 115.718 404.211 167.077 404.211 230.431Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#8f90ab" title="steel"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.0511107 254.527C-0.0170046 254.411 -0.0170388 254.267 0.0510196 254.15L128.795 34.1843C128.862 34.0702 128.985 34 129.117 34H384.294C384.427 34 384.55 34.0708 384.617 34.1859L511.949 254.152C512.016 254.267 512.016 254.41 511.949 254.525L384.617 474.244C384.55 474.359 384.427 474.43 384.294 474.43H129.117C128.985 474.43 128.862 474.36 128.795 474.246L0.0511107 254.527ZM374.617 254.215C374.617 319.703 321.528 372.792 256.04 372.792C190.552 372.792 137.463 319.703 137.463 254.215C137.463 188.726 190.552 135.638 256.04 135.638C321.528 135.638 374.617 188.726 374.617 254.215Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/raidhour20260930/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">18:00–19:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/raidhour20260930/">Leek Duck</a></div>
-      </li>
-      </ul>
-    </section>
-    <section class="month">
-      <h2>October 2026</h2>
-      <ul class="rows">
-      <li class="row">
-        <div class="date"><span class="d">2</span><span class="m">–5 Oct</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Fri</div><div class="n">2</div><div class="mo">Oct</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#d7f0ee;--tint:#b6e3e0;--ink:#1d7f79">
+        <span class="kind">Event</span>
+        <span class="badge">25 days</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Harvest Festival: Taken Over</h3>
-          <p class="meta"><span class="type big">Event</span></p>
-        <details class="ig-wrap"><summary>Infographic</summary><img src="img/harvest-festival-taken-over-2026.jpg" alt="Infographic for Harvest Festival: Taken Over" loading="lazy" decoding="async"><p class="credit">Infographic by G47IX</p></details>
+          
+          
+          <details class="ig"><summary>Infographic</summary><img src="img/harvest-festival-taken-over-2026.jpg" alt="Infographic for Harvest Festival: Taken Over" loading="lazy" decoding="async"><span class="credit">by G47IX</span></details>
+          <p class="links"><a href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790331176058903">The post</a><a href="https://leekduck.com/events/harvest-festival-taken-over-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">00:00 → 5 Oct 20:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk ig" href="https://discord.com/channels/772532010555670530/1173052217050267679/1546790331176058903">Post</a><a class="lk" href="https://leekduck.com/events/harvest-festival-taken-over-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">3</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">3</div><div class="mo">Oct</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe0f4;--tint:#ffc0e8;--ink:#b02a7e">
+        <span class="kind">Max Battle</span>
+        <span class="badge">2pm</span>
+        
+        <img class="hero" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/815.png" alt="" loading="lazy" decoding="async">
+        <div class="foot">
           <h3>Gigantamax Cinderace Max Battle Day</h3>
-          <p class="meta"><span class="type">Max Battle</span></p>
+          <p class="sub">Cinderace</p>
+          <div class="weak"><span class="tp" style="--c:#c08a26" title="ground"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M112.764 439.754C112.625 439.754 112.528 439.617 112.574 439.486L243.289 70.134C243.318 70.0537 243.394 70 243.479 70H383.021C383.106 70 383.183 70.0541 383.211 70.1349L511.987 439.487C512.032 439.618 511.935 439.754 511.797 439.754H116.692H112.764ZM0.201306 441.199C0.0609122 441.199 -0.0362852 441.059 0.0129607 440.928L97.3526 181.056C97.3821 180.977 97.4571 180.925 97.541 180.925H182.118C182.258 180.925 182.355 181.064 182.307 181.195L88.1823 441.067C88.1535 441.146 88.0779 441.199 87.9932 441.199H0.201306Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#a89029" title="rock"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M395.138 244.757C395.109 244.717 395.097 244.667 395.105 244.618L427.769 54.1518C427.784 54.0641 427.861 54 427.949 54H438.287C438.367 54 438.437 54.0517 438.461 54.1277L512.051 287.131C512.074 287.203 512.049 287.283 511.989 287.33L457.73 329.693C457.649 329.756 457.532 329.74 457.471 329.657L395.138 244.757ZM-1 371.022C-1 371.101 -0.949204 371.171 -0.874109 371.196L110.975 407.767C111.029 407.785 111.089 407.776 111.136 407.744L361.145 235.144C361.187 235.115 361.215 235.07 361.222 235.02L388.032 55.1284C388.049 55.018 387.963 54.9188 387.852 54.9188H166.406C166.351 54.9188 166.3 54.943 166.265 54.9849L-0.957974 256.714C-0.98514 256.747 -1 256.788 -1 256.831V371.022ZM157.583 417.085L279.776 457.112C279.831 457.13 279.892 457.121 279.939 457.087L425.418 352.734C425.499 352.677 425.519 352.566 425.464 352.484L370.928 271.329C370.871 271.244 370.757 271.222 370.673 271.28L157.583 417.085Z" fill="currentColor"/></svg></span><span class="tp" style="--c:#6390f0" title="water"><svg viewBox="0 0 512 512" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M422.172 346.515C422.172 437.897 347.813 511.977 256.086 511.977C164.359 511.977 90 437.897 90 346.515C90 257.639 247.102 13.5479 255.718 0.22781C255.915 -0.0759384 256.258 -0.0759358 256.454 0.227813C265.07 13.5479 422.172 257.639 422.172 346.515ZM228.4 458.931C144.12 440.49 158.542 347.13 158.542 347.13C158.542 347.13 181.556 403.488 237.405 421.744C293.253 439.999 360.745 413.225 360.745 413.225C360.745 413.225 312.68 477.371 228.4 458.931Z" fill="currentColor"/></svg></span></div>
+          
+          <p class="links"><a href="https://leekduck.com/events/gigantamax-cinderace-max-battle-day-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gigantamax-cinderace-max-battle-day-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">6</span><span class="m">–13 Oct</span></div>
-        <div class="body">
-          <h3>Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-2/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">10</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">10</div><div class="mo">Oct</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe3ec;--tint:#ffc3d6;--ink:#c02a5e">
+        <span class="kind">Community Day</span>
+        <span class="badge">2pm</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>October Community Day</h3>
-          <p class="meta"><span class="type big">Community Day</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/october-communityday2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/october-communityday2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">13</span><span class="m">–20 Oct</span></div>
-        <div class="body">
-          <h3>Great League, Ultra League: Mega Edition, and Little Cup | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_little-cup/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">17</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">17</div><div class="mo">Oct</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#d7f0ee;--tint:#b6e3e0;--ink:#1d7f79">
+        <span class="kind">Event</span>
+        <span class="badge">11am</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Hatch Day</h3>
-          <p class="meta"><span class="type big">Event</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/hatch-day-october-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">11:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/hatch-day-october-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">20</span><span class="m">–27 Oct</span></div>
-        <div class="body">
-          <h3>Ultra League, Master League: Mega Edition, and Fantasy Cup: Great League Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">20:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_fantasy-cup-great-league-edition/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">24</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">24</div><div class="mo">Oct</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe0f4;--tint:#ffc0e8;--ink:#b02a7e">
+        <span class="kind">Max Battle</span>
+        <span class="badge">2pm</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Max Battle Day</h3>
-          <p class="meta"><span class="type">Max Battle</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/max-battle-day-october-24-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/max-battle-day-october-24-2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">27</span><span class="m">–3 Nov</span></div>
-        <div class="body">
-          <h3>Master League and Mega Halloween Cup: Great League Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edition/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">31</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">31</div><div class="mo">Oct</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe2d4;--tint:#ffc2a6;--ink:#c4471c">
+        <span class="kind">Raid Day</span>
+        <span class="badge">2pm</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Super Mega Raid Day</h3>
-          <p class="meta"><span class="type big">Raid Day</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/super-mega-raid-day-october-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/super-mega-raid-day-october-2026/">Leek Duck</a></div>
-      </li>
-      </ul>
-    </section>
-    <section class="month">
-      <h2>November 2026</h2>
-      <ul class="rows">
-      <li class="row">
-        <div class="date"><span class="d">3</span><span class="m">–10 Nov</span></div>
-        <div class="body">
-          <h3>Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-3/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">6</span><span class="m">–8 Nov</span></div>
-        <div class="body">
-          <h3>Pokémon GO Wild Area 2026: Sendai • Tohoku</h3>
-          <p class="meta"><span class="type">wild-area</span></p>
-        </div>
-        <div class="when"><span class="t">01:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemon-go-wild-area-2026-sendai-japan/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">6</span><span class="m">–9 Nov</span></div>
-        <div class="body">
-          <h3>Pokémon GO Wild Area 2026: Mexico City</h3>
-          <p class="meta"><span class="type">wild-area</span></p>
-        </div>
-        <div class="when"><span class="t">16:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemon-go-wild-area-2026-mexico-city/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">10</span><span class="m">–17 Nov</span></div>
-        <div class="body">
-          <h3>Great League, Ultra League: Mega Edition, and 2026 GO LAIC Cup | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-laic-cup/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">14</span><span class="m">–15 Nov</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">14</div><div class="mo">Nov</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#dcefff;--tint:#bcdfff;--ink:#1f6ba8">
+        <span class="kind">Wild Area</span>
+        <span class="badge">66 days</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Pokémon GO Wild Area 2026: Global</h3>
-          <p class="meta"><span class="type">wild-area</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/pokemon-go-wild-area-2026-global/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">10:00 → 15 Nov 18:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/pokemon-go-wild-area-2026-global/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">18</span><span class="m">–25 Nov</span></div>
-        <div class="body">
-          <h3>Ultra League, Master League: Mega Edition, and 2026 GO LAIC Cup | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-laic-cup/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">21</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">21</div><div class="mo">Nov</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe3ec;--tint:#ffc3d6;--ink:#c02a5e">
+        <span class="kind">Community Day</span>
+        <span class="badge">2pm</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>November Community Day</h3>
-          <p class="meta"><span class="type big">Community Day</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/november-communityday2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/november-communityday2026/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">24</span><span class="m">–1 Dec</span></div>
-        <div class="body">
-          <h3>Master League and Mega Catch Cup: Great League Edition | Twilight Trails</h3>
-          <p class="meta"><span class="type">Battle League</span></p>
-        </div>
-        <div class="when"><span class="t">21:00</span><span class="z">UTC, fixed</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition/">Leek Duck</a></div>
-      </li>
-      <li class="row">
-        <div class="date"><span class="d">28</span><span class="m">Sat</span></div>
-        <div class="body">
+      </article>
+    </div>
+  </article>
+  <article class="day">
+    <div class="spine"><div class="wd">Sat</div><div class="n">28</div><div class="mo">Nov</div></div>
+    <div class="deck">
+      <article class="p" style="--bg:#ffe2d4;--tint:#ffc2a6;--ink:#c4471c">
+        <span class="kind">Raid Day</span>
+        <span class="badge">2pm</span>
+        
+        <div class="hero ball"></div>
+        <div class="foot">
           <h3>Super Mega Raid Day</h3>
-          <p class="meta"><span class="type big">Raid Day</span></p>
+          
+          
+          
+          <p class="links"><a href="https://leekduck.com/events/super-mega-raid-day-november-2026/">Leek Duck</a></p>
         </div>
-        <div class="when"><span class="t">14:00–17:00</span><span class="z">local time</span></div>
-        <div class="links"><a class="lk" href="https://leekduck.com/events/super-mega-raid-day-november-2026/">Leek Duck</a></div>
-      </li>
-      </ul>
-    </section>
-  <footer>
-    <span><b>Local time</b> means the same clock time everywhere — a 2pm Raid Day is 2pm wherever you are.</span>
-    <span><b>UTC, fixed</b> is one moment worldwide.</span>
-    <span>Event data from <a href="https://leekduck.com">Leek Duck</a>. Infographics by G47IX.</span>
-  </footer>
+      </article>
+    </div>
+  </article>
+  <footer>Times are your own local time unless a card says UTC.
+    Event data from <a href="https://leekduck.com">Leek Duck</a>.
+    Pokémon detail from <a href="https://pokeapi.co">PokéAPI</a>.
+    Infographics by G47IX.</footer>
 </div>

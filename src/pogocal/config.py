@@ -97,6 +97,31 @@ IMAGE_DIR = OUTPUT_PATH.parent / "img"
 CALENDAR_URL = "https://starfall10.github.io/pogo-event-calendar/pogo.ics"
 
 
+# --- Pokémon detail, from PokéAPI --------------------------------------------
+#
+# The Leek Duck feed names the Pokémon in an event but carries no types and no
+# weaknesses: searching the whole feed for "weak", "resist" or "counter" returns
+# nothing. PokéAPI has both, free and without a key.
+#
+# Every answer is cached in the repository, so a run makes a call only for a
+# Pokémon or a type chart it has never seen. Once warm, a scheduled run makes
+# none at all.
+POKEAPI_BASE = "https://pokeapi.co/api/v2"
+POKEAPI_CACHE = REPO_ROOT / "data" / "pokeapi.json"
+
+# Longer than the feed's timeout: these are cold lookups on a free service, and
+# a slow answer is better than a missing weakness.
+POKEAPI_TIMEOUT = 45.0
+
+# Words that appear in event titles around the Pokémon's name. "Staraptor Super
+# Mega Raid Day" has to become "staraptor" before PokéAPI will answer.
+TITLE_NOISE = (
+    "mega", "gigantamax", "dynamax", "shadow", "super", "raid", "raids", "hour",
+    "day", "classic", "during", "in", "max", "monday", "battle", "battles",
+    "community", "the", "of", "many", "hero", "spotlight", "and", "with",
+)
+
+
 # --- matching a Discord post to a Leek Duck event ----------------------------
 #
 # Measured against tests/fixtures/ on 8 Sep 2026: 25 real posts, 55 real feed

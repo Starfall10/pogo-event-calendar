@@ -1,13 +1,18 @@
 """The published web page.
 
-Same shape as test_ics_build.py: assert on the text that gets written, not on
-the objects, because the page is what a browser and GitHub Pages actually see.
+Day cards, each holding a poster per event. Assertions are on the text that
+gets written, not on Event objects, because the page is what a browser and
+GitHub Pages see.
 
-The page depends on the date it is built, which the calendar file does not.
-That is why render() takes `today` rather than reading the clock: a page that
-changes with the clock would make the scheduled job commit on every run.
+Two things shape the signature. The page depends on the date it was built, so
+`today` is passed in rather than read from the clock — a page that changed
+every hour would make the scheduled job commit every hour. And everything the
+feed does not carry — Pokémon artwork, weaknesses, infographics — arrives as
+plain mappings, so this module never fetches anything and a missing entry is
+never an error.
 """
 
+import re
 from datetime import date, datetime, timezone
 
 import pytest
@@ -15,175 +20,186 @@ import pytest
 from pogocal.models import Event
 from pogocal.web_build import render
 
-TODAY = date(2026, 9, 9)
+TODAY = date(2026, 9, 10)
+
+_STYLE_BLOCK = re.compile(r"<style>.*?</style>", re.S)
 
 
-def event(name, start, end=None, event_id=None, **kw):
+def markup(page: str) -> str:
+    """The page without its stylesheet.
+
+    The CSS is inlined, so every class name the page can draw also appears as a
+    selector. A bare `"ribbon" in page` is true whether or not a ribbon was
+    rendered — checking for absence has to look at the markup alone.
+    """
+    return _STYLE_BLOCK.sub("", page)
+
+
+def event(name, start, end=None, kind=None, **kw):
     start = datetime.fromisoformat(start)
     return Event(
-        event_id=event_id or name.lower().replace(" ", "-"),
-        name=name,
-        start=start,
+        event_id=kw.pop("event_id", None) or name.lower().replace(" ", "-"),
+        name=name, start=start,
         end=datetime.fromisoformat(end) if end else start,
-        source=kw.pop("source", "leekduck"),
-        confidence="high",
-        **kw,
-    )
+        source=kw.pop("source", "leekduck"), confidence="high",
+        event_type=kind, **kw)
 
 
 RAID_DAY = event("Staraptor Super Mega Raid Day", "2026-09-19T14:00:00",
-                 "2026-09-19T17:00:00", event_type="raid-day",
-                 summary_lines=["Raid Day"],
-                 discord_url="https://discord.com/channels/2/1/9",
-                 leekduck_url="https://leekduck.com/events/staraptor/",
-                 source="merged")
-GBL = event("Twilight Trails", "2026-09-15T20:00:00+00:00",
-            "2026-09-15T21:00:00+00:00", event_type="go-battle-league")
-PAST = event("Water Festival", "2026-08-18T10:00:00", "2026-08-24T20:00:00")
-TODAYS = event("Mega Squads", "2026-09-08T10:00:00", "2026-09-14T20:00:00",
-               event_type="event")
+                 "2026-09-19T17:00:00", "raid-day", event_id="staraptor-2026",
+                 leekduck_url="https://leekduck.com/events/staraptor/")
+COM_DAY = event("Gible Community Day Classic", "2026-09-12T14:00:00",
+                "2026-09-12T17:00:00", "community-day", event_id="gible-cd")
+SPOTLIGHT = event("Weedle Spotlight Hour", "2026-09-10T18:00:00",
+                  "2026-09-10T19:00:00", "pokemon-spotlight-hour", event_id="spot")
+SEASON = event("Twilight Trails", "2026-09-08T10:00:00",
+               "2026-12-01T10:00:00", "season", event_id="season-24")
+GBL = event("Great League: Mega Edition", "2026-09-15T20:00:00+00:00",
+            "2026-09-22T20:00:00+00:00", "go-battle-league", event_id="gbl")
+
+STARAPTOR = {"name": "Staraptor", "sprite": "https://img.invalid/staraptor.png",
+             "types": ["normal", "flying"], "weaknesses": ["electric", "ice", "rock"]}
 
 
-# --- what appears --------------------------------------------------------
+# --- what the page contains ----------------------------------------------
 
 
-def test_the_page_is_html_with_a_title():
+def test_the_page_is_html_and_names_itself():
     page = render([RAID_DAY], today=TODAY)
-    assert "<title>" in page
-    assert "Pokémon GO" in page
+    assert "<title>" in page and "Pokémon GO" in page
 
 
-def test_an_upcoming_event_appears():
-    page = render([RAID_DAY], today=TODAY)
-    assert "Staraptor Super Mega Raid Day" in page
+def test_an_upcoming_event_gets_a_poster():
+    assert "Staraptor Super Mega Raid Day" in render([RAID_DAY], today=TODAY)
 
 
-def test_an_event_that_has_finished_does_not_appear():
-    page = render([PAST, RAID_DAY], today=TODAY)
+def test_an_event_that_has_finished_is_gone():
+    past = event("Water Festival", "2026-08-18T10:00:00", "2026-08-24T20:00:00", "event")
+    page = render([past, RAID_DAY], today=TODAY)
     assert "Water Festival" not in page
-    assert "Staraptor Super Mega Raid Day" in page
 
 
-def test_an_event_running_now_still_appears():
-    """It started before today and has not ended. Still worth showing."""
-    page = render([TODAYS], today=TODAY)
-    assert "Mega Squads" in page
+def test_an_event_running_today_still_appears():
+    running = event("Mega Squads", "2026-09-08T10:00:00", "2026-09-14T20:00:00", "event")
+    assert "Mega Squads" in render([running], today=TODAY)
 
 
-def test_events_are_grouped_by_month_in_order():
-    october = event("Harvest Festival: Taken Over", "2026-10-02T10:00:00",
-                    "2026-10-05T20:00:00")
-    page = render([october, RAID_DAY], today=TODAY)
-    assert page.index("September 2026") < page.index("October 2026")
-    assert page.index("Staraptor") < page.index("Harvest Festival")
+def test_events_are_grouped_into_days_in_order():
+    page = render([RAID_DAY, COM_DAY], today=TODAY)
+    assert page.index("Gible") < page.index("Staraptor")
 
 
-# --- the distinction this project is built on ----------------------------
+def test_today_is_marked():
+    assert "now" in render([SPOTLIGHT], today=TODAY)
 
 
-def test_a_floating_event_is_marked_local():
-    page = render([RAID_DAY], today=TODAY)
-    assert "14:00–17:00" in page
-    assert "local time" in page
+# --- the page is not the calendar: it shows less --------------------------
 
 
-def test_a_fixed_event_is_marked_utc():
-    page = render([GBL], today=TODAY)
-    assert "UTC" in page
-    assert "20:00" in page
+def test_battle_league_is_left_off():
+    """Twelve of the feed's events are league rotations. They stay in the
+    calendar file and off the page, because the owner does not want them."""
+    page = markup(render([GBL, RAID_DAY], today=TODAY))
+    assert "Great League" not in page
+    assert "Staraptor" in page
 
 
-def test_both_kinds_are_explained_on_the_page():
-    page = render([RAID_DAY, GBL], today=TODAY)
-    assert "same clock time everywhere" in page
+def test_only_the_global_wild_area_is_shown():
+    sendai = event("Pokémon GO Wild Area 2026: Sendai", "2026-11-06T09:00:00",
+                   "2026-11-08T18:00:00", "wild-area", event_id="wa-sendai")
+    worldwide = event("Pokémon GO Wild Area 2026: Global", "2026-11-14T10:00:00",
+                      "2026-11-16T18:00:00", "wild-area", event_id="wa-global")
+    page = markup(render([sendai, worldwide], today=TODAY))
+    assert "Sendai" not in page
+    assert "Global" in page
 
 
-# --- links ---------------------------------------------------------------
+# --- the long-running things become ribbons -------------------------------
 
 
-def test_a_matched_event_links_to_its_infographic():
-    page = render([RAID_DAY], today=TODAY)
-    assert "https://discord.com/channels/2/1/9" in page
-
-
-def test_an_unmatched_event_has_no_infographic_link():
-    """The word itself appears in the header count and the footer credit, so
-    the check is for the link element, not the word."""
-    page = render([GBL], today=TODAY)
-    assert 'class="lk ig"' not in page
-    assert "discord.com/channels" not in page
-
-
-def test_the_page_offers_the_calendar_to_subscribe_to():
-    page = render([RAID_DAY], today=TODAY)
-    assert "pogo.ics" in page
-
-
-def test_no_expiring_cdn_url_ever_reaches_the_page():
-    """Discord image URLs die in about 24 hours. Same rule as the calendar."""
-    page = render([RAID_DAY, GBL], today=TODAY)
-    assert "cdn.discordapp.com" not in page
-
-
-# --- infographics --------------------------------------------------------
-#
-# The images are hosted by this repository, at full size, because the owner
-# asked for that on 9 Sep 2026. It reverses the build plan's §1 non-goal
-# ("keeping copies of the images"). Two consequences that shape these tests:
-# an event with no local copy must still render, and the page must reference
-# the local file rather than the Discord CDN, whose URLs expire.
-
-
-def test_an_event_with_a_local_image_shows_it():
-    page = render([RAID_DAY], today=TODAY,
-                  images={RAID_DAY.event_id: "img/staraptor.png"})
-    assert "img/staraptor.png" in page
-    assert "<img" in page
-
-
-def test_the_image_is_behind_a_disclosure_so_the_list_stays_dense():
-    """49 events. Opening them one at a time keeps the page scannable, and
-    nothing loads until asked."""
-    page = render([RAID_DAY], today=TODAY,
-                  images={RAID_DAY.event_id: "img/staraptor.png"})
-    assert "<details" in page
-    assert "<summary" in page
-
-
-def test_an_image_is_not_fetched_until_it_is_opened():
-    page = render([RAID_DAY], today=TODAY,
-                  images={RAID_DAY.event_id: "img/staraptor.png"})
-    assert 'loading="lazy"' in page
-
-
-def test_an_event_with_no_local_image_still_renders():
-    """Most events have none, and a matched event may not have been downloaded
-    yet. Neither is an error."""
-    page = render([RAID_DAY, GBL], today=TODAY, images={})
-    assert "Staraptor Super Mega Raid Day" in page
+def test_something_running_for_months_is_a_ribbon_not_a_poster():
+    """A season is not on any particular day, so repeating it inside fourteen
+    day cards says nothing."""
+    page = markup(render([SEASON], today=TODAY))
+    assert '<div class="ribbon"' in page
     assert "Twilight Trails" in page
-    assert "<img" not in page
 
 
-def test_the_page_never_references_the_discord_cdn_for_an_image():
-    """The local copy is what gets shown. The CDN url expires in about a day."""
+def test_a_ribbon_counts_down_in_days():
+    assert "82 days" in render([SEASON], today=TODAY)
+
+
+def test_a_short_event_stays_a_poster():
+    page = markup(render([COM_DAY], today=TODAY))
+    assert "Gible Community Day Classic" in page
+    assert '<div class="ribbon"' not in page
+
+
+# --- Pokémon detail, where it is known ------------------------------------
+
+
+def test_a_poster_shows_the_pokemon_and_its_weaknesses():
     page = render([RAID_DAY], today=TODAY,
-                  images={RAID_DAY.event_id: "img/staraptor.png"})
-    assert "cdn.discordapp.com" not in page
+                  details={"staraptor-2026": {"pokemon": STARAPTOR}})
+    assert "https://img.invalid/staraptor.png" in page
+    assert "Staraptor" in page
+    for weakness in ("electric", "ice", "rock"):
+        assert weakness in page
 
 
-def test_the_artwork_is_credited_where_it_is_shown():
+def test_weaknesses_are_drawn_as_type_symbols():
     page = render([RAID_DAY], today=TODAY,
-                  images={RAID_DAY.event_id: "img/staraptor.png"})
+                  details={"staraptor-2026": {"pokemon": STARAPTOR}})
+    assert "<svg" in page
+    assert "#dcae00" in page          # the electric colour, from type_icons
+
+
+def test_an_event_with_no_pokemon_still_renders():
+    """Three real events name nobody yet, and most events never will."""
+    page = render([RAID_DAY, COM_DAY], today=TODAY, details={})
+    assert "Staraptor Super Mega Raid Day" in page
+    assert "Gible Community Day Classic" in page
+
+
+def test_a_shiny_is_marked_only_when_the_feed_says_so():
+    shiny = {"pokemon": dict(STARAPTOR, shiny=True)}
+    marked = markup(render([RAID_DAY], today=TODAY, details={"staraptor-2026": shiny}))
+    plain = markup(render([RAID_DAY], today=TODAY,
+                          details={"staraptor-2026": {"pokemon": STARAPTOR}}))
+    assert '<span class="spark"' in marked
+    assert '<span class="spark"' not in plain
+
+
+def test_bonuses_are_listed_with_the_feeds_own_icons_and_wording():
+    detail = {"bonuses": [{"text": "3× Catch XP",
+                           "icon": "https://cdn.invalid/xp.png"}]}
+    page = render([COM_DAY], today=TODAY, details={"gible-cd": detail})
+    assert "3× Catch XP" in page
+    assert "https://cdn.invalid/xp.png" in page
+
+
+# --- links ----------------------------------------------------------------
+
+
+def test_the_infographic_is_shown_where_one_was_matched():
+    page = render([RAID_DAY], today=TODAY, images={"staraptor-2026": "img/star.png"})
+    assert "img/star.png" in page
     assert "G47IX" in page
 
 
-def test_images_are_optional_and_default_to_none():
-    """build, which never touches Discord, calls render without them."""
-    assert "Staraptor" in render([RAID_DAY], today=TODAY)
+def test_no_expiring_cdn_url_ever_reaches_the_page():
+    linked = event("Staraptor Super Mega Raid Day", "2026-09-19T14:00:00",
+                   "2026-09-19T17:00:00", "raid-day", event_id="staraptor-2026",
+                   discord_url="https://discord.com/channels/2/1/9", source="merged")
+    page = render([linked], today=TODAY, images={"staraptor-2026": "img/star.png"})
+    assert "cdn.discordapp.com" not in page
 
 
-# --- safety and stability ------------------------------------------------
+def test_the_page_offers_the_calendar_to_subscribe_to():
+    assert "pogo.ics" in render([RAID_DAY], today=TODAY)
+
+
+# --- safety and stability -------------------------------------------------
 
 
 def test_a_name_with_html_in_it_is_escaped():
@@ -194,12 +210,11 @@ def test_a_name_with_html_in_it_is_escaped():
 
 
 def test_the_same_day_renders_identical_bytes():
-    """The scheduled job commits on any change. A page that differs between two
-    runs on the same day would commit noise."""
-    assert render([RAID_DAY, GBL], today=TODAY) == render([RAID_DAY, GBL], today=TODAY)
+    a = render([RAID_DAY, COM_DAY, SEASON], today=TODAY)
+    b = render([RAID_DAY, COM_DAY, SEASON], today=TODAY)
+    assert a == b
 
 
-def test_an_empty_calendar_still_renders_a_page():
+def test_an_empty_feed_still_renders_a_page():
     page = render([], today=TODAY)
     assert "<title>" in page
-    assert "0" in page

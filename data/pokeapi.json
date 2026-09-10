@@ -1,0 +1,364 @@
+{
+ "pokemon:articuno": {
+  "name": "articuno",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png",
+  "types": [
+   "ice",
+   "flying"
+  ]
+ },
+ "pokemon:beedrill": {
+  "name": "beedrill",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
+  "types": [
+   "bug",
+   "poison"
+  ]
+ },
+ "pokemon:buzzwole": {
+  "name": "buzzwole",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/794.png",
+  "types": [
+   "bug",
+   "fighting"
+  ]
+ },
+ "pokemon:cinderace": {
+  "name": "cinderace",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/815.png",
+  "types": [
+   "fire"
+  ]
+ },
+ "pokemon:gible": {
+  "name": "gible",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/443.png",
+  "types": [
+   "dragon",
+   "ground"
+  ]
+ },
+ "pokemon:houndoom": {
+  "name": "houndoom",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png",
+  "types": [
+   "dark",
+   "fire"
+  ]
+ },
+ "pokemon:houndour": {
+  "name": "houndour",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/228.png",
+  "types": [
+   "dark",
+   "fire"
+  ]
+ },
+ "pokemon:malamar": {
+  "name": "malamar",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/687.png",
+  "types": [
+   "dark",
+   "psychic"
+  ]
+ },
+ "pokemon:rattata": {
+  "name": "rattata",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png",
+  "types": [
+   "normal"
+  ]
+ },
+ "pokemon:rhyhorn": {
+  "name": "rhyhorn",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/111.png",
+  "types": [
+   "ground",
+   "rock"
+  ]
+ },
+ "pokemon:sobble": {
+  "name": "sobble",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png",
+  "types": [
+   "water"
+  ]
+ },
+ "pokemon:staraptor": {
+  "name": "staraptor",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/398.png",
+  "types": [
+   "normal",
+   "flying"
+  ]
+ },
+ "pokemon:thundurus": null,
+ "pokemon:venusaur": {
+  "name": "venusaur",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+  "types": [
+   "grass",
+   "poison"
+  ]
+ },
+ "pokemon:victreebel": {
+  "name": "victreebel",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
+  "types": [
+   "grass",
+   "poison"
+  ]
+ },
+ "pokemon:weedle": {
+  "name": "weedle",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png",
+  "types": [
+   "bug",
+   "poison"
+  ]
+ },
+ "pokemon:xerneas": {
+  "name": "xerneas",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png",
+  "types": [
+   "fairy"
+  ]
+ },
+ "pokemon:xurkitree": {
+  "name": "xurkitree",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/796.png",
+  "types": [
+   "electric"
+  ]
+ },
+ "pokemon:zacian": {
+  "name": "zacian",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png",
+  "types": [
+   "fairy"
+  ]
+ },
+ "pokemon:zamazenta": {
+  "name": "zamazenta",
+  "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png",
+  "types": [
+   "fighting"
+  ]
+ },
+ "type:bug": {
+  "double": [
+   "flying",
+   "rock",
+   "fire"
+  ],
+  "half": [
+   "fighting",
+   "ground",
+   "grass"
+  ],
+  "none": []
+ },
+ "type:dark": {
+  "double": [
+   "fighting",
+   "bug",
+   "fairy"
+  ],
+  "half": [
+   "ghost",
+   "dark"
+  ],
+  "none": [
+   "psychic"
+  ]
+ },
+ "type:dragon": {
+  "double": [
+   "ice",
+   "dragon",
+   "fairy"
+  ],
+  "half": [
+   "fire",
+   "water",
+   "grass",
+   "electric"
+  ],
+  "none": []
+ },
+ "type:electric": {
+  "double": [
+   "ground"
+  ],
+  "half": [
+   "flying",
+   "steel",
+   "electric"
+  ],
+  "none": []
+ },
+ "type:fairy": {
+  "double": [
+   "poison",
+   "steel"
+  ],
+  "half": [
+   "fighting",
+   "bug",
+   "dark"
+  ],
+  "none": [
+   "dragon"
+  ]
+ },
+ "type:fighting": {
+  "double": [
+   "flying",
+   "psychic",
+   "fairy"
+  ],
+  "half": [
+   "rock",
+   "bug",
+   "dark"
+  ],
+  "none": []
+ },
+ "type:fire": {
+  "double": [
+   "ground",
+   "rock",
+   "water"
+  ],
+  "half": [
+   "bug",
+   "steel",
+   "fire",
+   "grass",
+   "ice",
+   "fairy"
+  ],
+  "none": []
+ },
+ "type:flying": {
+  "double": [
+   "rock",
+   "electric",
+   "ice"
+  ],
+  "half": [
+   "fighting",
+   "bug",
+   "grass"
+  ],
+  "none": [
+   "ground"
+  ]
+ },
+ "type:grass": {
+  "double": [
+   "flying",
+   "poison",
+   "bug",
+   "fire",
+   "ice"
+  ],
+  "half": [
+   "ground",
+   "water",
+   "grass",
+   "electric"
+  ],
+  "none": []
+ },
+ "type:ground": {
+  "double": [
+   "water",
+   "grass",
+   "ice"
+  ],
+  "half": [
+   "poison",
+   "rock"
+  ],
+  "none": [
+   "electric"
+  ]
+ },
+ "type:ice": {
+  "double": [
+   "fighting",
+   "rock",
+   "steel",
+   "fire"
+  ],
+  "half": [
+   "ice"
+  ],
+  "none": []
+ },
+ "type:normal": {
+  "double": [
+   "fighting"
+  ],
+  "half": [],
+  "none": [
+   "ghost"
+  ]
+ },
+ "type:poison": {
+  "double": [
+   "ground",
+   "psychic"
+  ],
+  "half": [
+   "fighting",
+   "poison",
+   "bug",
+   "grass",
+   "fairy"
+  ],
+  "none": []
+ },
+ "type:psychic": {
+  "double": [
+   "bug",
+   "ghost",
+   "dark"
+  ],
+  "half": [
+   "fighting",
+   "psychic"
+  ],
+  "none": []
+ },
+ "type:rock": {
+  "double": [
+   "fighting",
+   "ground",
+   "steel",
+   "water",
+   "grass"
+  ],
+  "half": [
+   "normal",
+   "flying",
+   "poison",
+   "fire"
+  ],
+  "none": []
+ },
+ "type:water": {
+  "double": [
+   "grass",
+   "electric"
+  ],
+  "half": [
+   "steel",
+   "fire",
+   "water",
+   "ice"
+  ],
+  "none": []
+ }
+}

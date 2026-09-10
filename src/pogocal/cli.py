@@ -9,10 +9,16 @@ import argparse
 import logging
 import sys
 
-from pogocal import config, discord_src, images, reconcile, web_build
+from typing import Any
+
+from pogocal import config, discord_src, images, leekduck, pokeapi, reconcile, web_build
 from pogocal.ics_build import render
-from pogocal.leekduck import fetch_events
 from pogocal.models import Event
+
+# Types where knowing what beats the Pokémon is worth the space. A Community
+# Day is not a fight.
+BATTLE_TYPES = frozenset({"raid-battles", "raid-hour", "raid-day",
+                          "max-battles", "max-mondays"})
 
 log = logging.getLogger("pogocal")
 
@@ -25,11 +31,12 @@ def build(with_links: bool = False) -> int:
     rather than stored, so they cannot drift from what the channel says.
     """
     try:
-        events = fetch_events()
+        records = leekduck.fetch()
     except RuntimeError as error:
         log.error("%s", error)
         log.error("calendar not rebuilt; the previous file is left in place")
         return 1
+    events = leekduck.parse(records)
 
     local_images: dict[str, str] = {}
     if with_links:
@@ -41,7 +48,8 @@ def build(with_links: bool = False) -> int:
                 log.warning("could not update the infographics: %s", error)
 
     calendar = render(events)
-    page = web_build.render(events, images=local_images)
+    page = web_build.render(events, images=local_images,
+                            details=_details(records, events))
 
     previous = None
     if config.OUTPUT_PATH.exists():
@@ -99,6 +107,96 @@ def poll() -> int:
         print(f"  {post.posted_at:%Y-%m-%d %H:%M}  {post.text[:60] or '<no text>'}")
         print(f"      {post.link}")
     return 0
+
+
+def _details(records: list[dict[str, Any]],
+             events: list[Event]) -> dict[str, dict[str, Any]]:
+    """The Pokémon, bonuses and shiny flags the page shows on each poster.
+
+    The feed carries rich detail for three kinds of event and nothing beyond a
+    name for the rest. What is missing is filled from PokéAPI, which also
+    supplies the weaknesses the feed has none of. Nothing here is fatal: an
+    event with no detail simply renders without it.
+    """
+    by_id = {r.get("eventID"): r for r in records}
+    details: dict[str, dict[str, Any]] = {}
+
+    for event in events:
+        record = by_id.get(event.event_id) or {}
+        extra = record.get("extraData") or {}
+        detail: dict[str, Any] = {}
+
+        pokemon = _pokemon_from_feed(extra, event.event_type)
+        if pokemon is None and event.event_type in BATTLE_TYPES:
+            # No detail in the feed, but the title usually names somebody:
+            # "Staraptor Super Mega Raid Day".
+            species = pokeapi.species_in(event.name)
+            described = pokeapi.describe(species) if species else None
+            if described:
+                pokemon = {"name": described["name"], "sprite": described["sprite"]}
+
+        if pokemon:
+            _enrich(pokemon, event.event_type)
+            detail["pokemon"] = pokemon
+
+        bonuses = _bonuses_from_feed(extra)
+        if bonuses:
+            detail["bonuses"] = bonuses
+
+        if detail:
+            details[event.event_id] = detail
+
+    pokeapi.save()
+    return details
+
+
+def _pokemon_from_feed(extra: dict[str, Any], event_type: str | None):
+    """The Pokémon the feed names, for the three kinds that carry one."""
+    if event_type == "pokemon-spotlight-hour":
+        spotlight = extra.get("spotlight") or {}
+        first = (spotlight.get("list") or [None])[0] or spotlight
+        if first.get("name"):
+            return {"name": first["name"], "sprite": first.get("image"),
+                    "shiny": bool(first.get("canBeShiny"))}
+    if event_type == "community-day":
+        spawns = (extra.get("communityday") or {}).get("spawns") or []
+        if spawns:
+            shinies = {s.get("name") for s in
+                       (extra.get("communityday") or {}).get("shinies") or []}
+            return {"name": spawns[0]["name"], "sprite": spawns[0].get("image"),
+                    "shiny": spawns[0]["name"] in shinies}
+    if event_type == "raid-battles":
+        bosses = (extra.get("raidbattles") or {}).get("bosses") or []
+        if bosses:
+            return {"name": bosses[0]["name"], "sprite": bosses[0].get("image"),
+                    "shiny": bool(bosses[0].get("canBeShiny"))}
+    return None
+
+
+def _enrich(pokemon: dict[str, Any], event_type: str | None) -> None:
+    """Add what PokéAPI knows: better artwork, and weaknesses where it is a
+    fight. Leaves the feed's own values in place if the lookup finds nothing."""
+    species = pokeapi.species_in(pokemon["name"])
+    described = pokeapi.describe(species) if species else None
+    if not described:
+        return
+    if described.get("sprite"):
+        pokemon["sprite"] = described["sprite"]
+    if event_type in BATTLE_TYPES:
+        pokemon["weaknesses"] = described["weaknesses"]
+
+
+def _bonuses_from_feed(extra: dict[str, Any]) -> list[dict[str, str]]:
+    """Bonuses, in the feed's own wording and with its own icons."""
+    bonuses = [
+        {"text": b["text"], "icon": b.get("image", "")}
+        for b in (extra.get("communityday") or {}).get("bonuses") or []
+        if b.get("text")
+    ]
+    spotlight_bonus = (extra.get("spotlight") or {}).get("bonus")
+    if spotlight_bonus:
+        bonuses.append({"text": spotlight_bonus, "icon": ""})
+    return bonuses
 
 
 def _write(path, text: str) -> str:
