@@ -561,6 +561,28 @@ URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
  ion_ultra-league-mega-edition_master-league-mega-edition-split-3/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Pokémon GO Wild Area: Sendai\, Tohoku
+DTSTART:20261106T010000Z
+DTEND:20261108T090000Z
+DTSTAMP:20260101T000000Z
+UID:pokemon-go-wild-area-2026-sendai-japan@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
+ -go-wild-area-2026-sendai-japan/
+URL:https://leekduck.com/events/pokemon-go-wild-area-2026-sendai-japan/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pokémon GO Wild Area: Mexico City
+DTSTART:20261106T160000Z
+DTEND:20261109T000000Z
+DTSTAMP:20260101T000000Z
+UID:pokemon-go-wild-area-2026-mexico-city@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
+ -go-wild-area-2026-mexico-city/
+URL:https://leekduck.com/events/pokemon-go-wild-area-2026-mexico-city/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Great League\, Ultra League: Mega Edition\, and 2026 GO LAIC Cup |
   Twilight Trails
 DTSTART:20261110T210000Z
@@ -574,6 +596,17 @@ DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
  p/
 URL:https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-lea
  gue-mega-edition_2026-go-laic-cup/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pokémon GO Wild Area: Global
+DTSTART:20261114T100000
+DTEND:20261115T180000
+DTSTAMP:20260101T000000Z
+UID:pokemon-go-wild-area-2026-global@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
+ -go-wild-area-2026-global/
+URL:https://leekduck.com/events/pokemon-go-wild-area-2026-global/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ultra League\, Master League: Mega Edition\, and 2026 GO LAIC Cup 
