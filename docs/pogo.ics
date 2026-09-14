@@ -116,17 +116,6 @@ URL:https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Houndour and Houndoom Spotlight Hour
-DTSTART:20260913T180000
-DTEND:20260913T190000
-DTSTAMP:20260101T000000Z
-UID:pokemonspotlighthour2026-09-13@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
- events/pokemonspotlighthour2026-09-13/
-URL:https://leekduck.com/events/pokemonspotlighthour2026-09-13/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Dynamax Rhyhorn during Max Monday
 DTSTART:20260914T060000
 DTEND:20260914T210000
