@@ -266,6 +266,17 @@ URL:https://leekduck.com/events/xurkitree-pheromosa-buzzwole-in-5-star-rai
  d-battles-september-2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Choose Your Path: Twilight Trails
+DTSTART:20260923T100000
+DTEND:20260928T200000
+DTSTAMP:20260101T000000Z
+UID:choose-your-path-twilight-trails-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Choose Your Path\n\n📄 Details: https://leekduck.com/events/
+ choose-your-path-twilight-trails-2026/
+URL:https://leekduck.com/events/choose-your-path-twilight-trails-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Xurkitree\, Pheromosa\, and Buzzwole Raid Hour
 DTSTART:20260923T180000
 DTEND:20260923T190000
