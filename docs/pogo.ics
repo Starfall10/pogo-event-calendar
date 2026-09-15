@@ -39,19 +39,6 @@ DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-s
 URL:https://leekduck.com/events/go-pass-september-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mega Squads
-DTSTART:20260908T100000
-DTEND:20260914T200000
-DTSTAMP:20260101T000000Z
-UID:mega-squads@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:📱 Infographic: https://discord.com/channels/772532010555670
- 530/1173052217050267679/1546790423660462130\n\nEvent\n\n📄 Details: http
- s://leekduck.com/events/mega-squads/
-URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
- 46790423660462130
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Twilight Trails
 DTSTART:20260908T100000
 DTEND:20261201T100000
@@ -114,17 +101,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
  -houndoom-in-mega-raids-september-2026/
 URL:https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026
  /
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dynamax Rhyhorn during Max Monday
-DTSTART:20260914T060000
-DTEND:20260914T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-09-14@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-09-14/
-URL:https://leekduck.com/events/max-mondays-2026-09-14/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League\, Ultra League: Mega Edition\, and Willpower Cup: Gre
