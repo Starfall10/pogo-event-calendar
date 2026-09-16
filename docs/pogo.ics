@@ -16,18 +16,6 @@ DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/lego-pokemo
 URL:https://leekduck.com/events/lego-pokemon-go-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mega Beedrill in Mega Raids
-DTSTART:20260908T060000
-DTEND:20260915T220000
-DTSTAMP:20260101T000000Z
-UID:mega-beedrill-in-mega-raids-september-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
- -beedrill-in-mega-raids-september-2026/
-URL:https://leekduck.com/events/mega-beedrill-in-mega-raids-september-2026
- /
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:GO Pass: September
 DTSTART:20260908T100000
 DTEND:20261006T100000
@@ -61,31 +49,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
  ow-thundurus-incarnate-forme-in-shadow-raids-september-2026/
 URL:https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow
  -raids-september-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Zacian (Hero of Many Battles) in 5-star Raid Battles
-DTSTART:20260909T060000
-DTEND:20260915T220000
-DTSTAMP:20260101T000000Z
-UID:zacian-hero-of-many-battles-in-5-star-raid-battles-september-2026@pogo
- -event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/zaci
- an-hero-of-many-battles-in-5-star-raid-battles-september-2026/
-URL:https://leekduck.com/events/zacian-hero-of-many-battles-in-5-star-raid
- -battles-september-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mega Houndoom in Mega Raids
-DTSTART:20260911T060000
-DTEND:20260915T220000
-DTSTAMP:20260101T000000Z
-UID:mega-houndoom-in-mega-raids-september-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
- -houndoom-in-mega-raids-september-2026/
-URL:https://leekduck.com/events/mega-houndoom-in-mega-raids-september-2026
- /
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League\, Ultra League: Mega Edition\, and Willpower Cup: Gre
