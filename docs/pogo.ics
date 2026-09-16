@@ -50,21 +50,6 @@ DESCRIPTION:Season\n\n📄 Details: https://leekduck.com/events/season-24-
 URL:https://leekduck.com/events/season-24-twilight-trails/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
- er League: Mega Edition | Twilight Trails
-DTSTART:20260908T200000Z
-DTEND:20260915T200000Z
-DTSTAMP:20260101T000000Z
-UID:gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-editio
- n_master-league-mega-edition-split-1@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
- gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_ma
- ster-league-mega-edition-split-1/
-URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
- ion_ultra-league-mega-edition_master-league-mega-edition-split-1/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Shadow Thundurus (Incarnate Forme) in Shadow Raids
 DTSTART:20260909T060000
 DTEND:20261006T220000
