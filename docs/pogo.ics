@@ -105,17 +105,6 @@ URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
  46790566434705434
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Charmander wearing Friede's goggles Spotlight Hour
-DTSTART:20260917T180000
-DTEND:20260917T190000
-DTSTAMP:20260101T000000Z
-UID:pokemonspotlighthour2026-09-17@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
- events/pokemonspotlighthour2026-09-17/
-URL:https://leekduck.com/events/pokemonspotlighthour2026-09-17/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Staraptor Super Mega Raid Day
 DTSTART:20260919T140000
 DTEND:20260919T170000
