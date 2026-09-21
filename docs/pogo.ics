@@ -332,15 +332,15 @@ DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/gigan
 URL:https://leekduck.com/events/gigantamax-cinderace-max-battle-day-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:???
-DTSTART:20261004T100000
-DTEND:20261010T200000
+SUMMARY:World Space Week 2026
+DTSTART:20261004T000000
+DTEND:20261010T235900
 DTSTAMP:20260101T000000Z
-UID:unannounced-event-october-2026@pogo-event-calendar
+UID:world-space-week-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/unannounced
- -event-october-2026/
-URL:https://leekduck.com/events/unannounced-event-october-2026/
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/world-space
+ -week-2026/
+URL:https://leekduck.com/events/world-space-week-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dynamax Sizzlipede during Max Monday
