@@ -117,17 +117,6 @@ URL:https://leekduck.com/events/pokemon-horizons-bonus-timed-research-2026
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dynamax Articuno\, Zapdos\, and Moltres during Max Monday
-DTSTART:20260921T060000
-DTEND:20260921T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-09-21@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-09-21/
-URL:https://leekduck.com/events/max-mondays-2026-09-21/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Ultra League\, Master League: Mega Edition\, and Retro Cup: Great 
  League Edition | Twilight Trails
 DTSTART:20260922T200000Z
@@ -352,6 +341,17 @@ SEQUENCE:0
 DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
  ondays-2026-10-05/
 URL:https://leekduck.com/events/max-mondays-2026-10-05/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:GO Pass: October
+DTSTART:20261006T100000
+DTEND:20261103T100000
+DTSTAMP:20260101T000000Z
+UID:go-pass-october-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-o
+ ctober-2026/
+URL:https://leekduck.com/events/go-pass-october-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
