@@ -113,7 +113,7 @@ URL:https://leekduck.com/events/pokemonspotlighthour2026-09-24/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:adidas × Pokémon Timed Research
-DTSTART:20260925T000000
+DTSTART:20260925T100000
 DTEND:20270115T200000
 DTSTAMP:20260101T000000Z
 UID:pokemon-x-adidas-2026@pogo-event-calendar
