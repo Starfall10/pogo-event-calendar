@@ -453,15 +453,15 @@ DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
 URL:https://leekduck.com/events/pokemonspotlighthour2026-10-15/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Hatch Day
+SUMMARY:Sandile Hatch Day
 DTSTART:20261017T110000
 DTEND:20261017T170000
 DTSTAMP:20260101T000000Z
-UID:hatch-day-october-2026@pogo-event-calendar
+UID:sandile-hatch-day-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/hatch-day-o
- ctober-2026/
-URL:https://leekduck.com/events/hatch-day-october-2026/
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/sandile-hat
+ ch-day-2026/
+URL:https://leekduck.com/events/sandile-hatch-day-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dynamax Sneasel during Max Monday
