@@ -101,17 +101,6 @@ DESCRIPTION:Choose Your Path\n\n📄 Details: https://leekduck.com/events/
 URL:https://leekduck.com/events/choose-your-path-twilight-trails-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Rattata Spotlight Hour
-DTSTART:20260924T180000
-DTEND:20260924T190000
-DTSTAMP:20260101T000000Z
-UID:pokemonspotlighthour2026-09-24@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
- events/pokemonspotlighthour2026-09-24/
-URL:https://leekduck.com/events/pokemonspotlighthour2026-09-24/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:adidas × Pokémon Timed Research
 DTSTART:20260925T100000
 DTEND:20270115T200000
@@ -389,9 +378,11 @@ DTEND:20261019T200000
 DTSTAMP:20260101T000000Z
 UID:fall-marathon-buddy-trek-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/fall-marath
- on-buddy-trek-2026/
-URL:https://leekduck.com/events/fall-marathon-buddy-trek-2026/
+DESCRIPTION:📱 Infographic: https://discord.com/channels/772532010555670
+ 530/1173052217050267679/1553026967421456539\n\nEvent\n\n📄 Details: http
+ s://leekduck.com/events/fall-marathon-buddy-trek-2026/
+URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
+ 53026967421456539
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League\, Ultra League: Mega Edition\, and Little Cup | Twili
