@@ -112,17 +112,6 @@ DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-tcg
 URL:https://leekduck.com/events/pokemon-tcg-30th-celebration/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dynamax Sobble during Max Monday
-DTSTART:20260928T060000
-DTEND:20260928T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-09-28@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-09-28/
-URL:https://leekduck.com/events/max-mondays-2026-09-28/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Harvest Festival 2026: Applin Picking
 DTSTART:20260929T100000
 DTEND:20261005T200000
