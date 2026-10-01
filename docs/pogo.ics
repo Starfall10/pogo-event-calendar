@@ -381,6 +381,17 @@ DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
 URL:https://leekduck.com/events/max-mondays-2026-10-19/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Minior Showers: Orionids 2026
+DTSTART:20261019T170000
+DTEND:20261024T235900
+DTSTAMP:20260101T000000Z
+UID:minior-showers-orionids-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
+ ers-orionids-2026/
+URL:https://leekduck.com/events/minior-showers-orionids-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ultra League\, Master League: Mega Edition\, and Fantasy Cup: Grea
  t League Edition | Twilight Trails
 DTSTART:20261020T200000Z
@@ -621,6 +632,17 @@ DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
 URL:https://leekduck.com/events/pokemon-go-wild-area-2026-global/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Minior Showers: Leonids 2026
+DTSTART:20261114T170000
+DTEND:20261119T235900
+DTSTAMP:20260101T000000Z
+UID:minior-showers-leonids-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
+ ers-leonids-2026/
+URL:https://leekduck.com/events/minior-showers-leonids-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ultra League\, Master League: Mega Edition\, and 2026 GO LAIC Cup 
  | Twilight Trails
 DTSTART:20261118T210000Z
@@ -672,6 +694,17 @@ DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
 URL:https://leekduck.com/events/super-mega-raid-day-november-2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Minior Showers: Geminids 2026
+DTSTART:20261211T170000
+DTEND:20261216T235900
+DTSTAMP:20260101T000000Z
+UID:minior-showers-geminids-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
+ ers-geminids-2026/
+URL:https://leekduck.com/events/minior-showers-geminids-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Pokémon GO Tour: Alola - Kaohsiung 2027
 DTSTART:20270218T160000Z
 DTEND:20270221T155959Z
@@ -703,5 +736,39 @@ SEQUENCE:0
 DESCRIPTION:Pokémon GO Tour\n\n📄 Details: https://leekduck.com/events/
  pokemon-go-tour-alola-global-2027/
 URL:https://leekduck.com/events/pokemon-go-tour-alola-global-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Minior Showers: Eta Aquariids 2027
+DTSTART:20270503T170000
+DTEND:20270508T235900
+DTSTAMP:20260101T000000Z
+UID:minior-showers-eta-aquariids-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
+ ers-eta-aquariids-2027/
+URL:https://leekduck.com/events/minior-showers-eta-aquariids-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Minior Showers: Southern Delta Aquariids 2027
+DTSTART:20270728T170000
+DTEND:20270802T235900
+DTSTAMP:20260101T000000Z
+UID:minior-showers-southern-delta-aquariids-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
+ ers-southern-delta-aquariids-2027/
+URL:https://leekduck.com/events/minior-showers-southern-delta-aquariids-20
+ 27/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Minior Showers: Perseids 2027
+DTSTART:20270810T170000
+DTEND:20270815T235900
+DTSTAMP:20260101T000000Z
+UID:minior-showers-perseids-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
+ ers-perseids-2027/
+URL:https://leekduck.com/events/minior-showers-perseids-2027/
 END:VEVENT
 END:VCALENDAR
