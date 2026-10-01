@@ -51,30 +51,6 @@ URL:https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow
  -raids-september-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mega Malamar in Mega Raids
-DTSTART:20260923T060000
-DTEND:20260929T220000
-DTSTAMP:20260101T000000Z
-UID:mega-malamar-in-mega-raids-september-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
- -malamar-in-mega-raids-september-2026/
-URL:https://leekduck.com/events/mega-malamar-in-mega-raids-september-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Xurkitree\, Pheromosa\, and Buzzwole in 5-star Raid Battles
-DTSTART:20260923T060000
-DTEND:20260929T220000
-DTSTAMP:20260101T000000Z
-UID:xurkitree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026@pog
- o-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/xurk
- itree-pheromosa-buzzwole-in-5-star-raid-battles-september-2026/
-URL:https://leekduck.com/events/xurkitree-pheromosa-buzzwole-in-5-star-rai
- d-battles-september-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:adidas × Pokémon Timed Research
 DTSTART:20260925T100000
 DTEND:20270115T200000
@@ -146,17 +122,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/xern
  eas-in-5-star-raid-battles-september-2026/
 URL:https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2
  026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Xerneas Raid Hour
-DTSTART:20260930T180000
-DTEND:20260930T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20260930@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20260930/
-URL:https://leekduck.com/events/raidhour20260930/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Seedot Spotlight Hour
