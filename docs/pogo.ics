@@ -113,17 +113,6 @@ URL:https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2
  026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Seedot Spotlight Hour
-DTSTART:20261001T180000
-DTEND:20261001T190000
-DTSTAMP:20260101T000000Z
-UID:pokemonspotlighthour2026-10-01@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
- events/pokemonspotlighthour2026-10-01/
-URL:https://leekduck.com/events/pokemonspotlighthour2026-10-01/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Harvest Festival: Taken Over
 DTSTART:20261002T000000
 DTEND:20261005T200000
