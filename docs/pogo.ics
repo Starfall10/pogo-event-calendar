@@ -455,6 +455,17 @@ URL:https://leekduck.com/events/dynamax-uxie-mesprit-azelf-max-battle-day-
  2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Twitch Drops for Pokémon Night Out 2026
+DTSTART:20261025T023000Z
+DTEND:20261025T065900Z
+DTSTAMP:20260101T000000Z
+UID:pokemon-night-out-2026-twitch-drops@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Twitch Drops\n\n📄 Details: https://leekduck.com/events/poke
+ mon-night-out-2026-twitch-drops/
+URL:https://leekduck.com/events/pokemon-night-out-2026-twitch-drops/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dynamax Sableye during Max Monday
 DTSTART:20261026T060000
 DTEND:20261026T210000
