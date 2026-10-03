@@ -126,17 +126,6 @@ URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
  46790331176058903
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Patterns of the Wild
-DTSTART:20261002T100000
-DTEND:20261002T200000
-DTSTAMP:20260101T000000Z
-UID:patterns-of-the-wild-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/patterns-of
- -the-wild-2026/
-URL:https://leekduck.com/events/patterns-of-the-wild-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Gigantamax Cinderace Max Battle Day
 DTSTART:20261003T140000
 DTEND:20261003T170000
