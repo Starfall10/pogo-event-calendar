@@ -455,9 +455,9 @@ DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
 URL:https://leekduck.com/events/max-mondays-2026-10-26/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Halloween 2026 Part I
+SUMMARY:Pokémon GO Halloween 2026 Part I
 DTSTART:20261027T100000
-DTEND:20261031T200000
+DTEND:20261101T100000
 DTSTAMP:20260101T000000Z
 UID:halloween-2026-part-1@pogo-event-calendar
 SEQUENCE:0
