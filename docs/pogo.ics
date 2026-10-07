@@ -5,17 +5,6 @@ X-WR-CALNAME:Pokémon GO
 REFRESH-INTERVAL;VALUE=DURATION:PT1440M
 X-PUBLISHED-TTL:PT1440M
 BEGIN:VEVENT
-SUMMARY:GO Pass: September
-DTSTART:20260908T100000
-DTEND:20261006T100000
-DTSTAMP:20260101T000000Z
-UID:go-pass-september-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-s
- eptember-2026/
-URL:https://leekduck.com/events/go-pass-september-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Twilight Trails
 DTSTART:20260908T100000
 DTEND:20261201T100000
@@ -60,20 +49,6 @@ SEQUENCE:0
 DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-tcg
  -30th-celebration/
 URL:https://leekduck.com/events/pokemon-tcg-30th-celebration/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Master League and Mega Color Cup: Great League Edition | Twilight 
- Trails
-DTSTART:20260929T200000Z
-DTEND:20261006T200000Z
-DTSTAMP:20260101T000000Z
-UID:gbl-twilight-trails_master-league_mega-color-cup-great-league-edition@
- pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
- gbl-twilight-trails_master-league_mega-color-cup-great-league-edition/
-URL:https://leekduck.com/events/gbl-twilight-trails_master-league_mega-col
- or-cup-great-league-edition/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Mega Victreebel in Mega Raids
