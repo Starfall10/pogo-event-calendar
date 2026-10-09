@@ -111,17 +111,6 @@ URL:https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-202
  6/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Elgyem Spotlight Hour
-DTSTART:20261008T180000
-DTEND:20261008T190000
-DTSTAMP:20260101T000000Z
-UID:pokemonspotlighthour2026-10-08@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
- events/pokemonspotlighthour2026-10-08/
-URL:https://leekduck.com/events/pokemonspotlighthour2026-10-08/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Zorua Community Day
 DTSTART:20261010T140000
 DTEND:20261010T170000
