@@ -111,17 +111,6 @@ URL:https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-202
  6/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Yveltal Raid Hour
-DTSTART:20261007T180000
-DTEND:20261007T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20261007@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20261007/
-URL:https://leekduck.com/events/raidhour20261007/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Elgyem Spotlight Hour
 DTSTART:20261008T180000
 DTEND:20261008T190000
@@ -438,7 +427,7 @@ DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
 URL:https://leekduck.com/events/super-mega-raid-day-october-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Halloween 2026 Part II
+SUMMARY:Pokémon GO Halloween 2026 Part II
 DTSTART:20261101T100000
 DTEND:20261105T200000
 DTSTAMP:20260101T000000Z
