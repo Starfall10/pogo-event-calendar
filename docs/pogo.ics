@@ -38,17 +38,6 @@ DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-tcg
 URL:https://leekduck.com/events/pokemon-tcg-30th-celebration/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:World Space Week 2026
-DTSTART:20261004T000000
-DTEND:20261010T235900
-DTSTAMP:20260101T000000Z
-UID:world-space-week-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/world-space
- -week-2026/
-URL:https://leekduck.com/events/world-space-week-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:GO Pass: October
 DTSTART:20261006T100000
 DTEND:20261103T100000
@@ -109,17 +98,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/yvel
  tal-in-5-star-raid-battles-october-2026/
 URL:https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-202
  6/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Zorua Community Day
-DTSTART:20261010T140000
-DTEND:20261010T170000
-DTSTAMP:20260101T000000Z
-UID:october-communityday2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/oct
- ober-communityday2026/
-URL:https://leekduck.com/events/october-communityday2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dynamax Rookidee during Max Monday
