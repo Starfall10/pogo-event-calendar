@@ -100,17 +100,6 @@ URL:https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-202
  6/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dynamax Rookidee during Max Monday
-DTSTART:20261012T060000
-DTEND:20261012T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-10-12@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-10-12/
-URL:https://leekduck.com/events/max-mondays-2026-10-12/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Fall Marathon: Buddy Trek
 DTSTART:20261013T100000
 DTEND:20261019T200000
