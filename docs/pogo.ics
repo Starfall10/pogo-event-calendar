@@ -372,15 +372,15 @@ DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
 URL:https://leekduck.com/events/pokemonspotlighthour2026-10-29/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Super Mega Raid Day
+SUMMARY:Chandelure Super Mega Raid Day
 DTSTART:20261031T140000
 DTEND:20261031T170000
 DTSTAMP:20260101T000000Z
-UID:super-mega-raid-day-october-2026@pogo-event-calendar
+UID:chandelure-super-mega-raid-day-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
- ga-raid-day-october-2026/
-URL:https://leekduck.com/events/super-mega-raid-day-october-2026/
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/chandelu
+ re-super-mega-raid-day-2026/
+URL:https://leekduck.com/events/chandelure-super-mega-raid-day-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pokémon GO Halloween 2026 Part II
