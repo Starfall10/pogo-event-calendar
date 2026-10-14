@@ -49,21 +49,6 @@ DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-o
 URL:https://leekduck.com/events/go-pass-october-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
- er League: Mega Edition | Twilight Trails
-DTSTART:20261006T200000Z
-DTEND:20261013T200000Z
-DTSTAMP:20260101T000000Z
-UID:gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-editio
- n_master-league-mega-edition-split-2@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
- gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_ma
- ster-league-mega-edition-split-2/
-URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
- ion_ultra-league-mega-edition_master-league-mega-edition-split-2/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mega Blastoise in Mega Raids
 DTSTART:20261007T060000
 DTEND:20261013T220000
@@ -265,6 +250,18 @@ SEQUENCE:0
 DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
  events/pokemonspotlighthour2026-10-22/
 URL:https://leekduck.com/events/pokemonspotlighthour2026-10-22/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pokémon GO City Safari: Boston (Rescheduled)
+DTSTART:20261024T100000
+DTEND:20261025T180000
+DTSTAMP:20260101T000000Z
+UID:pokemon-go-city-safari-boston-2026-rescheduled@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:City Safari\n\n📄 Details: https://leekduck.com/events/pokem
+ on-go-city-safari-boston-2026-rescheduled/
+URL:https://leekduck.com/events/pokemon-go-city-safari-boston-2026-resched
+ uled/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dynamax Uxie\, Mesprit\, and Azelf Max Battle Day
