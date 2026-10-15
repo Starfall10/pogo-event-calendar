@@ -112,17 +112,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
 URL:https://leekduck.com/events/mega-dragonite-in-mega-raids-october-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dialga Raid Hour
-DTSTART:20261014T180000
-DTEND:20261014T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20261014@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20261014/
-URL:https://leekduck.com/events/raidhour20261014/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Stufful Spotlight Hour
 DTSTART:20261015T180000
 DTEND:20261015T190000
