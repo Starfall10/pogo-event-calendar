@@ -231,6 +231,17 @@ DESCRIPTION:Twitch Drops\n\n📄 Details: https://leekduck.com/events/poke
 URL:https://leekduck.com/events/pokemon-night-out-2026-twitch-drops/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Pokémon Night Out 2026 - Los Angeles
+DTSTART:20261025T023000Z
+DTEND:20261025T065959Z
+DTSTAMP:20260101T000000Z
+UID:pokemon-night-out-los-angeles-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-nig
+ ht-out-los-angeles-2026/
+URL:https://leekduck.com/events/pokemon-night-out-los-angeles-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Dynamax Sableye during Max Monday
 DTSTART:20261026T060000
 DTEND:20261026T210000
@@ -282,7 +293,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Mega Sableye in Mega Raids
 DTSTART:20261028T060000
-DTEND:20261103T220000
+DTEND:20261108T220000
 DTSTAMP:20260101T000000Z
 UID:mega-sableye-in-mega-raids-october-2026@pogo-event-calendar
 SEQUENCE:0
@@ -337,6 +348,17 @@ DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/halloween-2
 URL:https://leekduck.com/events/halloween-2026-part-2/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dynamax Machop during Max Monday
+DTSTART:20261102T060000
+DTEND:20261102T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-11-02@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-11-02/
+URL:https://leekduck.com/events/max-mondays-2026-11-02/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
  er League: Mega Edition | Twilight Trails
 DTSTART:20261103T210000Z
@@ -350,6 +372,54 @@ DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
  ster-league-mega-edition-split-3/
 URL:https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edit
  ion_ultra-league-mega-edition_master-league-mega-edition-split-3/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Giratina (Altered Forme) in 5-star Raid Battles
+DTSTART:20261104T060000
+DTEND:20261108T220000
+DTSTAMP:20260101T000000Z
+UID:giratina-altered-forme-in-5-star-raid-battles-november-2026@pogo-event
+ -calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/gira
+ tina-altered-forme-in-5-star-raid-battles-november-2026/
+URL:https://leekduck.com/events/giratina-altered-forme-in-5-star-raid-batt
+ les-november-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shadow Tornadus (Incarnate Forme) in Shadow Raids
+DTSTART:20261104T060000
+DTEND:20261108T220000
+DTSTAMP:20260101T000000Z
+UID:shadow-tornadus-incarnate-forme-in-shadow-raids-november-4-2026@pogo-e
+ vent-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
+ ow-tornadus-incarnate-forme-in-shadow-raids-november-4-2026/
+URL:https://leekduck.com/events/shadow-tornadus-incarnate-forme-in-shadow-
+ raids-november-4-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Giratina (Altered Forme) Raid Hour
+DTSTART:20261104T180000
+DTEND:20261104T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261104@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261104/
+URL:https://leekduck.com/events/raidhour20261104/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Teddiursa wearing a witch hat Spotlight Hour
+DTSTART:20261105T180000
+DTEND:20261105T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-11-05@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-11-05/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-11-05/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pokémon GO Wild Area 2026: Sendai • Tohoku
@@ -385,6 +455,17 @@ DESCRIPTION:📱 Infographic: https://discord.com/channels/772532010555670
  s://leekduck.com/events/into-the-wild-2026/
 URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
  60035600155803811
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pokémon Night Out 2026 - London
+DTSTART:20261110T180000Z
+DTEND:20261110T223000Z
+DTSTAMP:20260101T000000Z
+UID:pokemon-night-out-london-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-nig
+ ht-out-london-2026/
+URL:https://leekduck.com/events/pokemon-night-out-london-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League\, Ultra League: Mega Edition\, and 2026 GO LAIC Cup |
@@ -424,6 +505,76 @@ DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
 URL:https://leekduck.com/events/minior-showers-leonids-2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Cresselia and Darkrai in 5-star Raid Battles
+DTSTART:20261116T060000
+DTEND:20261124T220000
+DTSTAMP:20260101T000000Z
+UID:cresselia-darkrai-in-5-star-raid-battles-november-2026@pogo-event-cale
+ ndar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/cres
+ selia-darkrai-in-5-star-raid-battles-november-2026/
+URL:https://leekduck.com/events/cresselia-darkrai-in-5-star-raid-battles-n
+ ovember-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Max Monday: Pokémon to be announced
+DTSTART:20261116T060000
+DTEND:20261116T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-11-16@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-11-16/
+URL:https://leekduck.com/events/max-mondays-2026-11-16/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Banette in Mega Raids
+DTSTART:20261116T060000
+DTEND:20261124T220000
+DTSTAMP:20260101T000000Z
+UID:mega-banette-in-mega-raids-november-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -banette-in-mega-raids-november-2026/
+URL:https://leekduck.com/events/mega-banette-in-mega-raids-november-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shadow Tornadus (Incarnate Forme) in Shadow Raids
+DTSTART:20261116T060000
+DTEND:20261201T220000
+DTSTAMP:20260101T000000Z
+UID:shadow-tornadus-incarnate-forme-in-shadow-raids-november-16-2026@pogo-
+ event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
+ ow-tornadus-incarnate-forme-in-shadow-raids-november-16-2026/
+URL:https://leekduck.com/events/shadow-tornadus-incarnate-forme-in-shadow-
+ raids-november-16-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dynamax Trails
+DTSTART:20261116T100000
+DTEND:20261123T200000
+DTSTAMP:20260101T000000Z
+UID:dynamax-trails-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/dynamax-tra
+ ils-2026/
+URL:https://leekduck.com/events/dynamax-trails-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Cresselia and Darkrai Raid Hour
+DTSTART:20261118T180000
+DTEND:20261118T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261118@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261118/
+URL:https://leekduck.com/events/raidhour20261118/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ultra League\, Master League: Mega Edition\, and 2026 GO LAIC Cup 
  | Twilight Trails
 DTSTART:20261118T210000Z
@@ -450,6 +601,28 @@ DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/nov
 URL:https://leekduck.com/events/november-communityday2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dynamax Espurr during Max Monday
+DTSTART:20261123T060000
+DTEND:20261123T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-11-23@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-11-23/
+URL:https://leekduck.com/events/max-mondays-2026-11-23/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Twilight Wishes
+DTSTART:20261124T100000
+DTEND:20261130T200000
+DTSTAMP:20260101T000000Z
+UID:twilight-wishes-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/twilight-wi
+ shes-2026/
+URL:https://leekduck.com/events/twilight-wishes-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Master League and Mega Catch Cup: Great League Edition | Twilight 
  Trails
 DTSTART:20261124T210000Z
@@ -464,6 +637,55 @@ URL:https://leekduck.com/events/gbl-twilight-trails_master-league_mega-cat
  ch-cup-great-league-edition/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Deoxys (Normal\, Defense\, Attack\, and Speed Formes) in 5-star Ra
+ id Battles
+DTSTART:20261125T060000
+DTEND:20261201T220000
+DTSTAMP:20260101T000000Z
+UID:deoxys-normal-defense-attack-speed-formes-in-5-star-raid-battles-novem
+ ber-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/deox
+ ys-normal-defense-attack-speed-formes-in-5-star-raid-battles-november-2026
+ /
+URL:https://leekduck.com/events/deoxys-normal-defense-attack-speed-formes-
+ in-5-star-raid-battles-november-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Metagross in Mega Raids
+DTSTART:20261125T060000
+DTEND:20261201T220000
+DTSTAMP:20260101T000000Z
+UID:mega-metagross-in-mega-raids-november-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -metagross-in-mega-raids-november-2026/
+URL:https://leekduck.com/events/mega-metagross-in-mega-raids-november-2026
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Deoxys (Normal\, Defense\, Attack\, and Speed Formes) Raid Hour
+DTSTART:20261125T180000
+DTEND:20261125T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261125@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261125/
+URL:https://leekduck.com/events/raidhour20261125/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Noibat Spotlight Hour
+DTSTART:20261126T180000
+DTEND:20261126T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-11-26@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-11-26/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-11-26/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Super Mega Raid Day
 DTSTART:20261128T140000
 DTEND:20261128T170000
@@ -473,6 +695,17 @@ SEQUENCE:0
 DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
  ga-raid-day-november-2026/
 URL:https://leekduck.com/events/super-mega-raid-day-november-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dynamax Cryogonal during Max Monday
+DTSTART:20261130T060000
+DTEND:20261130T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-11-30@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-11-30/
+URL:https://leekduck.com/events/max-mondays-2026-11-30/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Minior Showers: Geminids 2026
