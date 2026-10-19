@@ -112,17 +112,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
 URL:https://leekduck.com/events/mega-dragonite-in-mega-raids-october-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sandile Hatch Day
-DTSTART:20261017T110000
-DTEND:20261017T170000
-DTSTAMP:20260101T000000Z
-UID:sandile-hatch-day-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/sandile-hat
- ch-day-2026/
-URL:https://leekduck.com/events/sandile-hatch-day-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Dynamax Sneasel during Max Monday
 DTSTART:20261019T060000
 DTEND:20261019T210000
