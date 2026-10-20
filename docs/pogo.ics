@@ -62,19 +62,6 @@ URL:https://leekduck.com/events/shadow-landorus-incarnate-forme-in-shadow-
  raids-october-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fall Marathon: Buddy Trek
-DTSTART:20261013T100000
-DTEND:20261019T200000
-DTSTAMP:20260101T000000Z
-UID:fall-marathon-buddy-trek-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:📱 Infographic: https://discord.com/channels/772532010555670
- 530/1173052217050267679/1553026967421456539\n\nEvent\n\n📄 Details: http
- s://leekduck.com/events/fall-marathon-buddy-trek-2026/
-URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
- 53026967421456539
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Great League\, Ultra League: Mega Edition\, and Little Cup | Twili
  ght Trails
 DTSTART:20261013T200000Z
@@ -110,17 +97,6 @@ SEQUENCE:0
 DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
  -dragonite-in-mega-raids-october-2026/
 URL:https://leekduck.com/events/mega-dragonite-in-mega-raids-october-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dynamax Sneasel during Max Monday
-DTSTART:20261019T060000
-DTEND:20261019T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-10-19@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-10-19/
-URL:https://leekduck.com/events/max-mondays-2026-10-19/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Minior Showers: Orionids 2026
@@ -357,6 +333,17 @@ SEQUENCE:0
 DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
  ondays-2026-11-02/
 URL:https://leekduck.com/events/max-mondays-2026-11-02/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:GO Pass: November
+DTSTART:20261103T100000
+DTEND:20261201T100000
+DTSTAMP:20260101T000000Z
+UID:go-pass-november-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-n
+ ovember-2026/
+URL:https://leekduck.com/events/go-pass-november-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
