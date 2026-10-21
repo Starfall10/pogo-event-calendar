@@ -27,17 +27,6 @@ DESCRIPTION:Research\n\n📄 Details: https://leekduck.com/events/pokemon-
 URL:https://leekduck.com/events/pokemon-x-adidas-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pokémon TCG: 30th Celebration
-DTSTART:20260927T100000
-DTEND:20261020T220000
-DTSTAMP:20260101T000000Z
-UID:pokemon-tcg-30th-celebration@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-tcg
- -30th-celebration/
-URL:https://leekduck.com/events/pokemon-tcg-30th-celebration/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:GO Pass: October
 DTSTART:20261006T100000
 DTEND:20261103T100000
@@ -60,29 +49,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
  ow-landorus-incarnate-forme-in-shadow-raids-october-2026/
 URL:https://leekduck.com/events/shadow-landorus-incarnate-forme-in-shadow-
  raids-october-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dialga in 5-star Raid Battles
-DTSTART:20261014T060000
-DTEND:20261020T220000
-DTSTAMP:20260101T000000Z
-UID:dialga-in-5-star-raid-battles-october-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/dial
- ga-in-5-star-raid-battles-october-2026/
-URL:https://leekduck.com/events/dialga-in-5-star-raid-battles-october-2026
- /
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Mega Dragonite in Mega Raids
-DTSTART:20261014T060000
-DTEND:20261020T220000
-DTSTAMP:20260101T000000Z
-UID:mega-dragonite-in-mega-raids-october-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
- -dragonite-in-mega-raids-october-2026/
-URL:https://leekduck.com/events/mega-dragonite-in-mega-raids-october-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Minior Showers: Orionids 2026
@@ -563,7 +529,7 @@ URL:https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-le
  ague-mega-edition_2026-go-laic-cup/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:November Community Day
+SUMMARY:Pawniard Community Day
 DTSTART:20261121T140000
 DTEND:20261121T170000
 DTSTAMP:20260101T000000Z
