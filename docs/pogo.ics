@@ -102,17 +102,6 @@ URL:https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Palkia Raid Hour
-DTSTART:20261021T180000
-DTEND:20261021T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20261021@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20261021/
-URL:https://leekduck.com/events/raidhour20261021/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Morelull Spotlight Hour
 DTSTART:20261022T180000
 DTEND:20261022T190000
