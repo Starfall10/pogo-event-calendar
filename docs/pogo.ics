@@ -102,17 +102,6 @@ URL:https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Morelull Spotlight Hour
-DTSTART:20261022T180000
-DTEND:20261022T190000
-DTSTAMP:20260101T000000Z
-UID:pokemonspotlighthour2026-10-22@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
- events/pokemonspotlighthour2026-10-22/
-URL:https://leekduck.com/events/pokemonspotlighthour2026-10-22/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Pokémon GO City Safari: Boston (Rescheduled)
 DTSTART:20261024T100000
 DTEND:20261025T180000
