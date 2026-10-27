@@ -91,17 +91,6 @@ URL:https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dynamax Sableye during Max Monday
-DTSTART:20261026T060000
-DTEND:20261026T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-10-26@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-10-26/
-URL:https://leekduck.com/events/max-mondays-2026-10-26/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Pokémon GO Halloween 2026 Part I
 DTSTART:20261027T100000
 DTEND:20261101T100000
