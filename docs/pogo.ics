@@ -91,18 +91,6 @@ URL:https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pokémon GO City Safari: Boston (Rescheduled)
-DTSTART:20261024T100000
-DTEND:20261025T180000
-DTSTAMP:20260101T000000Z
-UID:pokemon-go-city-safari-boston-2026-rescheduled@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:City Safari\n\n📄 Details: https://leekduck.com/events/pokem
- on-go-city-safari-boston-2026-rescheduled/
-URL:https://leekduck.com/events/pokemon-go-city-safari-boston-2026-resched
- uled/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Dynamax Sableye during Max Monday
 DTSTART:20261026T060000
 DTEND:20261026T210000
