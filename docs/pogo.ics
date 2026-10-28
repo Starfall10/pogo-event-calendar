@@ -51,31 +51,6 @@ URL:https://leekduck.com/events/shadow-landorus-incarnate-forme-in-shadow-
  raids-october-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mega Charizard X and Mega Charizard Y in Mega Raids
-DTSTART:20261021T060000
-DTEND:20261027T220000
-DTSTAMP:20260101T000000Z
-UID:mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026@pogo-even
- t-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
- -charizard-x-mega-charizard-y-in-mega-raids-october-2026/
-URL:https://leekduck.com/events/mega-charizard-x-mega-charizard-y-in-mega-
- raids-october-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Palkia in 5-star Raid Battles
-DTSTART:20261021T060000
-DTEND:20261027T220000
-DTSTAMP:20260101T000000Z
-UID:palkia-in-5-star-raid-battles-october-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/palk
- ia-in-5-star-raid-battles-october-2026/
-URL:https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026
- /
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Pokémon GO Halloween 2026 Part I
 DTSTART:20261027T100000
 DTEND:20261101T100000
@@ -422,6 +397,28 @@ DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
  up/
 URL:https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-le
  ague-mega-edition_2026-go-laic-cup/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Grookey\, Scorbunny\, and Sobble Spotlight Hour
+DTSTART:20261119T180000
+DTEND:20261119T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-11-19@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-11-19/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-11-19/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Eternamax Eternatus Returns
+DTSTART:20261121T110000
+DTEND:20261121T140000
+DTSTAMP:20260101T000000Z
+UID:eternamax-eternatus-max-battles-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/etern
+ amax-eternatus-max-battles-2026/
+URL:https://leekduck.com/events/eternamax-eternatus-max-battles-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pawniard Community Day
