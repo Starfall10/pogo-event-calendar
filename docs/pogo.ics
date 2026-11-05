@@ -27,57 +27,6 @@ DESCRIPTION:Research\n\n📄 Details: https://leekduck.com/events/pokemon-
 URL:https://leekduck.com/events/pokemon-x-adidas-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GO Pass: October
-DTSTART:20261006T100000
-DTEND:20261103T100000
-DTSTAMP:20260101T000000Z
-UID:go-pass-october-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-o
- ctober-2026/
-URL:https://leekduck.com/events/go-pass-october-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Shadow Landorus (Incarnate Forme) in Shadow Raids
-DTSTART:20261007T060000
-DTEND:20261103T220000
-DTSTAMP:20260101T000000Z
-UID:shadow-landorus-incarnate-forme-in-shadow-raids-october-2026@pogo-even
- t-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
- ow-landorus-incarnate-forme-in-shadow-raids-october-2026/
-URL:https://leekduck.com/events/shadow-landorus-incarnate-forme-in-shadow-
- raids-october-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Master League and Mega Halloween Cup: Great League Edition | Twili
- ght Trails
-DTSTART:20261027T210000Z
-DTEND:20261103T210000Z
-DTSTAMP:20260101T000000Z
-UID:gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edit
- ion@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
- gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edition/
-URL:https://leekduck.com/events/gbl-twilight-trails_master-league_mega-hal
- loween-cup-great-league-edition/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Giratina (Origin Forme) in 5-star Raid Battles
-DTSTART:20261028T060000
-DTEND:20261103T220000
-DTSTAMP:20260101T000000Z
-UID:giratina-origin-forme-in-5-star-raid-battles-october-2026@pogo-event-c
- alendar
-SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/gira
- tina-origin-forme-in-5-star-raid-battles-october-2026/
-URL:https://leekduck.com/events/giratina-origin-forme-in-5-star-raid-battl
- es-october-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mega Sableye in Mega Raids
 DTSTART:20261028T060000
 DTEND:20261108T220000
@@ -98,17 +47,6 @@ SEQUENCE:0
 DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/halloween-2
  026-part-2/
 URL:https://leekduck.com/events/halloween-2026-part-2/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dynamax Machop during Max Monday
-DTSTART:20261102T060000
-DTEND:20261102T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-11-02@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-11-02/
-URL:https://leekduck.com/events/max-mondays-2026-11-02/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:GO Pass: November
@@ -161,17 +99,6 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
  ow-tornadus-incarnate-forme-in-shadow-raids-november-4-2026/
 URL:https://leekduck.com/events/shadow-tornadus-incarnate-forme-in-shadow-
  raids-november-4-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Giratina (Altered Forme) Raid Hour
-DTSTART:20261104T180000
-DTEND:20261104T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20261104@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20261104/
-URL:https://leekduck.com/events/raidhour20261104/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Teddiursa wearing a witch hat Spotlight Hour
