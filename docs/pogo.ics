@@ -123,6 +123,19 @@ DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
 URL:https://leekduck.com/events/pokemon-go-wild-area-2026-sendai-japan/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:GO Wild Area: Gigantamax Machamp Power Up! Timed Research
+DTSTART:20261106T100000
+DTEND:20261115T235900
+DTSTAMP:20260101T000000Z
+UID:go-wild-area-gigantamax-machamp-power-up-timed-research@pogo-event-cal
+ endar
+SEQUENCE:0
+DESCRIPTION:Timed Research\n\n📄 Details: https://leekduck.com/events/go
+ -wild-area-gigantamax-machamp-power-up-timed-research/
+URL:https://leekduck.com/events/go-wild-area-gigantamax-machamp-power-up-t
+ imed-research/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Pokémon GO Wild Area 2026: Mexico City
 DTSTART:20261106T160000Z
 DTEND:20261109T000000Z
