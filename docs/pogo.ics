@@ -90,17 +90,6 @@ URL:https://leekduck.com/events/shadow-tornadus-incarnate-forme-in-shadow-
  raids-november-4-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pokémon GO Wild Area 2026: Sendai • Tohoku
-DTSTART:20261106T010000Z
-DTEND:20261108T090000Z
-DTSTAMP:20260101T000000Z
-UID:pokemon-go-wild-area-2026-sendai-japan@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
- -go-wild-area-2026-sendai-japan/
-URL:https://leekduck.com/events/pokemon-go-wild-area-2026-sendai-japan/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:GO Wild Area: Gigantamax Machamp Power Up! Timed Research
 DTSTART:20261106T100000
 DTEND:20261115T235900
@@ -112,17 +101,6 @@ DESCRIPTION:Timed Research\n\n📄 Details: https://leekduck.com/events/go
  -wild-area-gigantamax-machamp-power-up-timed-research/
 URL:https://leekduck.com/events/go-wild-area-gigantamax-machamp-power-up-t
  imed-research/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pokémon GO Wild Area 2026: Mexico City
-DTSTART:20261106T160000Z
-DTEND:20261109T000000Z
-DTSTAMP:20260101T000000Z
-UID:pokemon-go-wild-area-2026-mexico-city@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
- -go-wild-area-2026-mexico-city/
-URL:https://leekduck.com/events/pokemon-go-wild-area-2026-mexico-city/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Into the Wild 2026
