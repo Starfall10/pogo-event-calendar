@@ -369,6 +369,17 @@ DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
 URL:https://leekduck.com/events/max-mondays-2026-11-30/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Max Battle Day
+DTSTART:20261205T140000
+DTEND:20261205T170000
+DTSTAMP:20260101T000000Z
+UID:max-battle-day-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
+ attle-day-december-2026/
+URL:https://leekduck.com/events/max-battle-day-december-2026/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Minior Showers: Geminids 2026
 DTSTART:20261211T170000
 DTEND:20261216T235900
@@ -378,6 +389,116 @@ SEQUENCE:0
 DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
  ers-geminids-2026/
 URL:https://leekduck.com/events/minior-showers-geminids-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:December Community Day
+DTSTART:20261212T140000
+DTEND:20261213T170000
+DTSTAMP:20260101T000000Z
+UID:december-communityday2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/dec
+ ember-communityday2026/
+URL:https://leekduck.com/events/december-communityday2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Raid Day
+DTSTART:20261219T140000
+DTEND:20261219T170000
+DTSTAMP:20260101T000000Z
+UID:raid-day-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/raid-day
+ -december-2026/
+URL:https://leekduck.com/events/raid-day-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Hatch Day
+DTSTART:20261226T110000
+DTEND:20261226T170000
+DTSTAMP:20260101T000000Z
+UID:hatch-day-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/hatch-day-d
+ ecember-2026/
+URL:https://leekduck.com/events/hatch-day-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:January Community Day Classic
+DTSTART:20270102T140000
+DTEND:20270102T170000
+DTSTAMP:20260101T000000Z
+UID:january-communitydayclassic2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/jan
+ uary-communitydayclassic2027/
+URL:https://leekduck.com/events/january-communitydayclassic2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Super Mega Raid Day
+DTSTART:20270109T140000
+DTEND:20270109T170000
+DTSTAMP:20260101T000000Z
+UID:super-mega-raid-day-january-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
+ ga-raid-day-january-2027/
+URL:https://leekduck.com/events/super-mega-raid-day-january-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:January Community Day
+DTSTART:20270116T140000
+DTEND:20270116T170000
+DTSTAMP:20260101T000000Z
+UID:january-communityday2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/jan
+ uary-communityday2027/
+URL:https://leekduck.com/events/january-communityday2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Max Battle Day
+DTSTART:20270123T140000
+DTEND:20270123T170000
+DTSTAMP:20260101T000000Z
+UID:max-battle-day-january-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
+ attle-day-january-2027/
+URL:https://leekduck.com/events/max-battle-day-january-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Super Mega Raid Day
+DTSTART:20270130T140000
+DTEND:20270130T170000
+DTSTAMP:20260101T000000Z
+UID:super-mega-raid-day-january-30-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
+ ga-raid-day-january-30-2027/
+URL:https://leekduck.com/events/super-mega-raid-day-january-30-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:February Community Day
+DTSTART:20270206T140000
+DTEND:20270206T170000
+DTSTAMP:20260101T000000Z
+UID:february-communityday2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/feb
+ ruary-communityday2027/
+URL:https://leekduck.com/events/february-communityday2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Raid Day
+DTSTART:20270213T140000
+DTEND:20270213T170000
+DTSTAMP:20260101T000000Z
+UID:raid-day-february-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/raid-day
+ -february-2027/
+URL:https://leekduck.com/events/raid-day-february-2027/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pokémon GO Tour: Alola - Kaohsiung 2027
