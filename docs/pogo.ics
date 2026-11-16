@@ -66,17 +66,6 @@ URL:https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-lea
  gue-mega-edition_2026-go-laic-cup/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Pokémon GO Wild Area 2026: Global
-DTSTART:20261114T100000
-DTEND:20261115T180000
-DTSTAMP:20260101T000000Z
-UID:pokemon-go-wild-area-2026-global@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Wild Area\n\n📄 Details: https://leekduck.com/events/pokemon
- -go-wild-area-2026-global/
-URL:https://leekduck.com/events/pokemon-go-wild-area-2026-global/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Minior Showers: Leonids 2026
 DTSTART:20261114T170000
 DTEND:20261119T235900
@@ -101,7 +90,7 @@ URL:https://leekduck.com/events/cresselia-darkrai-in-5-star-raid-battles-n
  ovember-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Max Monday: Pokémon to be announced
+SUMMARY:[Canceled] Max Monday
 DTSTART:20261116T060000
 DTEND:20261116T210000
 DTSTAMP:20260101T000000Z
