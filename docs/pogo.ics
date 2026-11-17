@@ -77,17 +77,6 @@ URL:https://leekduck.com/events/cresselia-darkrai-in-5-star-raid-battles-n
  ovember-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[Canceled] Max Monday
-DTSTART:20261116T060000
-DTEND:20261116T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-11-16@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-11-16/
-URL:https://leekduck.com/events/max-mondays-2026-11-16/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mega Banette in Mega Raids
 DTSTART:20261116T060000
 DTEND:20261124T220000
