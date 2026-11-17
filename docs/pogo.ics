@@ -38,19 +38,6 @@ DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-n
 URL:https://leekduck.com/events/go-pass-november-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GO Wild Area: Gigantamax Machamp Power Up! Timed Research
-DTSTART:20261106T100000
-DTEND:20261115T235900
-DTSTAMP:20260101T000000Z
-UID:go-wild-area-gigantamax-machamp-power-up-timed-research@pogo-event-cal
- endar
-SEQUENCE:0
-DESCRIPTION:Timed Research\n\n📄 Details: https://leekduck.com/events/go
- -wild-area-gigantamax-machamp-power-up-timed-research/
-URL:https://leekduck.com/events/go-wild-area-gigantamax-machamp-power-up-t
- imed-research/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Great League\, Ultra League: Mega Edition\, and 2026 GO LAIC Cup |
   Twilight Trails
 DTSTART:20261110T210000Z
@@ -134,6 +121,17 @@ SEQUENCE:0
 DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/dynamax-tra
  ils-2026/
 URL:https://leekduck.com/events/dynamax-trails-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pokémon GO and Duolingo Timed Research
+DTSTART:20261117T100000
+DTEND:20261231T235900
+DTSTAMP:20260101T000000Z
+UID:duolingo-timed-research-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Timed Research\n\n📄 Details: https://leekduck.com/events/du
+ olingo-timed-research-2026/
+URL:https://leekduck.com/events/duolingo-timed-research-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cresselia and Darkrai Raid Hour
