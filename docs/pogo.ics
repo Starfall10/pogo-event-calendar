@@ -38,21 +38,6 @@ DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-n
 URL:https://leekduck.com/events/go-pass-november-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Great League\, Ultra League: Mega Edition\, and 2026 GO LAIC Cup |
-  Twilight Trails
-DTSTART:20261110T210000Z
-DTEND:20261117T210000Z
-DTSTAMP:20260101T000000Z
-UID:gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-lai
- c-cup@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
- gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-laic-cu
- p/
-URL:https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-lea
- gue-mega-edition_2026-go-laic-cup/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Minior Showers: Leonids 2026
 DTSTART:20261114T170000
 DTEND:20261119T235900
@@ -121,17 +106,6 @@ SEQUENCE:0
 DESCRIPTION:Timed Research\n\n📄 Details: https://leekduck.com/events/du
  olingo-timed-research-2026/
 URL:https://leekduck.com/events/duolingo-timed-research-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cresselia and Darkrai Raid Hour
-DTSTART:20261118T180000
-DTEND:20261118T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20261118@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20261118/
-URL:https://leekduck.com/events/raidhour20261118/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Ultra League\, Master League: Mega Edition\, and 2026 GO LAIC Cup 
