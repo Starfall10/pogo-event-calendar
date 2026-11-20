@@ -38,17 +38,6 @@ DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-n
 URL:https://leekduck.com/events/go-pass-november-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Minior Showers: Leonids 2026
-DTSTART:20261114T170000
-DTEND:20261119T235900
-DTSTAMP:20260101T000000Z
-UID:minior-showers-leonids-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/minior-show
- ers-leonids-2026/
-URL:https://leekduck.com/events/minior-showers-leonids-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Cresselia and Darkrai in 5-star Raid Battles
 DTSTART:20261116T060000
 DTEND:20261124T220000
@@ -123,15 +112,19 @@ URL:https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-le
  ague-mega-edition_2026-go-laic-cup/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Grookey\, Scorbunny\, and Sobble Spotlight Hour
-DTSTART:20261119T180000
-DTEND:20261119T190000
+SUMMARY:Twitch Drops for 2027 Pokémon Latin America International Champio
+ nships
+DTSTART:20261120T120000Z
+DTEND:20261122T230000Z
 DTSTAMP:20260101T000000Z
-UID:pokemonspotlighthour2026-11-19@pogo-event-calendar
+UID:pokemon-latin-america-international-championships-2027-timed-research-
+ twitch-drops@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
- events/pokemonspotlighthour2026-11-19/
-URL:https://leekduck.com/events/pokemonspotlighthour2026-11-19/
+DESCRIPTION:Twitch Drops\n\n📄 Details: https://leekduck.com/events/poke
+ mon-latin-america-international-championships-2027-timed-research-twitch-d
+ rops/
+URL:https://leekduck.com/events/pokemon-latin-america-international-champi
+ onships-2027-timed-research-twitch-drops/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Eternamax Eternatus Returns
