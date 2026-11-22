@@ -127,28 +127,6 @@ URL:https://leekduck.com/events/pokemon-latin-america-international-champi
  onships-2027-timed-research-twitch-drops/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eternamax Eternatus Returns
-DTSTART:20261121T110000
-DTEND:20261121T140000
-DTSTAMP:20260101T000000Z
-UID:eternamax-eternatus-max-battles-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/etern
- amax-eternatus-max-battles-2026/
-URL:https://leekduck.com/events/eternamax-eternatus-max-battles-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Pawniard Community Day
-DTSTART:20261121T140000
-DTEND:20261121T170000
-DTSTAMP:20260101T000000Z
-UID:november-communityday2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/nov
- ember-communityday2026/
-URL:https://leekduck.com/events/november-communityday2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Dynamax Espurr during Max Monday
 DTSTART:20261123T060000
 DTEND:20261123T210000
