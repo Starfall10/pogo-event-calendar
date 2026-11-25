@@ -402,6 +402,18 @@ DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
 URL:https://leekduck.com/events/max-mondays-2026-12-14/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Choose Your Path: Daydream Destinations (December 15\, 2026)
+DTSTART:20261215T100000
+DTEND:20261221T200000
+DTSTAMP:20260101T000000Z
+UID:choose-your-path-daydream-destinations-2026-12-15@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Choose Your Path\n\n📄 Details: https://leekduck.com/events/
+ choose-your-path-daydream-destinations-2026-12-15/
+URL:https://leekduck.com/events/choose-your-path-daydream-destinations-202
+ 6-12-15/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ultra League: Mega Edition and Holiday Cup: Great League Edition |
   Daydream Destinations
 DTSTART:20261215T210000Z
@@ -689,6 +701,18 @@ DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
 URL:https://leekduck.com/events/super-mega-raid-day-january-2027/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Choose Your Path: Daydream Destinations (January 12\, 2027)
+DTSTART:20270112T100000
+DTEND:20270118T200000
+DTSTAMP:20260101T000000Z
+UID:choose-your-path-daydream-destinations-2027-01-12@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Choose Your Path\n\n📄 Details: https://leekduck.com/events/
+ choose-your-path-daydream-destinations-2027-01-12/
+URL:https://leekduck.com/events/choose-your-path-daydream-destinations-202
+ 7-01-12/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Ultra League: Mega Edition and Jungle Cup: Great League Edition | 
  Daydream Destinations
 DTSTART:20270112T210000Z
@@ -738,6 +762,18 @@ SEQUENCE:0
 DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
  attle-day-january-2027/
 URL:https://leekduck.com/events/max-battle-day-january-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Choose Your Path: Daydream Destinations (January 26\, 2027)
+DTSTART:20270126T100000
+DTEND:20270201T200000
+DTSTAMP:20260101T000000Z
+UID:choose-your-path-daydream-destinations-2027-01-26@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Choose Your Path\n\n📄 Details: https://leekduck.com/events/
+ choose-your-path-daydream-destinations-2027-01-26/
+URL:https://leekduck.com/events/choose-your-path-daydream-destinations-202
+ 7-01-26/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
@@ -815,6 +851,18 @@ SEQUENCE:0
 DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/raid-day
  -february-2027/
 URL:https://leekduck.com/events/raid-day-february-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Choose Your Path: Daydream Destinations (February 16\, 2027)
+DTSTART:20270216T100000
+DTEND:20270221T200000
+DTSTAMP:20260101T000000Z
+UID:choose-your-path-daydream-destinations-2027-02-16@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Choose Your Path\n\n📄 Details: https://leekduck.com/events/
+ choose-your-path-daydream-destinations-2027-02-16/
+URL:https://leekduck.com/events/choose-your-path-daydream-destinations-202
+ 7-02-16/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Master League: Mega Edition\, Mega Catch Cup: Great League Edition
