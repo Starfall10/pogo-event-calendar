@@ -75,17 +75,6 @@ URL:https://leekduck.com/events/shadow-tornadus-incarnate-forme-in-shadow-
  raids-november-16-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Dynamax Trails
-DTSTART:20261116T100000
-DTEND:20261123T200000
-DTSTAMP:20260101T000000Z
-UID:dynamax-trails-2026@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/dynamax-tra
- ils-2026/
-URL:https://leekduck.com/events/dynamax-trails-2026/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Pokémon GO and Duolingo Timed Research
 DTSTART:20261117T100000
 DTEND:20261231T235900
@@ -95,32 +84,6 @@ SEQUENCE:0
 DESCRIPTION:Timed Research\n\n📄 Details: https://leekduck.com/events/du
  olingo-timed-research-2026/
 URL:https://leekduck.com/events/duolingo-timed-research-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Ultra League\, Master League: Mega Edition\, and 2026 GO LAIC Cup 
- | Twilight Trails
-DTSTART:20261118T210000Z
-DTEND:20261125T210000Z
-DTSTAMP:20260101T000000Z
-UID:gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-la
- ic-cup@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
- gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-laic-c
- up/
-URL:https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-le
- ague-mega-edition_2026-go-laic-cup/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dynamax Espurr during Max Monday
-DTSTART:20261123T060000
-DTEND:20261123T210000
-DTSTAMP:20260101T000000Z
-UID:max-mondays-2026-11-23@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
- ondays-2026-11-23/
-URL:https://leekduck.com/events/max-mondays-2026-11-23/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Twilight Wishes
@@ -134,20 +97,6 @@ DESCRIPTION:📱 Infographic: https://discord.com/channels/772532010555670
  s://leekduck.com/events/twilight-wishes-2026/
 URL:https://discord.com/channels/772532010555670530/1173052217050267679/15
  66915506668179627
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Master League and Mega Catch Cup: Great League Edition | Twilight 
- Trails
-DTSTART:20261124T210000Z
-DTEND:20261201T210000Z
-DTSTAMP:20260101T000000Z
-UID:gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition@
- pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
- gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition/
-URL:https://leekduck.com/events/gbl-twilight-trails_master-league_mega-cat
- ch-cup-great-league-edition/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Deoxys (Normal\, Defense\, Attack\, and Speed Formes) in 5-star Ra
@@ -221,6 +170,111 @@ DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
 URL:https://leekduck.com/events/max-mondays-2026-11-30/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:GO Pass: December
+DTSTART:20261201T100000
+DTEND:20270105T100000
+DTSTAMP:20260101T000000Z
+UID:go-pass-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Pass\n\n📄 Details: https://leekduck.com/events/go-pass-d
+ ecember-2026/
+URL:https://leekduck.com/events/go-pass-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Daydream Destinations
+DTSTART:20261201T100000
+DTEND:20270301T100000
+DTSTAMP:20260101T000000Z
+UID:season-25-daydream-destinations@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Season\n\n📄 Details: https://leekduck.com/events/season-25-
+ daydream-destinations/
+URL:https://leekduck.com/events/season-25-daydream-destinations/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tropical Paradise
+DTSTART:20261201T100000
+DTEND:20261207T200000
+DTSTAMP:20260101T000000Z
+UID:tropical-paradise-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/tropical-pa
+ radise-2026/
+URL:https://leekduck.com/events/tropical-paradise-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
+ er League: Mega Edition | Daydream Destinations
+DTSTART:20261201T210000Z
+DTEND:20261208T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-
+ edition_master-league-mega-edition-split-1@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-edit
+ ion_master-league-mega-edition-split-1/
+URL:https://leekduck.com/events/gbl-daydream-destinations_great-league-meg
+ a-edition_ultra-league-mega-edition_master-league-mega-edition-split-1/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Slowbro in Mega Raids
+DTSTART:20261202T060000
+DTEND:20261208T220000
+DTSTAMP:20260101T000000Z
+UID:mega-slowbro-in-mega-raids-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -slowbro-in-mega-raids-december-2026/
+URL:https://leekduck.com/events/mega-slowbro-in-mega-raids-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Regidrago in 5-star Raid Battles
+DTSTART:20261202T060000
+DTEND:20261208T220000
+DTSTAMP:20260101T000000Z
+UID:regidrago-in-5-star-raid-battles-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/regi
+ drago-in-5-star-raid-battles-december-2026/
+URL:https://leekduck.com/events/regidrago-in-5-star-raid-battles-december-
+ 2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Shadow Dialga in Shadow Raids
+DTSTART:20261202T060000
+DTEND:20270105T220000
+DTSTAMP:20260101T000000Z
+UID:shadow-dialga-in-shadow-raids-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/shad
+ ow-dialga-in-shadow-raids-december-2026/
+URL:https://leekduck.com/events/shadow-dialga-in-shadow-raids-december-202
+ 6/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Regidrago Raid Hour
+DTSTART:20261202T180000
+DTEND:20261202T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261202@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261202/
+URL:https://leekduck.com/events/raidhour20261202/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wimpod Spotlight Hour
+DTSTART:20261203T180000
+DTEND:20261203T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-12-03@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-12-03/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-12-03/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Max Battle Day
 DTSTART:20261205T140000
 DTEND:20261205T170000
@@ -230,6 +284,89 @@ SEQUENCE:0
 DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
  attle-day-december-2026/
 URL:https://leekduck.com/events/max-battle-day-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dynamax Deino during Max Monday
+DTSTART:20261207T060000
+DTEND:20261207T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-12-07@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-12-07/
+URL:https://leekduck.com/events/max-mondays-2026-12-07/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unannounced Event
+DTSTART:20261208T100000
+DTEND:20261214T200000
+DTSTAMP:20260101T000000Z
+UID:unannounced-event-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/unannounced
+ -event-december-2026/
+URL:https://leekduck.com/events/unannounced-event-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition and Mountain Cup: Great League Edition 
+ | Daydream Destinations
+DTSTART:20261208T210000Z
+DTEND:20261215T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_great-league-mega-edition_mountain-cup-great
+ -league-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_great-league-mega-edition_mountain-cup-great-lea
+ gue-edition/
+URL:https://leekduck.com/events/gbl-daydream-destinations_great-league-meg
+ a-edition_mountain-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Gengar in Mega Raids
+DTSTART:20261209T060000
+DTEND:20261215T220000
+DTSTAMP:20260101T000000Z
+UID:mega-gengar-in-mega-raids-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -gengar-in-mega-raids-december-2026/
+URL:https://leekduck.com/events/mega-gengar-in-mega-raids-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unannounced Pokémon in 5-star Raid Battles
+DTSTART:20261209T060000
+DTEND:20261215T220000
+DTSTAMP:20260101T000000Z
+UID:unannounced-pokemon-in-5-star-raid-battles-december-2026@pogo-event-ca
+ lendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/unan
+ nounced-pokemon-in-5-star-raid-battles-december-2026/
+URL:https://leekduck.com/events/unannounced-pokemon-in-5-star-raid-battles
+ -december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unannounced Raid Hour
+DTSTART:20261209T180000
+DTEND:20261209T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261209@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261209/
+URL:https://leekduck.com/events/raidhour20261209/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Starly Spotlight Hour
+DTSTART:20261210T180000
+DTEND:20261210T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-12-10@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-12-10/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-12-10/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Minior Showers: Geminids 2026
@@ -254,6 +391,77 @@ DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/dec
 URL:https://leekduck.com/events/december-communityday2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dynamax Eevee during Max Monday
+DTSTART:20261214T060000
+DTEND:20261214T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-12-14@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-12-14/
+URL:https://leekduck.com/events/max-mondays-2026-12-14/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ultra League: Mega Edition and Holiday Cup: Great League Edition |
+  Daydream Destinations
+DTSTART:20261215T210000Z
+DTEND:20261222T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_ultra-league-mega-edition_holiday-cup-great-
+ league-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_ultra-league-mega-edition_holiday-cup-great-leag
+ ue-edition/
+URL:https://leekduck.com/events/gbl-daydream-destinations_ultra-league-meg
+ a-edition_holiday-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ho-Oh in 5-star Raid Battles
+DTSTART:20261216T060000
+DTEND:20261222T220000
+DTSTAMP:20260101T000000Z
+UID:ho-oh-in-5-star-raid-battles-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/ho-o
+ h-in-5-star-raid-battles-december-2026/
+URL:https://leekduck.com/events/ho-oh-in-5-star-raid-battles-december-2026
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Skarmory in Mega Raids
+DTSTART:20261216T060000
+DTEND:20261222T220000
+DTSTAMP:20260101T000000Z
+UID:mega-skarmory-in-mega-raids-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -skarmory-in-mega-raids-december-2026/
+URL:https://leekduck.com/events/mega-skarmory-in-mega-raids-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Ho-Oh Raid Hour
+DTSTART:20261216T180000
+DTEND:20261216T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261216@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261216/
+URL:https://leekduck.com/events/raidhour20261216/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Bergmite Spotlight Hour
+DTSTART:20261217T180000
+DTEND:20261217T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-12-17@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-12-17/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-12-17/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Raid Day
 DTSTART:20261219T140000
 DTEND:20261219T170000
@@ -263,6 +471,88 @@ SEQUENCE:0
 DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/raid-day
  -december-2026/
 URL:https://leekduck.com/events/raid-day-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Dynamax Alolan Sandshrew during Max Monday
+DTSTART:20261221T060000
+DTEND:20261221T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-12-21@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-12-21/
+URL:https://leekduck.com/events/max-mondays-2026-12-21/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Winter Holiday 2026
+DTSTART:20261222T100000
+DTEND:20261228T200000
+DTSTAMP:20260101T000000Z
+UID:winter-holiday-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/winter-holi
+ day-2026/
+URL:https://leekduck.com/events/winter-holiday-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Master League: Mega Edition and Holiday Cup: Great League Edition 
+ | Daydream Destinations
+DTSTART:20261222T210000Z
+DTEND:20261229T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_master-league-mega-edition_holiday-cup-great
+ -league-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_master-league-mega-edition_holiday-cup-great-lea
+ gue-edition/
+URL:https://leekduck.com/events/gbl-daydream-destinations_master-league-me
+ ga-edition_holiday-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lugia in 5-star Raid Battles
+DTSTART:20261223T060000
+DTEND:20261229T220000
+DTSTAMP:20260101T000000Z
+UID:lugia-in-5-star-raid-battles-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/lugi
+ a-in-5-star-raid-battles-december-2026/
+URL:https://leekduck.com/events/lugia-in-5-star-raid-battles-december-2026
+ /
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Glalie in Mega Raids
+DTSTART:20261223T060000
+DTEND:20261229T220000
+DTSTAMP:20260101T000000Z
+UID:mega-glalie-in-mega-raids-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -glalie-in-mega-raids-december-2026/
+URL:https://leekduck.com/events/mega-glalie-in-mega-raids-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lugia Raid Hour
+DTSTART:20261223T180000
+DTEND:20261223T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261223@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261223/
+URL:https://leekduck.com/events/raidhour20261223/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Delibird Spotlight Hour
+DTSTART:20261224T180000
+DTEND:20261224T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-12-24@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-12-24/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-12-24/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hatch Day
@@ -276,6 +566,92 @@ DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/hatch-day-d
 URL:https://leekduck.com/events/hatch-day-december-2026/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Dynamax Magikarp during Max Monday
+DTSTART:20261228T060000
+DTEND:20261228T210000
+DTSTAMP:20260101T000000Z
+UID:max-mondays-2026-12-28@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
+ ondays-2026-12-28/
+URL:https://leekduck.com/events/max-mondays-2026-12-28/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:New Year's 2027
+DTSTART:20261229T100000
+DTEND:20270104T200000
+DTSTAMP:20260101T000000Z
+UID:new-years-2027@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/new-years-2
+ 027/
+URL:https://leekduck.com/events/new-years-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
+ er League: Mega Edition | Daydream Destinations
+DTSTART:20261229T210000Z
+DTEND:20270105T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-
+ edition_master-league-mega-edition-split-2@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-edit
+ ion_master-league-mega-edition-split-2/
+URL:https://leekduck.com/events/gbl-daydream-destinations_great-league-meg
+ a-edition_ultra-league-mega-edition_master-league-mega-edition-split-2/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Mega Falinks in Mega Raids
+DTSTART:20261230T060000
+DTEND:20270105T220000
+DTSTAMP:20260101T000000Z
+UID:mega-falinks-in-mega-raids-december-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
+ -falinks-in-mega-raids-december-2026/
+URL:https://leekduck.com/events/mega-falinks-in-mega-raids-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tornadus\, Thundurus\, and Landorus (Therian Formes) in 5-star Rai
+ d Battles
+DTSTART:20261230T060000
+DTEND:20270105T220000
+DTSTAMP:20260101T000000Z
+UID:tornadus-thundurus-landorus-therian-formes-in-5-star-raid-battles-dece
+ mber-2026@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/torn
+ adus-thundurus-landorus-therian-formes-in-5-star-raid-battles-december-202
+ 6/
+URL:https://leekduck.com/events/tornadus-thundurus-landorus-therian-formes
+ -in-5-star-raid-battles-december-2026/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tornadus (Therian Forme)\, Thundurus (Therian Forme)\, and Landoru
+ s (Therian Forme) Raid Hour
+DTSTART:20261230T180000
+DTEND:20261230T190000
+DTSTAMP:20260101T000000Z
+UID:raidhour20261230@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
+ r20261230/
+URL:https://leekduck.com/events/raidhour20261230/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Plusle and Minun Spotlight Hour
+DTSTART:20261231T180000
+DTEND:20261231T190000
+DTSTAMP:20260101T000000Z
+UID:pokemonspotlighthour2026-12-31@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
+ events/pokemonspotlighthour2026-12-31/
+URL:https://leekduck.com/events/pokemonspotlighthour2026-12-31/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:January Community Day Classic
 DTSTART:20270102T140000
 DTEND:20270102T170000
@@ -285,6 +661,21 @@ SEQUENCE:0
 DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/jan
  uary-communitydayclassic2027/
 URL:https://leekduck.com/events/january-communitydayclassic2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition and Fighting Cup: Great League Edition 
+ | Daydream Destinations
+DTSTART:20270105T210000Z
+DTEND:20270112T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_great-league-mega-edition_fighting-cup-great
+ -league-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_great-league-mega-edition_fighting-cup-great-lea
+ gue-edition/
+URL:https://leekduck.com/events/gbl-daydream-destinations_great-league-meg
+ a-edition_fighting-cup-great-league-edition/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Super Mega Raid Day
@@ -298,6 +689,21 @@ DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
 URL:https://leekduck.com/events/super-mega-raid-day-january-2027/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Ultra League: Mega Edition and Jungle Cup: Great League Edition | 
+ Daydream Destinations
+DTSTART:20270112T210000Z
+DTEND:20270119T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_ultra-league-mega-edition_jungle-cup-great-l
+ eague-edition@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_ultra-league-mega-edition_jungle-cup-great-leagu
+ e-edition/
+URL:https://leekduck.com/events/gbl-daydream-destinations_ultra-league-meg
+ a-edition_jungle-cup-great-league-edition/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:January Community Day
 DTSTART:20270116T140000
 DTEND:20270116T170000
@@ -307,6 +713,20 @@ SEQUENCE:0
 DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/jan
  uary-communityday2027/
 URL:https://leekduck.com/events/january-communityday2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Master League: Mega Edition and Master League | Daydream Destinati
+ ons
+DTSTART:20270119T210000Z
+DTEND:20270126T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_master-league-mega-edition_master-league@pog
+ o-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_master-league-mega-edition_master-league/
+URL:https://leekduck.com/events/gbl-daydream-destinations_master-league-me
+ ga-edition_master-league/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Max Battle Day
@@ -320,6 +740,21 @@ DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
 URL:https://leekduck.com/events/max-battle-day-january-2027/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, and Mast
+ er League: Mega Edition | Daydream Destinations
+DTSTART:20270126T210000Z
+DTEND:20270202T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-
+ edition_master-league-mega-edition-split-3@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-edit
+ ion_master-league-mega-edition-split-3/
+URL:https://leekduck.com/events/gbl-daydream-destinations_great-league-meg
+ a-edition_ultra-league-mega-edition_master-league-mega-edition-split-3/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Super Mega Raid Day
 DTSTART:20270130T140000
 DTEND:20270130T170000
@@ -329,6 +764,20 @@ SEQUENCE:0
 DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/super-me
  ga-raid-day-january-30-2027/
 URL:https://leekduck.com/events/super-mega-raid-day-january-30-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition and Master League | Daydream Destinatio
+ ns
+DTSTART:20270202T210000Z
+DTEND:20270209T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_great-league-mega-edition_master-league@pogo
+ -event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_great-league-mega-edition_master-league/
+URL:https://leekduck.com/events/gbl-daydream-destinations_great-league-meg
+ a-edition_master-league/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:February Community Day
@@ -342,6 +791,21 @@ DESCRIPTION:Community Day\n\n📄 Details: https://leekduck.com/events/feb
 URL:https://leekduck.com/events/february-communityday2027/
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Ultra League: Mega Edition\, Love Cup: Great League Edition\, and 
+ 2027 GO EUIC Cup | Daydream Destinations
+DTSTART:20270209T210000Z
+DTEND:20270216T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_ultra-league-mega-edition_love-cup-great-lea
+ gue-edition_2027-go-euic-cup@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_ultra-league-mega-edition_love-cup-great-league-
+ edition_2027-go-euic-cup/
+URL:https://leekduck.com/events/gbl-daydream-destinations_ultra-league-meg
+ a-edition_love-cup-great-league-edition_2027-go-euic-cup/
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Raid Day
 DTSTART:20270213T140000
 DTEND:20270213T170000
@@ -351,6 +815,21 @@ SEQUENCE:0
 DESCRIPTION:Raid Day\n\n📄 Details: https://leekduck.com/events/raid-day
  -february-2027/
 URL:https://leekduck.com/events/raid-day-february-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Master League: Mega Edition\, Mega Catch Cup: Great League Edition
+ \, and 2027 GO EUIC Cup | Daydream Destinations
+DTSTART:20270216T210000Z
+DTEND:20270223T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_master-league-mega-edition_mega-catch-cup-gr
+ eat-league-edition_2027-go-euic-cup@pogo-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_master-league-mega-edition_mega-catch-cup-great-
+ league-edition_2027-go-euic-cup/
+URL:https://leekduck.com/events/gbl-daydream-destinations_master-league-me
+ ga-edition_mega-catch-cup-great-league-edition_2027-go-euic-cup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pokémon GO Tour: Alola - Kaohsiung 2027
@@ -373,6 +852,24 @@ SEQUENCE:0
 DESCRIPTION:Pokémon GO Tour\n\n📄 Details: https://leekduck.com/events/
  pokemon-go-tour-alola-los-angeles-2027/
 URL:https://leekduck.com/events/pokemon-go-tour-alola-los-angeles-2027/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Great League: Mega Edition\, Ultra League: Mega Edition\, Master L
+ eague: Mega Edition\, and Mega Catch Cup: Great League Edition | Daydream 
+ Destinations
+DTSTART:20270223T210000Z
+DTEND:20270302T210000Z
+DTSTAMP:20260101T000000Z
+UID:gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-
+ edition_master-league-mega-edition_mega-catch-cup-great-league-edition@pog
+ o-event-calendar
+SEQUENCE:0
+DESCRIPTION:GO Battle League\n\n📄 Details: https://leekduck.com/events/
+ gbl-daydream-destinations_great-league-mega-edition_ultra-league-mega-edit
+ ion_master-league-mega-edition_mega-catch-cup-great-league-edition/
+URL:https://leekduck.com/events/gbl-daydream-destinations_great-league-meg
+ a-edition_ultra-league-mega-edition_master-league-mega-edition_mega-catch-
+ cup-great-league-edition/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pokémon GO Tour: Alola - Global 2027
