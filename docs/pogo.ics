@@ -102,17 +102,6 @@ URL:https://leekduck.com/events/mega-metagross-in-mega-raids-november-2026
  /
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Deoxys (Normal\, Defense\, Attack\, and Speed Formes) Raid Hour
-DTSTART:20261125T180000
-DTEND:20261125T190000
-DTSTAMP:20260101T000000Z
-UID:raidhour20261125@pogo-event-calendar
-SEQUENCE:0
-DESCRIPTION:Raid Hour\n\n📄 Details: https://leekduck.com/events/raidhou
- r20261125/
-URL:https://leekduck.com/events/raidhour20261125/
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Noibat Spotlight Hour
 DTSTART:20261126T180000
 DTEND:20261126T190000
@@ -251,15 +240,15 @@ DESCRIPTION:Pokémon Spotlight Hour\n\n📄 Details: https://leekduck.com/
 URL:https://leekduck.com/events/pokemonspotlighthour2026-12-03/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Max Battle Day
+SUMMARY:Gigantamax Inteleon Max Battle Day
 DTSTART:20261205T140000
 DTEND:20261205T170000
 DTSTAMP:20260101T000000Z
-UID:max-battle-day-december-2026@pogo-event-calendar
+UID:gigantamax-inteleon-max-battle-day-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/max-b
- attle-day-december-2026/
-URL:https://leekduck.com/events/max-battle-day-december-2026/
+DESCRIPTION:Max Battles\n\n📄 Details: https://leekduck.com/events/gigan
+ tamax-inteleon-max-battle-day-2026/
+URL:https://leekduck.com/events/gigantamax-inteleon-max-battle-day-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Dynamax Deino during Max Monday
