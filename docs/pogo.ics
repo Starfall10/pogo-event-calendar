@@ -273,15 +273,15 @@ DESCRIPTION:Max Mondays\n\n📄 Details: https://leekduck.com/events/max-m
 URL:https://leekduck.com/events/max-mondays-2026-12-07/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Unannounced Event
+SUMMARY:Pokémon Champions Celebration Event 2026
 DTSTART:20261208T100000
 DTEND:20261214T200000
 DTSTAMP:20260101T000000Z
-UID:unannounced-event-december-2026@pogo-event-calendar
+UID:pokemon-champions-celebration-event-2026@pogo-event-calendar
 SEQUENCE:0
-DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/unannounced
- -event-december-2026/
-URL:https://leekduck.com/events/unannounced-event-december-2026/
+DESCRIPTION:Event\n\n📄 Details: https://leekduck.com/events/pokemon-cha
+ mpions-celebration-event-2026/
+URL:https://leekduck.com/events/pokemon-champions-celebration-event-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Great League: Mega Edition and Mountain Cup: Great League Edition 
@@ -310,17 +310,17 @@ DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/mega
 URL:https://leekduck.com/events/mega-gengar-in-mega-raids-december-2026/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Unannounced Pokémon in 5-star Raid Battles
+SUMMARY:Pokémon Champions Celebration 5-star Raid Battles
 DTSTART:20261209T060000
 DTEND:20261215T220000
 DTSTAMP:20260101T000000Z
-UID:unannounced-pokemon-in-5-star-raid-battles-december-2026@pogo-event-ca
- lendar
+UID:pokemon-champions-celebration-5-star-raid-battles-december-2026@pogo-e
+ vent-calendar
 SEQUENCE:0
-DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/unan
- nounced-pokemon-in-5-star-raid-battles-december-2026/
-URL:https://leekduck.com/events/unannounced-pokemon-in-5-star-raid-battles
- -december-2026/
+DESCRIPTION:Raid Battles\n\n📄 Details: https://leekduck.com/events/poke
+ mon-champions-celebration-5-star-raid-battles-december-2026/
+URL:https://leekduck.com/events/pokemon-champions-celebration-5-star-raid-
+ battles-december-2026/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Unannounced Raid Hour
